@@ -68,7 +68,7 @@
             {
                 "title": "IPv6 Address Types",
                 "note": [
-                    "![Image](https://drive.usercontent.google.com/download?id=1BvDJDr1f4uZklCHlHvNbi7CR0tX15UVO&export=png)"
+                    "![Image](https://raw.githubusercontent.com/syukrimokhtar/eswitching/main/serve/notes/ipv6AT.png)"
                 ]
             },
             {
@@ -78,7 +78,7 @@
                     "",
                     "**Link-local Address (LLA)** - Required for every IPv6-enabled device and used to communicate with other devices on the same local link. LLAs are not routable and are confined to a single link. IPv6 LLAs are in the fe80: :/10 range.",
 					"",
-					"![Image](https://drive.usercontent.google.com/download?id=1-w8NNXPABH25e2yPDc9FPpII1UUncIhq&export=png)"
+					"![Image](https://raw.githubusercontent.com/syukrimokhtar/eswitching/main/serve/notes/ipv6UA1.png)"
                 ]
             },
 			{
@@ -93,7 +93,7 @@
                     "",
                     "**Method for configuring an IPv6 GUA**",
                     "",
-                    "![Image](https://drive.usercontent.google.com/download?id=1z7YKhBcRlkcH5okPtbM6sQokvkVEiqUd&export=png)"
+                    "![Image](https://raw.githubusercontent.com/syukrimokhtar/eswitching/main/serve/notes/ipv6GUA.png)"
 				]
 			},
             {
@@ -113,8 +113,8 @@
                     "",
                     "A solicited-node multicast address is mapped to a special Ethernet multicast address.",
                     "",
-                    "![Image](https://drive.usercontent.google.com/download?id=1161FiqgLy419hrUsBRxq0X5zdH-_qN7d&export=png)",
-                    "![Image](https://drive.usercontent.google.com/download?id=1eWbGpAtYnGF7HpkP2dsdBabab4Wuu8W_&export=png)"
+                    "![Image](https://raw.githubusercontent.com/syukrimokhtar/eswitching/main/serve/notes/ipv6B.png)",
+                    "![Image](https://raw.githubusercontent.com/syukrimokhtar/eswitching/main/serve/notes/T1-Solicited.png)"
                 ]
             }
         ]
@@ -131,13 +131,13 @@
                     "Virtual LANs (VLANs) provide segmentation and organizational flexibility in a switched network. VLANs is one of the technologies used to improve network performance by the separation of large broadcast domains into smaller ones.",
                     "",
                     "**Benefits of a VLAN Design**",
-                    "![Image](https://drive.usercontent.google.com/download?id=1KTjcYYWWt56ncXH5Qu53wFamvPF_mzde&export=png)"
+                    "![Image](https://raw.githubusercontent.com/syukrimokhtar/eswitching/main/serve/notes/vLAN.png)"
                 ]
             },
             {
                 "title": "Types of VLANs",
                 "note": [
-                    "![Image](https://drive.usercontent.google.com/download?id=1X2jcFFtzur36Ag4QD4ZVJydyRpOOxdss&export=png)"
+                    "![Image](https://raw.githubusercontent.com/syukrimokhtar/eswitching/main/serve/notes/vLANType.png)"
                 ]
             },
             {
@@ -146,7 +146,7 @@
                     " - A trunk is a point-to-point link between two network devices that carries more than one VLAN.",
                     " - VLAN trunks allow all VLAN traffic to propagate between switches, so that devices which are in the same VLAN, but connected to different switches, can communicate without the intervention of a router. ",
                     "",
-                    "![Image](https://drive.usercontent.google.com/download?id=1UnOethhqMcrM9kIblxVrlkTEyFcGMLFS&export=png)",
+                    "![Image](https://raw.githubusercontent.com/syukrimokhtar/eswitching/main/serve/notes/T2-VLAN-Trunk.png)",
                     "The links between switches SW1 - SW2 and SW2 - SW3 are configured to transmit traffic coming from VLANs 10 and 20 across the network."
                 ]
             },
@@ -163,7 +163,7 @@
                 "subTitle": "(DTP)",
                 "note": [
                     "DTP is a Cisco proprietary protocol that manages trunk negotiation with a neighboring device.",
-                    "![Image](https://drive.usercontent.google.com/download?id=1K3UpgS0AuqTt1-btENc4Q5krzZfhBfnD&export=png)"
+                    "![Image](https://raw.githubusercontent.com/syukrimokhtar/eswitching/main/serve/notes/table2ai.png)"
                 ]
             }
         ]
@@ -186,18 +186,18 @@
                     "**Legacy inter-VLAN routing**",
                     "",
                     "Legacy inter-VLAN routing solution using a router with multiple Ethernet interfaces. Each router interface was connected to a switch port in different VLANs.",
-                    "![Image](https://drive.usercontent.google.com/download?id=1jojIBxfi9QQwJpOnrZzQA__u-m_v35hT&export=png)",
+                    "![Image](https://raw.githubusercontent.com/syukrimokhtar/eswitching/main/serve/notes/T2-Legacy-InterVLAN.png)",
                     "",
                     "**Router-on-a-Stick**",
                     "",
                     "The router-on-a-stick requires only one physical Ethernet interface to route traffic between multiple VLANs on a network.",
-                    "![Image](https://drive.usercontent.google.com/download?id=10ibgRnoa0MRrwib7oFv7Rqf5BknDbw1s&export=png)",
+                    "![Image](https://raw.githubusercontent.com/syukrimokhtar/eswitching/main/serve/notes/T2-outer-on-Stick.png)",
                     "",
                     "**Layer 3 switch using switched virtual interfaces (SVIs)**",
                     "",
                     "The modern method of performing inter-VLAN routing is to use Layer 3 switches and switched virtual interfaces (SVI).  An SVI is a virtual interface that is configured on a Layer 3 switch.",
                     "",
-                    "![Image](https://drive.usercontent.google.com/download?id=1hjtMrMST1kkZdCgKtI-WeBZqDOyVqVsM&export=png)"
+                    "![Image](https://raw.githubusercontent.com/syukrimokhtar/eswitching/main/serve/notes/T2-Layer3Switch.png)"
                 ]
             },
             {
@@ -216,7 +216,7 @@
                 "note": [
                     "**Common Inter-VLAN Issues**",
                     "",
-                    "![Image](https://drive.usercontent.google.com/download?id=15iYq6DuNye0oGO4RohJ2lju6gMUo__k2&export=png)"
+                    "![Image](https://raw.githubusercontent.com/syukrimokhtar/eswitching/main/serve/notes/table3ai.png)"
                 ]
             }
         ]
@@ -230,7 +230,7 @@
                 "note": [
                     "Spanning Tree Protocol (STP) is a loop-prevention network protocol that allows for redundancy while creating a loop-free Layer 2 topology using blocked ports.",
                     "",
-                    "![Image](https://drive.usercontent.google.com/download?id=1l_Fc56mOlL1SB28qemzCaA-3FrvPiX0U&export=png)",
+                    "![Image](https://raw.githubusercontent.com/syukrimokhtar/eswitching/main/serve/notes/T4-STP.png)",
                     "",
                     "**Steps to a Loop-Free Topology**",
                     "1. Elect the root bridge.",
@@ -242,7 +242,7 @@
                     " - The switch with the **lowest BID/lowest priority** will become the root bridge.",
                     " - If the priorities are the same, the switch with the **lowest MAC Address** will become the root bridge.",
                     "",
-                    "![Image](https://drive.usercontent.google.com/download?id=1JYomwAeOCA-ZaKkHn1J90SJUWKAjb04-&export=png)"
+                    "![Image](https://raw.githubusercontent.com/syukrimokhtar/eswitching/main/serve/notes/T4-Bridge.png)"
                     
                 ]
             },
