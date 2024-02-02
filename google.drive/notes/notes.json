@@ -1,0 +1,291 @@
+[
+    {
+        "topic": "Topic 1",
+        "title": "IP ADDRESSING",
+        "subTopic": [
+            {
+                "title": "VLSM",
+                "subTitle": "Variable Length Subnet Mask",
+                "note": [
+                    "**VLSM** VLSM stands for Variable Length Subnet Mask where it is used to increase the usability of subnets as they can be of variable size. "                    
+                ]
+            },
+            {
+                "title": "The need of IPV6",
+                "note": [
+                    " - A limited IPv4 address space",
+                    " - Issues with NAT and the IoT",
+                    " - IPv4 is running out of addresses",
+                    " - Increasing internet population"
+                ]
+            },
+            {
+                "title": "Migration Techniques",
+                "note": [
+                    "**Dual stack** - The devices run both IPv4 and IPv6 protocol stacks.",
+                    "",
+                    "**Tunneling** - A method of transporting an IPv6 packet over an IPv4 network. The IPv6 packet is encapsulated inside an IPv4 packet.",
+                    "",
+                    "**Translation** - Network Address Translation 64 (NAT64) allows IPv6-enabled devices to communicate with IPv4-enabled devices using a translation technique."
+                ]
+            },
+            {
+                "title": "IPv6 Addressing Formats",
+                "note": [
+                    "- IPv6 addresses are 128 bits in length and written in hexadecimal.",
+                    "- In IPv6, a hextet is used to refer to a segment of 16 bits, or four hexadecimal values.",
+                    "- Examples of IPv6 addresses in the preferred format:",
+                    "",
+                    "     ``` 2001:0bb8:acad:1221:0000:0000:009f:0900 ```",
+                    "",
+                    "",
+                    "## Rule 1 - Omit Leading Zero",
+                    "The first rule to help reduce the notation of IPv6 addresses is to omit any leading 0s.",
+                    "",
+                    "![Image](https://drive.usercontent.google.com/download?id=1UP0MaxKHkqYghAINHxja5E7UcrbYiqji&export=png)",
+                    "",
+                    "",
+                    "## Rule 2 - Double Colon",
+                    "",
+                    "A double colon (: :) can replace any single, contiguous string of one or more 16-bit hextets consisting of all zeros. The double colon (: :) can ONLY be used once within an address.",
+                    "",
+                    "![Image](https://drive.usercontent.google.com/download?id=1WcY9OWWPn68BNfulqilHIcZihg1wcurh&export=png)"
+
+                ]
+            },
+            {
+                "title": "IPv6 Address Types",
+                "note": [
+                    "![Image](https://drive.usercontent.google.com/download?id=1BvDJDr1f4uZklCHlHvNbi7CR0tX15UVO&export=png)"
+                ]
+            },
+            {
+                "title": "IPv6 Unicast Address",
+                "note": [
+                    "**Global Unicast Address (GUA)** - This is similar to a public IPv4 address. These are globally unique, internet-routable addresses.",
+                    "",
+                    "**Link-local Address (LLA)** - Required for every IPv6-enabled device and used to communicate with other devices on the same local link. LLAs are not routable and are confined to a single link. IPv6 LLAs are in the fe80: :/10 range.",
+					"",
+					"![Image](https://drive.usercontent.google.com/download?id=1-w8NNXPABH25e2yPDc9FPpII1UUncIhq&export=png)"
+                ]
+            },
+			{
+				"title": "Dynamic Addressing",
+				"note" : [
+					"**RS and RA Messages**",
+					" - **Router Solicitation (RS) messages** - sent by host devices to discover IPv6 routers.",
+					" - **Router Advertisement (RA) messages** - sent by routers to inform hosts on how to obtain an IPv6 GUA and provide useful network information such as:",
+                    "   1. Network prefix and prefix length",
+                    "   2. Default gateway address",
+                    "   3. DNS addresses and domain name",
+                    "**Method for configuring an IPv6 GUA**",
+                    "",
+                    "![Image](https://drive.usercontent.google.com/download?id=1z7YKhBcRlkcH5okPtbM6sQokvkVEiqUd&export=png)"
+				]
+			},
+            {
+                "title": "IPv6 Multicast Address",
+                "note": [
+                    "IPv6 multicast addresses have the prefix ff00::/8. There are two types of IPv6 multicast addresses",
+                    " - Well-Known multicast addresses",
+                    " - Solicited node multicast addresses",
+                    "",
+                    "**Well-known IPv6 multicast addresses**",
+                    "Two types of IPv6 Assigned multicast groups:",
+                    " - ff02::1 All-nodes multicast group - This is a multicast group that all IPv6-enabled devices join.",
+                    " - ff02::2 All-routers multicast group - This is a multicast group that all IPv6 routers join. ",
+                    "",
+                    "**Solicited node multicast addresses**",
+                    "",
+                    "A solicited-node multicast address is mapped to a special Ethernet multicast address.",
+                    "",
+                    "![Image](https://drive.usercontent.google.com/download?id=1161FiqgLy419hrUsBRxq0X5zdH-_qN7d&export=png)",
+                    "![Image](https://drive.usercontent.google.com/download?id=1eWbGpAtYnGF7HpkP2dsdBabab4Wuu8W_&export=png)"
+                ]
+            }
+        ]
+    },
+    {
+        "topic": "Topic 2",
+        "title": "VLAN",
+        "subTitle": "VIRTUAL LOCAL AREA NETWORKS",
+        "subTopic": [
+            {
+                "title": "Virtual Local Area Networks",
+                "subTitle": " (VLANs)",
+                "note": [
+                    "Virtual LANs (VLANs) provide segmentation and organizational flexibility in a switched network. VLANs is one of the technologies used to improve network performance by the separation of large broadcast domains into smaller ones.",
+                    "",
+                    "**Benefits of a VLAN Design**",
+                    "![Image](https://drive.usercontent.google.com/download?id=1KTjcYYWWt56ncXH5Qu53wFamvPF_mzde&export=png)"
+                ]
+            },
+            {
+                "title": "Types of VLANs",
+                "note": [
+                    "![Image](https://drive.usercontent.google.com/download?id=1X2jcFFtzur36Ag4QD4ZVJydyRpOOxdss&export=png)"
+                ]
+            },
+            {
+                "title": "VLAN Trunks",
+                "note": [
+                    " - A trunk is a point-to-point link between two network devices that carries more than one VLAN.",
+                    " - VLAN trunks allow all VLAN traffic to propagate between switches, so that devices which are in the same VLAN, but connected to different switches, can communicate without the intervention of a router. ",
+                    "",
+                    "![Image](https://drive.usercontent.google.com/download?id=1UnOethhqMcrM9kIblxVrlkTEyFcGMLFS&export=png)",
+                    "The links between switches SW1 - SW2 and SW2 - SW3 are configured to transmit traffic coming from VLANs 10 and 20 across the network."
+                ]
+            },
+            {
+                "title": "VLAN Tagging",
+                "note": [
+                    " - **Frame tagging** is the process of adding a VLAN identification header to the frame.",
+                    " - It is used to properly transmit multiple VLAN frames through a trunk link.",
+                    " - Switches add VLAN tags to the frames before placing them into trunk links and remove the tags before forwarding frames through non-trunk ports."
+                ]
+            },
+            {
+                "title": "Dynamic Trunking Protocol",
+                "subTitle": "(DTP)",
+                "note": [
+                    "DTP is a Cisco proprietary protocol that manages trunk negotiation with a neighboring device.",
+                    "![Image](https://drive.usercontent.google.com/download?id=1K3UpgS0AuqTt1-btENc4Q5krzZfhBfnD&export=png)"
+                ]
+            }
+        ]
+    },
+    {
+        "topic": "Topic 3",
+        "title": "INTER VLAN",
+        "subTopic": [
+            {
+                "title": "Inter-VLAN routing",
+                "note": [
+                    "Inter-VLAN is the process of forwarding network traffic from one VLAN to another VLAN.",
+                    "",
+                    "Types of inter-VLAN routing",
+                    "",
+                    "1. Legacy inter-VLAN routing",
+                    "2. Router-on-a-Stick",
+                    "3. Layer 3 switch using switched virtual interfaces (SVIs)",
+                    "",
+                    "**Legacy inter-VLAN routing**",
+                    "",
+                    "Legacy inter-VLAN routing solution using a router with multiple Ethernet interfaces. Each router interface was connected to a switch port in different VLANs.",
+                    "![Image](https://drive.usercontent.google.com/download?id=1jojIBxfi9QQwJpOnrZzQA__u-m_v35hT&export=png)",
+                    "",
+                    "**Router-on-a-Stick**",
+                    "",
+                    "The router-on-a-stick requires only one physical Ethernet interface to route traffic between multiple VLANs on a network.",
+                    "![Image](https://drive.usercontent.google.com/download?id=10ibgRnoa0MRrwib7oFv7Rqf5BknDbw1s&export=png)",
+                    "",
+                    "**Layer 3 switch using switched virtual interfaces (SVIs)**",
+                    "",
+                    "The modern method of performing inter-VLAN routing is to use Layer 3 switches and switched virtual interfaces (SVI).  An SVI is a virtual interface that is configured on a Layer 3 switch.",
+                    "",
+                    "![Image](https://drive.usercontent.google.com/download?id=1hjtMrMST1kkZdCgKtI-WeBZqDOyVqVsM&export=png)"
+                ]
+            },
+            {
+                "title": "Layer 3 Switch Inter-VLAN Routing",
+                "note": [
+                    "The advantages of using Layer 3 switches for inter-VLAN routing:",
+                    "",
+                    " - They are much faster than router-on-a-stick because everything is hardware switched and routed",
+                    " - There is no need for external links from the switch to the router for routing.",
+                    " - They are not limited to one link because Layer 2 EtherChannels can be used as trunk links between the switches to increase bandwidth.",
+                    " - Latency is much lower because data does not need to leave the switch in order to be routed to a different network."
+                ]
+            },
+            {
+                "title": "Troubleshoot Inter-VLAN",
+                "note": [
+                    "**Common Inter-VLAN Issues**",
+                    "",
+                    "![Image](https://drive.usercontent.google.com/download?id=15iYq6DuNye0oGO4RohJ2lju6gMUo__k2&export=png)"
+                ]
+            }
+        ]
+    },
+    {
+        "topic": "Topic 4",
+        "title": "STP and ETHERCHANNEL",
+        "subTopic": [
+            {
+                "title": "Spanning Tree Protocol (STP)",
+                "note": [
+                    "Spanning Tree Protocol (STP) is a loop-prevention network protocol that allows for redundancy while creating a loop-free Layer 2 topology using blocked ports.",
+                    "",
+                    "![Image](https://drive.usercontent.google.com/download?id=1l_Fc56mOlL1SB28qemzCaA-3FrvPiX0U&export=png)",
+                    "",
+                    "**Steps to a Loop-Free Topology**",
+                    "1. Elect the root bridge.",
+                    "2. Elect the root ports.",
+                    "3. Elect designated ports.",
+                    "4. Elect alternate (blocked) ports",
+                    "",
+                    "**Elect the root bridge**",
+                    " - The switch with the **lowest BID/lowest priority** will become the root bridge.",
+                    " - If the priorities are the same, the switch with the **lowest MAC Address** will become the root bridge.",
+                    "",
+                    "![Image](https://drive.usercontent.google.com/download?id=1JYomwAeOCA-ZaKkHn1J90SJUWKAjb04-&export=png)"
+                    
+                ]
+            },
+            {
+                "title": "Rapid Spanning Tree Protocol (RSTP)",
+                "note": [
+                    " - Rapid Spanning Tree Protocol (RSTP) is an evolution of STP that provides faster convergence than STP.",
+                    " - If a port is configured to be an alternate port it can immediately change to a forwarding state without waiting for the network to converge."
+                ]
+            },
+            {
+                "title": "EtherChannel",
+                "note": [
+                    "EtherChannel is a link aggregation technology that groups multiple physical Ethernet links together into one single logical link. When an EtherChannel is configured, the resulting virtual interface is called a port channel.",
+                    "",
+                    "![Image](https://drive.usercontent.google.com/download?id=1IC21fDPF7d9-X8t6c99bzIeO4HO47TGT&export=png)"
+                ]
+            },
+            {
+                "title": "EtherChannel Protocols",
+                "note": [
+                    "",
+                    "**Port Aggregation Protocol (PAgP)**",
+                    "",
+                    "![Image](https://drive.usercontent.google.com/download?id=1CcqVh0hUtF0U9jKtLdNiBwpDbv-sWgIw&export=png)",
+                    "",
+                    "![Image](https://drive.usercontent.google.com/download?id=1fSFRWrtsAjx9dKpU63hSwekItsqrMUoB&export=png)",
+                    "",
+                    "The combination of PAgP modes on SW1 and SW2 and the resulting channel establishment.",
+                    "",
+                    "**Link Aggregation Control Protocol**",
+                    "",
+                    "![Image](https://drive.usercontent.google.com/download?id=1y0sVo2Mmz1M50RFITP6y-tINOOobuUas&export=png)",
+                    "",
+                    "![Image](https://drive.usercontent.google.com/download?id=1LmSPOK_GhagjJFaa9-690IQ-Xo9ZX3Jz&export=png)",
+                    "",
+                    "The combination of LACP modes on SW1 and SW2 and the resulting channel establishment."
+                ]
+            }
+        ]
+    },
+    {
+        "topic": "Topic 5",
+        "title": "SWITCH SECURITY",
+        "subTopic": [
+            {
+				"title": "Switch Attack",
+				"note" : [
+					"![Image](https://drive.usercontent.google.com/download?id=10JIDnQou08W1pDLfyK1FXJ_tw5_6-iv8&export=png)"
+				]
+			},
+            {
+				"title": "Mitigation Techniques",
+				"note" : [
+					"![Image](https://drive.usercontent.google.com/download?id=1dzcJbuj3FCYjUYHJMZ2_OkwTFs5JnC5c&export=png)"
+				]
+			}
+        ]
+    }
+]
