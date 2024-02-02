@@ -21,7 +21,7 @@ class NotesController extends GetxController {
     error('');
     try {
       String notesUrl = dotenv.env['NOTES'] ?? '';
-      var response = await http.get(Uri.parse(notesUrl));
+      var response = await http.get(Uri.parse("$notesUrl?rand=${DateTime.now()}"));
       notes.clear();
       notes.addAll(jsonDecode(response.body));
     }catch(e) {

@@ -13,10 +13,7 @@
             {
                 "title": "The need of IPV6",
                 "note": [
-                    " - A limited IPv4 address space",
-                    " - Issues with NAT and the IoT",
-                    " - IPv4 is running out of addresses",
-                    " - Increasing internet population"
+                    "![Image](https://raw.githubusercontent.com/syukrimokhtar/eswitching/main/serve/notes/ipv6Need.png)"
                 ]
             },
             {
@@ -47,7 +44,7 @@
                     "",
                     "## Rule 2 - Double Colon",
                     "",
-                    "A double colon (: :) can replace any single, contiguous string of one or more 16-bit hextets consisting of all zeros. The double colon (: :) can ONLY be used once within an address.",
+                    "A double colon (: :) can replace any single, contiguous string of one or more 16-bit hextets consisting of all zeros. The double colon (: :) can **ONLY** be used once within an address.",
                     "",
                     "![Image](https://raw.githubusercontent.com/syukrimokhtar/eswitching/main/serve/notes/table1bii.png)"
 
