@@ -42,14 +42,14 @@
                     "## Rule 1 - Omit Leading Zero",
                     "The first rule to help reduce the notation of IPv6 addresses is to omit any leading 0s.",
                     "",
-                    "![Image](./table1aii.png)",
+                    "![Image](https://raw.githubusercontent.com/syukrimokhtar/eswitching/main/serve/notes/table1aii.png)",
                     "",
                     "",
                     "## Rule 2 - Double Colon",
                     "",
                     "A double colon (: :) can replace any single, contiguous string of one or more 16-bit hextets consisting of all zeros. The double colon (: :) can ONLY be used once within an address.",
                     "",
-                    "![Image](https://drive.usercontent.google.com/download?id=1WcY9OWWPn68BNfulqilHIcZihg1wcurh&export=png)"
+                    "![Image](https://raw.githubusercontent.com/syukrimokhtar/eswitching/main/serve/notes/table1bii.png)"
 
                 ]
             },
