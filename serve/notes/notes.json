@@ -258,7 +258,7 @@
                 "note": [
                     "EtherChannel is a link aggregation technology that groups multiple physical Ethernet links together into one single logical link. When an EtherChannel is configured, the resulting virtual interface is called a port channel.",
                     "",
-                    "![Image](https://drive.usercontent.google.com/download?id=1IC21fDPF7d9-X8t6c99bzIeO4HO47TGT&export=png)"
+                    "![Image](https://raw.githubusercontent.com/syukrimokhtar/eswitching/main/serve/notes/EtherChannel1.png)"
                 ]
             },
             {
@@ -267,17 +267,17 @@
                     "",
                     "**Port Aggregation Protocol (PAgP)**",
                     "",
-                    "![Image](https://drive.usercontent.google.com/download?id=1CcqVh0hUtF0U9jKtLdNiBwpDbv-sWgIw&export=png)",
+                    "![Image](https://raw.githubusercontent.com/syukrimokhtar/eswitching/main/serve/notes/T4-PAGP.png)",
                     "",
-                    "![Image](https://drive.usercontent.google.com/download?id=1fSFRWrtsAjx9dKpU63hSwekItsqrMUoB&export=png)",
+                    "![Image](https://raw.githubusercontent.com/syukrimokhtar/eswitching/main/serve/notes/table4s.png)",
                     "",
                     "The combination of PAgP modes on SW1 and SW2 and the resulting channel establishment.",
                     "",
                     "**Link Aggregation Control Protocol**",
                     "",
-                    "![Image](https://drive.usercontent.google.com/download?id=1y0sVo2Mmz1M50RFITP6y-tINOOobuUas&export=png)",
+                    "![Image](https://raw.githubusercontent.com/syukrimokhtar/eswitching/main/serve/notes/stpLACP.png)",
                     "",
-                    "![Image](https://drive.usercontent.google.com/download?id=1LmSPOK_GhagjJFaa9-690IQ-Xo9ZX3Jz&export=png)",
+                    "![Image](https://raw.githubusercontent.com/syukrimokhtar/eswitching/main/serve/notes/stpLACPTable.png)",
                     "",
                     "The combination of LACP modes on SW1 and SW2 and the resulting channel establishment."
                 ]
@@ -291,13 +291,13 @@
             {
 				"title": "Switch Attack",
 				"note" : [
-					"![Image](https://drive.usercontent.google.com/download?id=10JIDnQou08W1pDLfyK1FXJ_tw5_6-iv8&export=png)"
+					"![Image](https://raw.githubusercontent.com/syukrimokhtar/eswitching/main/serve/notes/table5a.png)"
 				]
 			},
             {
 				"title": "Mitigation Techniques",
 				"note" : [
-					"![Image](https://drive.usercontent.google.com/download?id=1dzcJbuj3FCYjUYHJMZ2_OkwTFs5JnC5c&export=png)"
+					"![Image](https://raw.githubusercontent.com/syukrimokhtar/eswitching/main/serve/notes/table5b.png)"
 				]
 			}
         ]
