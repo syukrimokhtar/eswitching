@@ -42,7 +42,7 @@
                     "## Rule 1 - Omit Leading Zero",
                     "The first rule to help reduce the notation of IPv6 addresses is to omit any leading 0s.",
                     "",
-                    "![Image](table1aii.png)",
+                    "![Image](./table1aii.png)",
                     "",
                     "",
                     "## Rule 2 - Double Colon",
