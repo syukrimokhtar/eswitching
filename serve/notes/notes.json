@@ -92,6 +92,8 @@
                     "   3. DNS addresses and domain name",
                     "**Method for configuring an IPv6 GUA**",
                     "",
+                    "**Method for configuring an IPv6 GUA**",
+                    "",
                     "![Image](https://drive.usercontent.google.com/download?id=1z7YKhBcRlkcH5okPtbM6sQokvkVEiqUd&export=png)"
 				]
 			},
@@ -103,6 +105,7 @@
                     " - Solicited node multicast addresses",
                     "",
                     "**Well-known IPv6 multicast addresses**",
+                    "",
                     "Two types of IPv6 Assigned multicast groups:",
                     " - ff02::1 All-nodes multicast group - This is a multicast group that all IPv6-enabled devices join.",
                     " - ff02::2 All-routers multicast group - This is a multicast group that all IPv6 routers join. ",
