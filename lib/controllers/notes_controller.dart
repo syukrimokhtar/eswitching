@@ -1,5 +1,4 @@
 import 'dart:convert';
-import 'dart:math';
 
 import 'package:eswitching/library/sm_init.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
@@ -22,8 +21,11 @@ class NotesController extends GetxController {
     error('');
     try {
       String notesUrl = dotenv.env['NOTES'] ?? '';
-      var response = await http.get(Uri.parse("$notesUrl?rand=${Random().nextInt(1000)}"));
+      var response = await http.get(Uri.parse("$notesUrl?rand=${DateTime.now().millisecondsSinceEpoch.toString()}"));
       notes.clear();
+      //replace .png with rand=
+      var body = response.body;
+      body = body.replaceAll(".png", ".png?rand=${DateTime.now().millisecondsSinceEpoch.toString()}");
       notes.addAll(jsonDecode(response.body));
     }catch(e) {
       _talker.error(e);
