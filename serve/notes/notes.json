@@ -197,7 +197,7 @@
                     "",
                     "The modern method of performing inter-VLAN routing is to use Layer 3 switches and switched virtual interfaces (SVI).  An SVI is a virtual interface that is configured on a Layer 3 switch.",
                     "",
-                    "![Image](https://raw.githubusercontent.com/syukrimokhtar/eswitching/main/serve/notes/Layer3.png)"
+                    "![Image](https://raw.githubusercontent.com/syukrimokhtar/eswitching/main/serve/notes/layer3a.png)"
                 ]
             },
             {
