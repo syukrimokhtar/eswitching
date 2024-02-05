@@ -247,7 +247,7 @@
                 ]
             },
             {
-                "title": "Rapid Spanning Tree Protocol (RSTP)",
+                "title": "Rapid Spanning Tree Protocol",
                 "note": [
                     " - Rapid Spanning Tree Protocol (RSTP) is an evolution of STP that provides faster convergence than STP.",
                     " - If a port is configured to be an alternate port it can immediately change to a forwarding state without waiting for the network to converge."
