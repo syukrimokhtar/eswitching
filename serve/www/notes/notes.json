@@ -2,7 +2,7 @@
     {
         "topic": "Topic 1",
         "title": "IP ADDRESSING",
-        "subTopic": [
+        "subNotes": [
             {
                 "title": "VLSM",
                 "subTitle": "Variable Length Subnet Mask",
@@ -123,7 +123,7 @@
         "topic": "Topic 2",
         "title": "VLAN",
         "subTitle": "VIRTUAL LOCAL AREA NETWORKS",
-        "subTopic": [
+        "subNotes": [
             {
                 "title": "Virtual Local Area Networks",
                 "subTitle": " (VLANs)",
@@ -171,7 +171,7 @@
     {
         "topic": "Topic 3",
         "title": "INTER VLAN",
-        "subTopic": [
+        "subNotes": [
             {
                 "title": "Inter-VLAN routing",
                 "note": [
@@ -224,7 +224,7 @@
     {
         "topic": "Topic 4",
         "title": "STP and ETHERCHANNEL",
-        "subTopic": [
+        "subNotes": [
             {
                 "title": "Spanning Tree Protocol (STP)",
                 "note": [
@@ -287,7 +287,7 @@
     {
         "topic": "Topic 5",
         "title": "SWITCH SECURITY",
-        "subTopic": [
+        "subNotes": [
             {
 				"title": "Switch Attack",
 				"note" : [

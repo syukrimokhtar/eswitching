@@ -1,9 +1,9 @@
 import 'dart:convert';
 
+import 'package:eswitching/config/dio.dart';
 import 'package:eswitching/library/sm_init.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:get/get.dart';
-import 'package:http/http.dart' as http;
 
 class NotesController extends GetxController {
 
@@ -20,14 +20,22 @@ class NotesController extends GetxController {
     isLoading(true);
     error('');
     try {
+
       String notesUrl = dotenv.env['NOTES'] ?? '';
-      var response = await http.get(Uri.parse("$notesUrl?rand=${DateTime.now().millisecondsSinceEpoch.toString()}"));
-      notes.clear();
-      //replace .png with rand=
-      var body = response.body;
-      body = body.replaceAll(".png", ".png?rand=${DateTime.now().millisecondsSinceEpoch.toString()}");
-      _talker.debug(body);
-      notes.addAll(jsonDecode(body));
+
+      if(notesUrl.startsWith("http")) {
+
+        var response = await dio.get(notesUrl);
+        notes.clear();
+        var body = response.data;
+        if(body is String) {
+          notes.addAll(jsonDecode(body));
+        }else {
+          notes.addAll(body);
+        }
+      }
+
+      
     }catch(e) {
       _talker.error(e);
       error('Fail to load / parse JSON');

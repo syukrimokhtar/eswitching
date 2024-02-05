@@ -4,7 +4,7 @@ import 'package:eswitching/library/sm_layout.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-class SubTopic extends GetView<NotesController> {
+class NotesSubNotes extends GetView<NotesController> {
 
   //logging
   final _talker = Sm.instance.talker;
@@ -15,16 +15,16 @@ class SubTopic extends GetView<NotesController> {
     var args = Get.arguments;
     var title = args['title'];
     var subTitle = args['subTitle'];
-    var subTopic = args['subTopic'];
+    var subNotes = args['subNotes'];
 
     Widget body = ListView.separated(
         separatorBuilder: (context, index) => Divider(
           color: Colors.grey.shade200,
         ),
-        itemCount: subTopic.length,
+        itemCount: subNotes.length,
         itemBuilder: (context, index) {
 
-          var topic = subTopic[index];
+          var topic = subNotes[index];
 
           return ListTile(
             leading: Icon(Icons.topic,
@@ -35,7 +35,7 @@ class SubTopic extends GetView<NotesController> {
             subtitle: topic['subTitle'] == null ? null : Text(topic['subTitle']),
             onTap: () {
 
-              Get.toNamed("/notes/subtopic/note", arguments: {
+              Get.toNamed("/notes/subNotes/note", arguments: {
                 "title": topic['title'],
                 "subTitle": topic['subTitle'],
                 "note":  topic['note']

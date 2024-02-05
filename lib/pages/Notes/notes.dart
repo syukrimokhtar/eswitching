@@ -63,20 +63,20 @@ class Notes extends GetView<NotesController> {
             return ListTile(
               leading: Icon(Icons.topic,
                 color: Sm.instance.config.primaryColor),
-              trailing: note['subTopic'] == null ? null : Icon(Icons.arrow_forward,
+              trailing: note['subNotes'] == null ? null : Icon(Icons.arrow_forward,
                 color: Sm.instance.config.primaryColor),
               title: Text(note['topic'], style: const TextStyle(fontWeight: FontWeight.bold)),
               subtitle: Text(note['title']),
               onTap: () {
 
-                if(note['subTopic'] == null) {
+                if(note['subNotes'] == null) {
                   return;
                 }
 
-                Get.toNamed("/notes/subtopic", arguments: {
+                Get.toNamed("/notes/subNotes", arguments: {
                   "title": note['title'],
                   "subTitle": note['subTitle'],
-                  "subTopic": note['subTopic']
+                  "subNotes": note['subNotes']
                 });
                 
               },

@@ -3,10 +3,11 @@ import 'package:eswitching/controllers/home_controller.dart';
 import 'package:eswitching/controllers/notes_controller.dart';
 import 'package:eswitching/controllers/quiz_controller.dart';
 import 'package:eswitching/pages/Command/command.dart';
+import 'package:eswitching/pages/Command/note.dart';
 import 'package:eswitching/pages/Home/home.dart';
 import 'package:eswitching/pages/Notes/note.dart';
 import 'package:eswitching/pages/Notes/notes.dart';
-import 'package:eswitching/pages/Notes/subtopic.dart';
+import 'package:eswitching/pages/Notes/sub_notes.dart';
 import 'package:eswitching/pages/quiz/quiz.dart';
 import 'package:get/get.dart';
 
@@ -39,11 +40,11 @@ smRoutes() => [
   ),
 
   //
-  // Notes / SubTopic
+  // Notes / Sub Notes
   //
   GetPage(
-    name: '/notes/subtopic',
-    page: () => SubTopic(),
+    name: '/notes/subNotes',
+    page: () => NotesSubNotes(),
     binding: BindingsBuilder(() { 
       Get.lazyPut<NotesController>(() => NotesController());
       
@@ -55,8 +56,8 @@ smRoutes() => [
   // Notes / Note
   //
   GetPage(
-    name: '/notes/subtopic/note',
-    page: () => Note(),
+    name: '/notes/subNotes/note',
+    page: () => NotesNote(),
     binding: BindingsBuilder(() { 
       Get.lazyPut<NotesController>(() => NotesController());
       
@@ -70,6 +71,19 @@ smRoutes() => [
   GetPage(
     name: '/command',
     page: () => Command(),
+    binding: BindingsBuilder(() { 
+      Get.lazyPut<CommandController>(() => CommandController());
+      
+    }),
+    transition: Transition.rightToLeft
+  ),
+
+  //
+  // Command / Note
+  //
+  GetPage(
+    name: '/command/note',
+    page: () => CommandNote(),
     binding: BindingsBuilder(() { 
       Get.lazyPut<CommandController>(() => CommandController());
       

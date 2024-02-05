@@ -41,6 +41,9 @@ dependencies:
   flutter_device_type: ^0.4.0
   open_filex: ^4.3.4
   flutter_markdown: ^0.6.18+3
+  dio: ^5.4.0
+  dio_cache_interceptor: ^3.5.0
+  awesome_dialog: ^3.2.0
 
 dev_dependencies:
   flutter_test:
@@ -89,7 +92,7 @@ flutter:
   assets:
     - .env
     - assets/images/
-
+    
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
 

@@ -1,4 +1,4 @@
-import 'package:eswitching/controllers/notes_controller.dart';
+import 'package:eswitching/controllers/command_controller.dart';
 import 'package:eswitching/library/sm_init.dart';
 import 'package:eswitching/library/sm_layout.dart';
 import 'package:flutter/material.dart';
@@ -6,7 +6,7 @@ import 'package:flutter_markdown/flutter_markdown.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class NotesNote extends GetView<NotesController> {
+class CommandNote extends GetView<CommandController> {
 
   //logging
   final _talker = Sm.instance.talker;
@@ -16,7 +16,6 @@ class NotesNote extends GetView<NotesController> {
 
     var args = Get.arguments;
     var title = args['title'];
-    var subTitle = args['subTitle'];
     var note = args['note'].join("\n");
 
     Widget body = SingleChildScrollView(child: MarkdownBody(
@@ -32,7 +31,6 @@ class NotesNote extends GetView<NotesController> {
 
     return SmLayout(
       title: title,
-      subTitle: subTitle,
       body: body,
       back: () {
         Get.back();
