@@ -20,7 +20,7 @@
                     "",
                     "The point-to-point WAN links only require two addresses and therefore waste 28 addresses each for a total of 84 unused addresses",
                     "",
-                    "![Image](https://raw.githubusercontent.com/syukrimokhtar/eswitching/main/serve/notes/wan.png)",
+                    "![Image](https://raw.githubusercontent.com/syukrimokhtar/eswitching/main/serve/notes/wan1.png)",
                     "",
                     "Applying a traditional subnetting scheme to this scenario is not very efficient and is wasteful. VLSM was developed to avoid wasting addresses by enabling us to subnet a subnet."
                 ]

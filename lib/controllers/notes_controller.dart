@@ -26,7 +26,8 @@ class NotesController extends GetxController {
       //replace .png with rand=
       var body = response.body;
       body = body.replaceAll(".png", ".png?rand=${DateTime.now().millisecondsSinceEpoch.toString()}");
-      notes.addAll(jsonDecode(response.body));
+      _talker.debug(body);
+      notes.addAll(jsonDecode(body));
     }catch(e) {
       _talker.error(e);
       error('Fail to load / parse JSON');
