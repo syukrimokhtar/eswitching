@@ -1,2 +1,3 @@
 REM dhttpd --path www
-dhttpd --path wwww
+SET var=%cd%
+dhttpd --host=192.168.1.75 --path %var%\www

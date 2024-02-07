@@ -7,38 +7,69 @@
                 "title": "VLSM",
                 "subTitle": "Variable Length Subnet Mask",
                 "note": [
-                    "**VLSM** stands for Variable Length Subnet Mask where it is used to increase the usability of subnets as they can be of variable size.",
-                    "",
-                    "**IPv4 Address Conservation**",
+                    "<b>VLSM</b> stands for Variable Length Subnet Mask where it is used to increase the usability of subnets as they can be of variable size.",
+                    "<br>",
+                    "<br>",
+                    "<b>IPv4 Address Conservation</b>",
+                    "<br>",
                     "Using traditional subnetting, the same number of addresses is allocated for each subnet.",
-                    "",
-                    "**Example:**",
+                    "<br>",
+                    "<br>",
+                    "<b>Example:</b>",
                     "",
                     "7 subnets are required and the largest number of hosts is in Block 4 with 28 hosts. A /27 mask would provide 8 subnets of 30 host IP addresses and therefore support this topology.",
-                    "",
-                    "![Image](https://raw.githubusercontent.com/syukrimokhtar/eswitching/main/serve/notes/block.png)",
-                    "",
+                    "<br>",
+                    "<br>",
+                    "<img src='https://raw.githubusercontent.com/syukrimokhtar/eswitching/main/serve/notes/block.png'>",
+                    "<br>",
+                    "<br>",
                     "The point-to-point WAN links only require two addresses and therefore waste 28 addresses each for a total of 84 unused addresses",
-                    "",
-                    "![Image](https://raw.githubusercontent.com/syukrimokhtar/eswitching/main/serve/notes/wan1.png)",
-                    "",
+                    "<br>",
+                    "<br>",
+
+                    "<table>",
+                    "<colgroup>",
+                    "<col width='5%' />",
+                    "<col width='90%' />",
+                    "<col width='5%' />",
+                    "</colgroup>",
+                    "<tr>",
+                    "<td>&nbsp;</td>",
+                    "<td class='blue'>",
+
+                    "Host portion<br>",
+                    "2^5 - 2 = 30 host IP addresses per subnet<br><br>",
+                    "30 - 2 = 28<br>",
+                    "Each WAN subnet wastes 28 addresses<br><br>",
+                    "28 X 3 = 84<br>",
+                    "84 addresses are unused</br>",
+
+                    "</td>",
+                    "<td>&nbsp;</td>",
+                    "</tr>",
+                    "</table>",
+                    
+                    "<br>",
+                    "<br>",
                     "Applying a traditional subnetting scheme to this scenario is not very efficient and is wasteful. VLSM was developed to avoid wasting addresses by enabling us to subnet a subnet."
                 ]
             },
             {
                 "title": "The need of IPV6",
                 "note": [
-                    "![Image](https://raw.githubusercontent.com/syukrimokhtar/eswitching/main/serve/notes/ipv6Need.png)"
+                    "<img src='https://raw.githubusercontent.com/syukrimokhtar/eswitching/main/serve/notes/ipv6Need.png'>"
                 ]
             },
             {
                 "title": "Migration Techniques",
                 "note": [
-                    "**Dual stack** - The devices run both IPv4 and IPv6 protocol stacks.",
-                    "",
-                    "**Tunneling** - A method of transporting an IPv6 packet over an IPv4 network. The IPv6 packet is encapsulated inside an IPv4 packet.",
-                    "",
-                    "**Translation** - Network Address Translation 64 (NAT64) allows IPv6-enabled devices to communicate with IPv4-enabled devices using a translation technique."
+                    "<b>Dual stack</b> - The devices run both IPv4 and IPv6 protocol stacks.",
+                    "<br>",
+                    "<br>",
+                    "<b>Tunneling</b> - A method of transporting an IPv6 packet over an IPv4 network. The IPv6 packet is encapsulated inside an IPv4 packet.",
+                    "<br>",
+                    "<br>",
+                    "<b>Translation</b> - Network Address Translation 64 (NAT64) allows IPv6-enabled devices to communicate with IPv4-enabled devices using a translation technique."
                 ]
             },
             {
@@ -249,37 +280,180 @@
             {
                 "title": "Rapid Spanning Tree Protocol",
                 "note": [
-                    " - Rapid Spanning Tree Protocol (RSTP) is an evolution of STP that provides faster convergence than STP.",
-                    " - If a port is configured to be an alternate port it can immediately change to a forwarding state without waiting for the network to converge."
+                    "<ul>",
+                    "<li>Rapid Spanning Tree Protocol (RSTP) is an evolution of STP that provides faster convergence than STP.</li>",
+                    "<li>If a port is configured to be an alternate port it can immediately change to a forwarding state without waiting for the network to converge.</li>",
+                    "</ul>"
                 ]
             },
             {
                 "title": "EtherChannel",
                 "note": [
                     "EtherChannel is a link aggregation technology that groups multiple physical Ethernet links together into one single logical link. When an EtherChannel is configured, the resulting virtual interface is called a port channel.",
-                    "",
-                    "![Image](https://raw.githubusercontent.com/syukrimokhtar/eswitching/main/serve/notes/EtherChannel1.png)"
+                    "<br>",
+                    "<br>",
+                    "<img src='https://raw.githubusercontent.com/syukrimokhtar/eswitching/main/serve/notes/EtherChannel1.png'>"
                 ]
             },
             {
                 "title": "EtherChannel Protocols",
                 "note": [
+                    "<b>Port Aggregation Protocol (PAgP)</b>",
                     "",
-                    "**Port Aggregation Protocol (PAgP)**",
-                    "",
-                    "![Image](https://raw.githubusercontent.com/syukrimokhtar/eswitching/main/serve/notes/T4-PAGP.png)",
-                    "",
-                    "![Image](https://raw.githubusercontent.com/syukrimokhtar/eswitching/main/serve/notes/table4s.png)",
-                    "",
-                    "The combination of PAgP modes on SW1 and SW2 and the resulting channel establishment.",
-                    "",
-                    "**Link Aggregation Control Protocol**",
-                    "",
-                    "![Image](https://raw.githubusercontent.com/syukrimokhtar/eswitching/main/serve/notes/stpLACP1.png)",
-                    "",
-                    "![Image](https://raw.githubusercontent.com/syukrimokhtar/eswitching/main/serve/notes/stpLACPTable.png)",
-                    "",
-                    "The combination of LACP modes on SW1 and SW2 and the resulting channel establishment."
+                    "<img src='https://raw.githubusercontent.com/syukrimokhtar/eswitching/main/serve/notes/T4-PAGP.png'>",
+                    "<br>",
+                    "<br>",
+                    
+                    "<table>",
+                    
+                    "<colgroup>",
+                    "<col width='1%' />",
+                    "<col width='25%' />",
+                    "<col width='36%' />",
+                    "<col width='37%' />",
+                    "<col width='1%' />",
+                    "</colgroup>",
+                    
+                    "<tr>",
+                    "<td>&nbsp;</td>",
+                    "<td class='blt-blue-center'>SW1</td>",
+                    "<td class='blrt-blue-center'>SW2</td>",
+                    "<td class='brt-blue-center'>Channel Establishment</td>",
+                    "<td>&nbsp;</td>",
+                    "</tr>",
+
+                    "<tr>",
+                    "<td>&nbsp;</td>",
+                    "<td class='brlb-center'>On</td>",
+                    "<td class='brb-center'>On</td>",
+                    "<td class='brb-center'>Yes</td>",
+                    "<td>&nbsp;</td>",
+                    "</tr>",
+
+                    "<tr>",
+                    "<td>&nbsp;</td>",
+                    "<td class='brlb-center'>On</td>",
+                    "<td class='brb-center'>Desirable / Auto</td>",
+                    "<td class='brb-center'>No</td>",
+                    "<td>&nbsp;</td>",
+                    "</tr>",
+
+                    "<tr>",
+                    "<td>&nbsp;</td>",
+                    "<td class='brlb-center'>Desirable</td>",
+                    "<td class='brb-center'>Desirable</td>",
+                    "<td class='brb-center'>Yes</td>",
+                    "<td>&nbsp;</td>",
+                    "</tr>",
+
+                    "<tr>",
+                    "<td>&nbsp;</td>",
+                    "<td class='brlb-center'>Desirable</td>",
+                    "<td class='brb-center'>Auto</td>",
+                    "<td class='brb-center'>Yes</td>",
+                    "<td>&nbsp;</td>",
+                    "</tr>",
+
+                    "<tr>",
+                    "<td>&nbsp;</td>",
+                    "<td class='brlb-center'>Auto</td>",
+                    "<td class='brb-center'>Desirable</td>",
+                    "<td class='brb-center'>Yes</td>",
+                    "<td>&nbsp;</td>",
+                    "</tr>",
+
+                    "<tr>",
+                    "<td>&nbsp;</td>",
+                    "<td class='brlb-center'>Auto</td>",
+                    "<td class='brb-center'>Auto</td>",
+                    "<td class='brb-center'>No</td>",
+                    "<td>&nbsp;</td>",
+                    "</tr>",
+
+                    "</table>",
+
+                    "<br>",
+                    "<div class='text-center'>The combination of PAgP modes on SW1 and SW2 and the resulting channel establishment.</div>",
+                    "<br>",
+                    "<br>",
+                    "<br>",
+                    "<br>",
+                    "<b>Link Aggregation Control Protocol</b>",
+                    "<br>",
+                    "<br>",
+                    "<img src='https://raw.githubusercontent.com/syukrimokhtar/eswitching/main/serve/notes/stpLACP1.png'>",
+                    "<br>",
+                    "<br>",
+                    "<table>",
+                    
+                    "<colgroup>",
+                    "<col width='1%' />",
+                    "<col width='22%' />",
+                    "<col width='36%' />",
+                    "<col width='40%' />",
+                    "<col width='1%' />",
+                    "</colgroup>",
+                    
+                    "<tr>",
+                    "<td>&nbsp;</td>",
+                    "<td class='blt-blue-center'>SW1</td>",
+                    "<td class='blrt-blue-center'>SW2</td>",
+                    "<td class='brt-blue-center'>Channel Establishment</td>",
+                    "<td>&nbsp;</td>",
+                    "</tr>",
+
+                    "<tr>",
+                    "<td>&nbsp;</td>",
+                    "<td class='brlb-center'>On</td>",
+                    "<td class='brb-center'>On</td>",
+                    "<td class='brb-center'>Yes</td>",
+                    "<td>&nbsp;</td>",
+                    "</tr>",
+
+                    "<tr>",
+                    "<td>&nbsp;</td>",
+                    "<td class='brlb-center'>On</td>",
+                    "<td class='brb-center'>Active / Passive</td>",
+                    "<td class='brb-center'>No</td>",
+                    "<td>&nbsp;</td>",
+                    "</tr>",
+
+                    "<tr>",
+                    "<td>&nbsp;</td>",
+                    "<td class='brlb-center'>Active</td>",
+                    "<td class='brb-center'>Active</td>",
+                    "<td class='brb-center'>Yes</td>",
+                    "<td>&nbsp;</td>",
+                    "</tr>",
+
+                    "<tr>",
+                    "<td>&nbsp;</td>",
+                    "<td class='brlb-center'>Active</td>",
+                    "<td class='brb-center'>Passive</td>",
+                    "<td class='brb-center'>Yes</td>",
+                    "<td>&nbsp;</td>",
+                    "</tr>",
+
+                    "<tr>",
+                    "<td>&nbsp;</td>",
+                    "<td class='brlb-center'>Passive</td>",
+                    "<td class='brb-center'>Active</td>",
+                    "<td class='brb-center'>Yes</td>",
+                    "<td>&nbsp;</td>",
+                    "</tr>",
+
+                    "<tr>",
+                    "<td>&nbsp;</td>",
+                    "<td class='brlb-center'>Passive</td>",
+                    "<td class='brb-center'>Passive</td>",
+                    "<td class='brb-center'>No</td>",
+                    "<td>&nbsp;</td>",
+                    "</tr>",
+
+                    "</table>",
+
+                    "<br>",
+                    "<div class='text-center'>The combination of LACP modes on SW1 and SW2 and the resulting channel establishment.</div>"
                 ]
             }
         ]
@@ -291,13 +465,115 @@
             {
 				"title": "Switch Attack",
 				"note" : [
-					"![Image](https://raw.githubusercontent.com/syukrimokhtar/eswitching/main/serve/notes/table5a.png)"
+					"<table>",
+
+                    "<colgroup>",
+                    "<col width='1%' />",
+                    "<col width='34%' />",
+                    "<col width='64%' />",
+                    "<col width='1%' />",
+                    "</colgroup>",
+                    
+                    "<tr>",
+                    "<td>&nbsp;</td>",
+                    "<td class='blt-blue'>Category</td>",
+                    "<td class='brt-blue'>Examples</td>",
+                    "<td>&nbsp;</td>",
+                    "</tr>",
+
+                    "<tr>",
+                    "<td>&nbsp;</td>",
+                    "<td class='brlb'>VLAN Attacks</td>",
+                    "<td class='brb'>VLAN hopping and VLAN double-tagging attacks</td>",
+                    "<td>&nbsp;</td>",
+                    "</tr>",
+
+                    "<tr>",
+                    "<td>&nbsp;</td>",
+                    "<td class='brlb'>DHCP Attacks</td>",
+                    "<td class='brb'>DHCP starvation and DHCP spoofing attacks</td>",
+                    "<td>&nbsp;</td>",
+                    "</tr>",
+
+                    "<tr>",
+                    "<td>&nbsp;</td>",
+                    "<td class='brlb'>ARP Attacks</td>",
+                    "<td class='brb'>ARP spoofing and ARP poisoning attacks</td>",
+                    "<td>&nbsp;</td>",
+                    "</tr>",
+                    
+                    "<tr>",
+                    "<td>&nbsp;</td>",
+                    "<td class='brlb'>Address Spoofing Attacks</td>",
+                    "<td class='brb'>MAC address and IP address spoofing attacks</td>",
+                    "<td>&nbsp;</td>",
+                    "</tr>",
+
+                    "<tr>",
+                    "<td>&nbsp;</td>",
+                    "<td class='brlb'>STP Attacks</td>",
+                    "<td class='brb'>Spanning Tree Protocol manipulation attacks</td>",
+                    "<td>&nbsp;</td>",
+                    "</tr>",
+                    
+                    "</table>"
 				]
 			},
             {
 				"title": "Mitigation Techniques",
 				"note" : [
-					"![Image](https://raw.githubusercontent.com/syukrimokhtar/eswitching/main/serve/notes/table5b.png)"
+					"<table>",
+                    
+                    "<colgroup>",
+                    "<col width='1%' />",
+                    "<col width='34%' />",
+                    "<col width='64%' />",
+                    "<col width='1%' />",
+                    "</colgroup>",
+                    
+                    "<tr>",
+                    "<td>&nbsp;</td>",
+                    "<td class='blt-blue'>Solution</td>",
+                    "<td class='brt-blue'>Description</td>",
+                    "<td>&nbsp;</td>",
+                    "</tr>",
+
+                    "<tr>",
+                    "<td>&nbsp;</td>",
+                    "<td class='brlb'>DHCP Snooping</td>",
+                    "<td class='brb'>Prevents DHCP starvation and DHCP spoofing attacks.</td>",
+                    "<td>&nbsp;</td>",
+                    "</tr>",
+
+                    "<tr>",
+                    "<td>&nbsp;</td>",
+                    "<td class='brlb'>Dynamic ARP Inspection (DAI)</td>",
+                    "<td class='brb'>Prevents ARP spoofing and ARP poisoning attacks.</td>",
+                    "<td>&nbsp;</td>",
+                    "</tr>",
+
+                    "<tr>",
+                    "<td>&nbsp;</td>",
+                    "<td class='brlb'>IP Source Guard (IPSG)</td>",
+                    "<td class='brb'>Prevents MAC and IP address spoofing attacks.</td>",
+                    "<td>&nbsp;</td>",
+                    "</tr>",
+                    
+                    "<tr>",
+                    "<td>&nbsp;</td>",
+                    "<td class='brlb'>Port Security</td>",
+                    "<td class='brb'>Prevents MAC address flooding attacks and DHCP starvation attacks.</td>",
+                    "<td>&nbsp;</td>",
+                    "</tr>",
+
+                    "<tr>",
+                    "<td>&nbsp;</td>",
+                    "<td class='brlb'>PortFast and BPDU Guard</td>",
+                    "<td class='brb'>Prevents STP Attacks</td>",
+                    "<td>&nbsp;</td>",
+                    "</tr>",
+                    
+                    "</table>"
 				]
 			}
         ]

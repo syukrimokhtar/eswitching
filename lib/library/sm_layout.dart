@@ -8,6 +8,7 @@ class SmLayout extends GetView<HomeController> {
   late String? title;
   late String? subTitle;
   late Function? back;
+  late List<Widget>? actions;
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
   SmLayout({
@@ -15,7 +16,8 @@ class SmLayout extends GetView<HomeController> {
     this.body,
     this.title,
     this.subTitle,
-    this.back});
+    this.back,
+    this.actions});
 
   Widget? _title(String? title, String? subTitle) {
     if(title == null && subTitle == null) {
@@ -38,7 +40,8 @@ class SmLayout extends GetView<HomeController> {
   PreferredSizeWidget _appBar({
       String? title,
       String? subTitle,
-    Function? back}) {
+    Function? back,
+    List<Widget>? actions}) {
     return AppBar(
       title: _title(title, subTitle),
       leading: back == null ?
@@ -56,6 +59,7 @@ class SmLayout extends GetView<HomeController> {
         IconButton(onPressed: () {
           back();
         }, icon: const Icon(Icons.arrow_back)),
+      actions: actions,
       backgroundColor: Colors.transparent);
   }
 
@@ -139,7 +143,8 @@ class SmLayout extends GetView<HomeController> {
       appBar: _appBar(
         title: title,
         subTitle: subTitle,
-        back: back),
+        back: back,
+        actions: actions),
       drawer: _drawer()
     );
     
