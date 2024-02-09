@@ -20,7 +20,7 @@
                     "7 subnets are required and the largest number of hosts is in Block 4 with 28 hosts. A /27 mask would provide 8 subnets of 30 host IP addresses and therefore support this topology.",
                     "<br>",
                     "<br>",
-                    "<img src='https://raw.githubusercontent.com/syukrimokhtar/eswitching/main/serve/notes/block.png'>",
+                    "<img title='VLSM Example' src='https://raw.githubusercontent.com/syukrimokhtar/eswitching/main/serve/notes/block.png'>",
                     "<br>",
                     "<br>",
                     "The point-to-point WAN links only require two addresses and therefore waste 28 addresses each for a total of 84 unused addresses",
@@ -57,7 +57,7 @@
             {
                 "title": "The need of IPV6",
                 "note": [
-                    "<img src='https://raw.githubusercontent.com/syukrimokhtar/eswitching/main/serve/notes/ipv6Need.png'>"
+                    "<img title='The need of IPV6' src='https://raw.githubusercontent.com/syukrimokhtar/eswitching/main/serve/notes/ipv6Need.png'>"
                 ]
             },
             {
@@ -75,77 +75,247 @@
             {
                 "title": "IPv6 Addressing Formats",
                 "note": [
-                    "- IPv6 addresses are 128 bits in length and written in hexadecimal.",
-                    "- In IPv6, a hextet is used to refer to a segment of 16 bits, or four hexadecimal values.",
-                    "- Examples of IPv6 addresses in the preferred format:",
-                    "",
-                    "     ``` 2001:0bb8:acad:1221:0000:0000:009f:0900 ```",
-                    "",
-                    "",
-                    "## Rule 1 - Omit Leading Zero",
+                    "<ul>",
+                    "<li>IPv6 addresses are 128 bits in length and written in hexadecimal.</li>",
+                    "<li>In IPv6, a hextet is used to refer to a segment of 16 bits, or four hexadecimal values.</li>",
+                    "<li>Examples of IPv6 addresses in the preferred format:</li>",
+                    "</ul>",
+                    "<br>",
+                    "<br>",
+
+                    "<table>",
+                    "<colgroup>",
+                    "<col width='1%' />",
+                    "<col width='98%' />",
+                    "<col width='1%' />",
+                    "</colgroup>",
+                    
+                    "<tr>",
+                    "<td>&nbsp;</td>",
+                    "<td><code class='code-large'>2001:0bb8:acad:1221:0000:0000:009f:0900</code></td>",
+                    "<td>&nbsp;</td>",
+                    "</tr>",
+                    "</table>",
+
+                    "<h3>Rule 1 - Omit Leading Zero</h3>",
                     "The first rule to help reduce the notation of IPv6 addresses is to omit any leading 0s.",
+                    "<br>",
+
+                    "<table>",
+                    "<colgroup>",
+                    "<col width='28%' />",
+                    "<col width='72%' />",
+                    "</colgroup>",
+                    
+                    "<tr>",
+                    "<td class='blrt-blue-center'>Type</td>",
+                    "<td class='brt-blue-center'>Format</td>",
+                    "</tr>",
+
+                    "<tr>",
+                    "<td class='brlt'>Preferred</td>",
+                    "<td class='brt'><code class='code'>2001:0ff8:0000:1334:0000:0000:0000:0900</code></td>",
+                    "</tr>",
+
+                    "<tr>",
+                    "<td class='brltb'>No leading zeroes</td>",
+                    "<td class='brtb'><code class='code'>2001: ff8:  <b>0</b> :1334:  0 :  0 : 0  : 900</code></td>",
+                    "</tr>",
+
+                    "</table>",
+
                     "",
-                    "![Image](https://raw.githubusercontent.com/syukrimokhtar/eswitching/main/serve/notes/table1aii.png)",
                     "",
-                    "",
-                    "## Rule 2 - Double Colon",
-                    "",
+                    "<h3>Rule 2 - Double Colon</h3>",
                     "A double colon (: :) can replace any single, contiguous string of one or more 16-bit hextets consisting of all zeros. The double colon (: :) can **ONLY** be used once within an address.",
-                    "",
-                    "![Image](https://raw.githubusercontent.com/syukrimokhtar/eswitching/main/serve/notes/table1bii.png)"
+                    "<br>",
+
+                    "<table>",
+                    "<colgroup>",
+                    "<col width='30%' />",
+                    "<col width='70%' />",
+                    "</colgroup>",
+                    
+                    "<tr>",
+                    "<td class='blrt-blue-center'>Type</td>",
+                    "<td class='brt-blue-center'>Format</td>",
+                    "</tr>",
+
+                    "<tr>",
+                    "<td class='brlt'>Preferred</td>",
+                    "<td class='brt'><code class='code'>2001:<b>0</b>ff8:<b>000</b>0:1334:<b>000</b>0:<b>000</b>0:<b>000</b>0:<b>0</b>900</code></td>",
+                    "</tr>",
+
+                    "<tr>",
+                    "<td class='brltb'>No leading zeroes</td>",
+                    "<td class='brtb'><code class='code'>2001: ff8:  <b>0</b> :1334:  0 :  0 : 0  : 900</code></td>",
+                    "</tr>",
+
+                    "<tr>",
+                    "<td class='brltb'>Compressed</td>",
+                    "<td class='brtb'><code class='code'>2001:ff8:0:1334::900</code></td>",
+                    "</tr>",
+
+                    "</table>"
+                    
 
                 ]
             },
             {
                 "title": "IPv6 Address Types",
                 "note": [
-                    "![Image](https://raw.githubusercontent.com/syukrimokhtar/eswitching/main/serve/notes/ipv6AT.png)"
+                    "<img title='IPv6 Address Types' src='https://raw.githubusercontent.com/syukrimokhtar/eswitching/main/serve/notes/ipv6AT.png'>"
                 ]
             },
             {
                 "title": "IPv6 Unicast Address",
                 "note": [
-                    "**Global Unicast Address (GUA)** - This is similar to a public IPv4 address. These are globally unique, internet-routable addresses.",
-                    "",
-                    "**Link-local Address (LLA)** - Required for every IPv6-enabled device and used to communicate with other devices on the same local link. LLAs are not routable and are confined to a single link. IPv6 LLAs are in the fe80: :/10 range.",
-					"",
-					"![Image](https://raw.githubusercontent.com/syukrimokhtar/eswitching/main/serve/notes/ipv6UA1.png)"
+                    "<b>Global Unicast Address (GUA)</b> - This is similar to a public IPv4 address. These are globally unique, internet-routable addresses.",
+                    "<br>",
+                    "<br>",
+                    "<b>Link-local Address (LLA)</b> - Required for every IPv6-enabled device and used to communicate with other devices on the same local link. LLAs are not routable and are confined to a single link. IPv6 LLAs are in the fe80: :/10 range.",
+					"<br>",
+                    "<br>",
+					"<img title='IPv6 Unicast Address' src='https://raw.githubusercontent.com/syukrimokhtar/eswitching/main/serve/notes/ipv6UA1.png'>"
                 ]
             },
 			{
 				"title": "Dynamic Addressing",
 				"note" : [
-					"**RS and RA Messages**",
-					" - **Router Solicitation (RS) messages** - sent by host devices to discover IPv6 routers.",
-					" - **Router Advertisement (RA) messages** - sent by routers to inform hosts on how to obtain an IPv6 GUA and provide useful network information such as:",
-                    "   1. Network prefix and prefix length",
-                    "   2. Default gateway address",
-                    "   3. DNS addresses and domain name",
+					"<b>RS and RA Messages</b>",
+					"<ul>",
+                    "<li><b>Router Solicitation (RS) messages</b> - sent by host devices to discover IPv6 routers.<br></li>",
+                    "<li><b>Router Advertisement (RA) messages</b> - sent by routers to inform hosts on how to obtain an IPv6 GUA and provide useful network information such as:</li>",
+                    "<ol>",
+                    "<li>Network prefix and prefix length</li>",
+                    "<li>Default gateway address</li>",
+                    "<li>DNS addresses and domain name</li>",
+                    "</ol>",
+                    "</ul>",
+                    
                     "",
-                    "**Method for configuring an IPv6 GUA**",
-                    "",
-                    "![Image](https://raw.githubusercontent.com/syukrimokhtar/eswitching/main/serve/notes/gua.png)"
+                    "<b>Method for configuring an IPv6 GUA</b>",
+                    "<br>",
+                    "<br>",
+
+                    "<table>",
+                    "<colgroup>",
+                    "<col width='1%' />",
+                    "<col width='98%' />",
+                    "<col width='1%' />",
+                    "</colgroup>",
+                    
+                    "<tr>",
+                    "<td class='blue-dark-center'>SLAAC</td>",
+                    "</tr>",
+                    "<tr>",
+                    "<td class='blue-light-border'>",
+                    " * Configure a GUA without the services of DHCPv6 server.<br><br>",
+                    " * The prefix is provided by the RA messages and the device uses either the EUI-64 or random generation method to create an interface ID",
+                    "</td>",
+                    "</tr>",
+
+                    "</table>",
+
+                    "<br>",
+                    "<br>",
+
+                    "<table>",
+                    "<colgroup>",
+                    "<col width='1%' />",
+                    "<col width='98%' />",
+                    "<col width='1%' />",
+                    "</colgroup>",
+                    
+                    "<tr>",
+                    "<td class='green-dark-center'>SLAAC and Stateless DHCPv6</td>",
+                    "</tr>",
+                    "<tr>",
+                    "<td class='green-light-border'>",
+                    " * SLAAC to create IPv6 GUA.<br>",
+                    " * To obtain other information (such as a DNS server address and a domain name) from DHCPv6 server.<br>",
+                    "</td>",
+                    "</tr>",
+
+                    "</table>",
+
+                    "<br>",
+                    "<br>",
+
+                    "<table>",
+                    "<colgroup>",
+                    "<col width='1%' />",
+                    "<col width='98%' />",
+                    "<col width='1%' />",
+                    "</colgroup>",
+                    
+                    "<tr>",
+                    "<td class='orange-dark-center'>Stateful DHCPv6</td>",
+                    "</tr>",
+                    "<tr>",
+                    "<td class='orange-light-border'>",
+                    " * An RA can instruct a device to use DHCPv6 server only.<br>",
+                    " * A device can automatically receive a GUA, prefix length, and the DNS server address from a stateful DHCPv6 server.<br>",
+                    "</td>",
+                    "</tr>",
+
+                    "</table>"
 				]
 			},
             {
                 "title": "IPv6 Multicast Address",
                 "note": [
-                    "IPv6 multicast addresses have the prefix ff00::/8. There are two types of IPv6 multicast addresses",
-                    " - Well-Known multicast addresses",
-                    " - Solicited node multicast addresses",
-                    "",
-                    "**Well-known IPv6 multicast addresses**",
-                    "",
+                    "IPv6 multicast addresses have the prefix ff00::/8. There are two types of IPv6 multicast addresses:",
+                    "<br>",
+                    "<br>",
+                    "<ul class='pl-10'>",
+                    "<li>Well-Known multicast addresses</li>",
+                    "<li>Solicited node multicast addresses</li>",
+                    "</ul>",
+
+                    "<br>",
+                    "<br>",
+                    "<br>",
+                    "<b>Well-known IPv6 multicast addresses</b>",
+                    "<br>",
                     "Two types of IPv6 Assigned multicast groups:",
-                    " - ff02::1 All-nodes multicast group - This is a multicast group that all IPv6-enabled devices join.",
-                    " - ff02::2 All-routers multicast group - This is a multicast group that all IPv6 routers join. ",
-                    "",
-                    "**Solicited node multicast addresses**",
+                    "<br>",
+                    "<br>",
+                    "<ul class='pl-10'>",
+                    "<li>ff02::1 All-nodes multicast group - This is a multicast group that all IPv6-enabled devices join.</li>",
+                    "<li>ff02::2 All-routers multicast group - This is a multicast group that all IPv6 routers join.</li>",
+                    "</ul>",
+                    "<br>",
+                    "<br>",
+                    "<b>Solicited node multicast addresses</b><br>",
                     "",
                     "A solicited-node multicast address is mapped to a special Ethernet multicast address.",
-                    "",
-                    "![Image](https://raw.githubusercontent.com/syukrimokhtar/eswitching/main/serve/notes/ipv6B.png)",
-                    "![Image](https://raw.githubusercontent.com/syukrimokhtar/eswitching/main/serve/notes/T1-Solicited.png)"
+                    
+                    "<br>",
+                    "<br>",
+
+                    "<table>",
+                    "<colgroup>",
+                    "<col width='1%' />",
+                    "<col width='49%' />",
+                    "<col width='49%' />",
+                    "<col width='1%' />",
+                    "</colgroup>",
+                    
+                    "<tr>",
+                    "<td>&nbsp;</td>",
+                    "<th class='blue-dark-small-center'>Destination MAC: <br>Multicast</th>",
+                    "<th class='grey-dark-small-center'>Destination IPv6: <br>Solicited-Node Multicast</th>",
+                    "<td>&nbsp;</td>",
+                    "</tr>",
+                    
+                    "</table>",
+
+                    "<br>",
+                    "<br>",
+
+
+                    "<img title='IPv6 Multicast Address' src='https://raw.githubusercontent.com/syukrimokhtar/eswitching/main/serve/notes/T1-Solicited.png'>"
                 ]
             }
         ]
@@ -160,33 +330,41 @@
                 "subTitle": " (VLANs)",
                 "note": [
                     "Virtual LANs (VLANs) provide segmentation and organizational flexibility in a switched network. VLANs is one of the technologies used to improve network performance by the separation of large broadcast domains into smaller ones.",
-                    "",
-                    "**Benefits of a VLAN Design**",
-                    "![Image](https://raw.githubusercontent.com/syukrimokhtar/eswitching/main/serve/notes/vLAN.png)"
+                    "<br>",
+                    "<br>",
+                    "<b>Benefits of a VLAN Design</b>",
+                    "<img src='https://raw.githubusercontent.com/syukrimokhtar/eswitching/main/serve/notes/vLAN.png'>"
                 ]
             },
             {
                 "title": "Types of VLANs",
                 "note": [
-                    "![Image](https://raw.githubusercontent.com/syukrimokhtar/eswitching/main/serve/notes/vLANType.png)"
+                    "<img src='https://raw.githubusercontent.com/syukrimokhtar/eswitching/main/serve/notes/vLANType.png'>"
                 ]
             },
             {
                 "title": "VLAN Trunks",
                 "note": [
-                    " - A trunk is a point-to-point link between two network devices that carries more than one VLAN.",
-                    " - VLAN trunks allow all VLAN traffic to propagate between switches, so that devices which are in the same VLAN, but connected to different switches, can communicate without the intervention of a router. ",
-                    "",
-                    "![Image](https://raw.githubusercontent.com/syukrimokhtar/eswitching/main/serve/notes/T2-VLAN-Trunk.png)",
+                    "<ol>",
+                    "<li>A trunk is a point-to-point link between two network devices that carries more than one VLAN.<br></li>",
+                    "<li>VLAN trunks allow all VLAN traffic to propagate between switches, so that devices which are in the same VLAN, but connected to different switches, can communicate without the intervention of a router.</li>",
+                    "</ol>",
+                    "<br>",
+                    "<br>",
+                    "<img src='https://raw.githubusercontent.com/syukrimokhtar/eswitching/main/serve/notes/T2-VLAN-Trunk.png'>",
+                    "<br>",
+                    "<br>",
                     "The links between switches SW1 - SW2 and SW2 - SW3 are configured to transmit traffic coming from VLANs 10 and 20 across the network."
                 ]
             },
             {
                 "title": "VLAN Tagging",
                 "note": [
-                    " - **Frame tagging** is the process of adding a VLAN identification header to the frame.",
-                    " - It is used to properly transmit multiple VLAN frames through a trunk link.",
-                    " - Switches add VLAN tags to the frames before placing them into trunk links and remove the tags before forwarding frames through non-trunk ports."
+                    "<ol>",
+                    "<li><b>Frame tagging</b> is the process of adding a VLAN identification header to the frame.<br></li>",
+                    "<li>It is used to properly transmit multiple VLAN frames through a trunk link.<br></li>",
+                    "<li>Switches add VLAN tags to the frames before placing them into trunk links and remove the tags before forwarding frames through non-trunk ports.<br></li>",
+                    "</ol>"
                 ]
             },
             {
@@ -194,7 +372,59 @@
                 "subTitle": "(DTP)",
                 "note": [
                     "DTP is a Cisco proprietary protocol that manages trunk negotiation with a neighboring device.",
-                    "![Image](https://raw.githubusercontent.com/syukrimokhtar/eswitching/main/serve/notes/table2ai.png)"
+                    "<br>",
+                    "<br>",
+                    
+                    "<table>",
+                    "<colgroup>",
+                    "<col width='19%' />",
+                    "<col width='18%' />",
+                    "<col width='19%' />",
+                    "<col width='22%' />",
+                    "<col width='22%' />",
+                    "</colgroup>",
+
+                    "<tr>",
+                    "<td class='blrt-blue-small-center'>&nbsp;</td>",
+                    "<td class='brt-blue-small-center'>Dynamic</td>",
+                    "<td class='brt-blue-small-center'>Dynamic Desirable</td>",
+                    "<td class='brt-blue-small-center'>Trunk</td>",
+                    "<td class='brt-blue-small-center'>Access</td>",
+                    "</tr>",
+
+                    "<tr>",
+                    "<td class='blrt-blue-small-center'>Dynamic Auto</td>",
+                    "<td class='brt-small-center'>Access</td>",
+                    "<td class='brt-small-center'>Trunk</td>",
+                    "<td class='brt-small-center'>Trunk</td>",
+                    "<td class='brt-small-center'>Access</td>",
+                    "</tr>",
+
+                    "<tr>",
+                    "<td class='blrt-blue-small-center'>Dynamic Desirable</td>",
+                    "<td class='brt-small-center'>Trunk</td>",
+                    "<td class='brt-small-center'>Trunk</td>",
+                    "<td class='brt-small-center'>Trunk</td>",
+                    "<td class='brt-small-center'>Access</td>",
+                    "</tr>",
+
+                    "<tr>",
+                    "<td class='blrt-blue-small-center'>Trunk</td>",
+                    "<td class='brt-small-center'>Trunk</td>",
+                    "<td class='brt-small-center'>Trunk</td>",
+                    "<td class='brt-small-center'>Trunk</td>",
+                    "<td class='brt-small-center'>Limited <br/>connectivity</td>",
+                    "</tr>",
+
+                    "<tr>",
+                    "<td class='blrtb-blue-small-center'>Access</td>",
+                    "<td class='brtb-small-center'>Access</td>",
+                    "<td class='brtb-small-center'>Access</td>",
+                    "<td class='brtb-small-center'>Limited <br/>connectivity</td>",
+                    "<td class='brtb-small-center'>Access</td>",
+                    "</tr>",
+
+                    "</table>"
                 ]
             }
         ]
@@ -207,47 +437,91 @@
                 "title": "Inter-VLAN routing",
                 "note": [
                     "Inter-VLAN is the process of forwarding network traffic from one VLAN to another VLAN.",
-                    "",
+                    "<br>",
+                    "<br>",
                     "Types of inter-VLAN routing",
-                    "",
-                    "1. Legacy inter-VLAN routing",
-                    "2. Router-on-a-Stick",
-                    "3. Layer 3 switch using switched virtual interfaces (SVIs)",
-                    "",
-                    "**Legacy inter-VLAN routing**",
-                    "",
+                    "<br>",
+                    "<br>",
+                    "<ol>",
+                    "<li>Legacy inter-VLAN routing<br></li>",
+                    "<li>Router-on-a-Stick<br></li>",
+                    "<li>Layer 3 switch using switched virtual interfaces (SVIs)<br></li>",
+                    "</ol>",
+                    "<br>",
+                    "<b>Legacy inter-VLAN routing</b>",
+                    "<br>",
                     "Legacy inter-VLAN routing solution using a router with multiple Ethernet interfaces. Each router interface was connected to a switch port in different VLANs.",
-                    "![Image](https://raw.githubusercontent.com/syukrimokhtar/eswitching/main/serve/notes/T2-Legacy-InterVLAN.png)",
-                    "",
-                    "**Router-on-a-Stick**",
-                    "",
+                    "<br>",
+                    "<img src='https://raw.githubusercontent.com/syukrimokhtar/eswitching/main/serve/notes/T2-Legacy-InterVLAN.png'>",
+                    "<br>",
+                    "<br>",
+                    "<b>Router-on-a-Stick</b>",
+                    "<br>",
                     "The router-on-a-stick requires only one physical Ethernet interface to route traffic between multiple VLANs on a network.",
-                    "![Image](https://raw.githubusercontent.com/syukrimokhtar/eswitching/main/serve/notes/T2-outer-on-Stick.png)",
-                    "",
-                    "**Layer 3 switch using switched virtual interfaces (SVIs)**",
-                    "",
+                    "<img src='https://raw.githubusercontent.com/syukrimokhtar/eswitching/main/serve/notes/T2-outer-on-Stick.png'>",
+                    "<br>",
+                    "<br>",
+                    "<b>Layer 3 switch using switched virtual interfaces (SVIs)</b>",
+                    "<br>",
                     "The modern method of performing inter-VLAN routing is to use Layer 3 switches and switched virtual interfaces (SVI).  An SVI is a virtual interface that is configured on a Layer 3 switch.",
                     "",
-                    "![Image](https://raw.githubusercontent.com/syukrimokhtar/eswitching/main/serve/notes/layer3a.png)"
+                    "<img src='https://raw.githubusercontent.com/syukrimokhtar/eswitching/main/serve/notes/layer3a.png'>"
                 ]
             },
             {
                 "title": "Layer 3 Switch Inter-VLAN Routing",
                 "note": [
                     "The advantages of using Layer 3 switches for inter-VLAN routing:",
-                    "",
-                    " - They are much faster than router-on-a-stick because everything is hardware switched and routed",
-                    " - There is no need for external links from the switch to the router for routing.",
-                    " - They are not limited to one link because Layer 2 EtherChannels can be used as trunk links between the switches to increase bandwidth.",
-                    " - Latency is much lower because data does not need to leave the switch in order to be routed to a different network."
+                    "<br>",
+                    "<br>",
+                    "<ol>",
+                    "<li>They are much faster than router-on-a-stick because everything is hardware switched and routed<br></li>",
+                    "<li>There is no need for external links from the switch to the router for routing.<br></li>",
+                    "<li>They are not limited to one link because Layer 2 EtherChannels can be used as trunk links between the switches to increase bandwidth.<br></li>",
+                    "<li>Latency is much lower because data does not need to leave the switch in order to be routed to a different network.<br></li>",
+                    "</ol>"
                 ]
             },
             {
                 "title": "Troubleshoot Inter-VLAN",
                 "note": [
-                    "**Common Inter-VLAN Issues**",
+                    "<b>Common Inter-VLAN Issues</b>",
+                    "<br>",
                     "",
-                    "![Image](https://raw.githubusercontent.com/syukrimokhtar/eswitching/main/serve/notes/table3ai.png)"
+                    "<table>",
+                    "<colgroup>",
+                    "<col width='20%' />",
+                    "<col width='50%' />",
+                    "<col width='30%' />",
+                    "</colgroup>",
+
+                    "<tr>",
+                    "<td class='blrt-blue-small-center'>Issue Type</td>",
+                    "<td class='brt-blue-small-center'>How to Fix</td>",
+                    "<td class='brt-blue-small-center'>How to Verify</td>",
+                    "</tr>",
+
+                    "<tr>",
+                    "<td class='blrt-small-center'>Missing VLANs</td>",
+                    "<td class='brt-small-center'> * Create (or re-create) the VLAN if it does not exist.<br> * Ensure host port is assigned to the correct VLAN.</td>",
+                    "<td class='brt-small-center'><b>show vlan [brief] show interfaces switchport ping</b></td>",
+                    "</tr>",
+
+                    "<tr>",
+                    "<td class='blrt-small-center'>Switch Trunk Port Issues</td>",
+                    "<td class='brt-small-center'> * Ensure trunks are configured correctly.<br> * Ensure port is a trunk port and enabled.</td>",
+                    "<td class='brt-small-center'><b>show interface trunk show running-config</b></td>",
+                    "</tr>",
+
+                    "<tr>",
+                    "<td class='blrb-small-center'>Switch Access Port Issues</td>",
+                    "<td class='brtb-small-center'> * Assign correct VLAN to access port.<br> * Ensure port is an access port and enabled.<br></td>",
+                    "<td class='brtb-small-center'><b>show interfaces switchport show running-config interface ipconfig</b></td>",
+                    "</tr>",
+
+
+                    "</table>"
+                    
                 ]
             }
         ]
@@ -257,23 +531,28 @@
         "title": "STP and ETHERCHANNEL",
         "subNotes": [
             {
-                "title": "Spanning Tree Protocol (STP)",
+                "title": "Spanning Tree Protocol",
                 "note": [
-                    "Spanning Tree Protocol (STP) is a loop-prevention network protocol that allows for redundancy while creating a loop-free Layer 2 topology using blocked ports.",
-                    "",
-                    "![Image](https://raw.githubusercontent.com/syukrimokhtar/eswitching/main/serve/notes/T4-STP.png)",
-                    "",
-                    "**Steps to a Loop-Free Topology**",
-                    "1. Elect the root bridge.",
-                    "2. Elect the root ports.",
-                    "3. Elect designated ports.",
-                    "4. Elect alternate (blocked) ports",
-                    "",
-                    "**Elect the root bridge**",
-                    " - The switch with the **lowest BID/lowest priority** will become the root bridge.",
-                    " - If the priorities are the same, the switch with the **lowest MAC Address** will become the root bridge.",
-                    "",
-                    "![Image](https://raw.githubusercontent.com/syukrimokhtar/eswitching/main/serve/notes/T4-Bridge.png)"
+                    "<b>Spanning Tree Protocol (STP)</b> is a loop-prevention network protocol that allows for redundancy while creating a loop-free Layer 2 topology using blocked ports.",
+                    "<br>",
+                    "<img src='https://raw.githubusercontent.com/syukrimokhtar/eswitching/main/serve/notes/T4-STP.png'>",
+                    "<br>",
+                    "<b>Steps to a Loop-Free Topology</b>",
+                    "<ol>",
+                    "<li>Elect the root bridge.</li>",
+                    "<li>Elect the root ports.</li>",
+                    "<li>Elect designated ports.</li>",
+                    "<li>Elect alternate (blocked) ports.</li>",
+                    "</ol>",
+                    "<br>",
+                    "<b>Elect the root bridge</b>",
+                    "<ul>",
+                    "<li>The switch with the <b>lowest BID/lowest priority</b> will become the root bridge</li>",
+                    "<li>If the priorities are the same, the switch with the <b>lowest MAC Address</b> will become the root bridge</li>",
+                    "</ul>",
+                    "<br>",
+                    "<br>",
+                    "<img src='https://raw.githubusercontent.com/syukrimokhtar/eswitching/main/serve/notes/T4-Bridge.png'>"
                     
                 ]
             },
@@ -281,7 +560,7 @@
                 "title": "Rapid Spanning Tree Protocol",
                 "note": [
                     "<ul>",
-                    "<li>Rapid Spanning Tree Protocol (RSTP) is an evolution of STP that provides faster convergence than STP.</li>",
+                    "<li>Rapid Spanning Tree Protocol (RSTP) is an evolution of STP that provides faster convergence than STP.<br></li>",
                     "<li>If a port is configured to be an alternate port it can immediately change to a forwarding state without waiting for the network to converge.</li>",
                     "</ul>"
                 ]

@@ -3,17 +3,174 @@
         "title": "GUA Configuration",
         "type": "note",
         "note": [
-            "![Image](http://192.168.1.75:8080/command/topic1note1.png)",
-            "![Image](http://192.168.1.75:8080/command/topic1note2.png)",
-            "![Image](http://192.168.1.75:8080/command/topic1note3.png)",
-            "![Image](http://192.168.1.75:8080/command/topic1note4.png)"
+            "<img src='http://192.168.1.75:8080/command/topic1note1.png'>",
+            "<br>",
+            "<table class='compact'>",
+            "<colgroup>",
+            "<col width='10%' />",
+            "<col width='21%' />",
+            "<col width='69%' />",
+            "</colgroup>",
+            
+            "<tr>",
+            "<th class='blue-blrtb-center' colspan='3'>IPV6 GUA Configuration on Router R1</th>",
+            "</tr>",
+
+            "<tr>",
+            "<td class='bl-small'>R1</td>",
+            "<td class='small'>(config)</td>",
+            "<td class='br-small'># interface gigabitethernet 0/0/0</td>",
+            "</tr>",
+
+            
+            "<tr>",
+            "<td class='bl-small'>R1</td>",
+            "<td class='small'>(config-if)</td>",
+            "<td class='br-small'># ipv6 address 2001:db8:acad:1::1/64</td>",
+            "</tr>",
+
+            "<tr>",
+            "<td class='bl-small'>R1</td>",
+            "<td class='small'>(config-if)</td>",
+            "<td class='br-small'># no shutdown</td>",
+            "</tr>",
+
+            "<tr>",
+            "<td class='bl-small'>R1</td>",
+            "<td class='small'>(config-if)</td>",
+            "<td class='br-small'># exit</td>",
+            "</tr>",
+
+            "<tr>",
+            "<td class='bl-small'>R1</td>",
+            "<td class='small'>(config)</td>",
+            "<td class='br-small'># interface gigabitethernet 0/0/1</td>",
+            "</tr>",
+
+            "<tr>",
+            "<td class='bl-small'>R1</td>",
+            "<td class='small'>(config-if)</td>",
+            "<td class='br-small'># ipv6 address 2001:db8:acad:2::1/64</td>",
+            "</tr>",
+
+            "<tr>",
+            "<td class='bl-small'>R1</td>",
+            "<td class='small'>(config-if)</td>",
+            "<td class='br-small'># no shutdown</td>",
+            "</tr>",
+
+            "<tr>",
+            "<td class='bl-small'>R1</td>",
+            "<td class='small'>(config-if)</td>",
+            "<td class='br-small'># exit</td>",
+            "</tr>",
+
+            "<tr>",
+            "<td class='bl-small'>R1</td>",
+            "<td class='small'>(config)</td>",
+            "<td class='br-small'># interface serial 0/1/0</td>",
+            "</tr>",
+
+            "<tr>",
+            "<td class='bl-small'>R1</td>",
+            "<td class='small'>(config-if)</td>",
+            "<td class='br-small'># ipv6 address 2001:db8:acad:3::1/64</td>",
+            "</tr>",
+
+            "<tr>",
+            "<td class='blb-small'>R1</td>",
+            "<td class='bb-small'>(config-if)</td>",
+            "<td class='brb-small'># no shutdown</td>",
+            "</tr>",
+            
+            "</table>"
         ]
     },
     {
         "title": "LLA Configuration",
         "type": "note",
         "note": [
+            "<img src='http://192.168.1.75:8080/command/topic1note3.png'>",
+            "<br>",
+            "<table class='compact'>",
+            "<colgroup>",
+            "<col width='10%' />",
+            "<col width='21%' />",
+            "<col width='69%' />",
+            "</colgroup>",
             
+            "<tr>",
+            "<th class='blue-blrtb-center' colspan='3'>IPV6 LLA Configuration on Router R1</th>",
+            "</tr>",
+
+            "<tr>",
+            "<td class='bl-small'>R1</td>",
+            "<td class='small'>(config)</td>",
+            "<td class='br-small'># interface gigabitethernet 0/0/0</td>",
+            "</tr>",
+
+            
+            "<tr>",
+            "<td class='bl-small'>R1</td>",
+            "<td class='small'>(config-if)</td>",
+            "<td class='br-small'># ipv6 address fe80::1:1 link-local</td>",
+            "</tr>",
+
+            "<tr>",
+            "<td class='bl-small'>R1</td>",
+            "<td class='small'>(config-if)</td>",
+            "<td class='br-small'># no shutdown</td>",
+            "</tr>",
+
+            "<tr>",
+            "<td class='bl-small'>R1</td>",
+            "<td class='small'>(config-if)</td>",
+            "<td class='br-small'># exit</td>",
+            "</tr>",
+
+            "<tr>",
+            "<td class='bl-small'>R1</td>",
+            "<td class='small'>(config)</td>",
+            "<td class='br-small'># interface gigabitethernet 0/0/1</td>",
+            "</tr>",
+
+            "<tr>",
+            "<td class='bl-small'>R1</td>",
+            "<td class='small'>(config-if)</td>",
+            "<td class='br-small'># ipv6 address fe80::2:1 link-local</td>",
+            "</tr>",
+
+            "<tr>",
+            "<td class='bl-small'>R1</td>",
+            "<td class='small'>(config-if)</td>",
+            "<td class='br-small'># no shutdown</td>",
+            "</tr>",
+
+            "<tr>",
+            "<td class='bl-small'>R1</td>",
+            "<td class='small'>(config-if)</td>",
+            "<td class='br-small'># exit</td>",
+            "</tr>",
+
+            "<tr>",
+            "<td class='bl-small'>R1</td>",
+            "<td class='small'>(config)</td>",
+            "<td class='br-small'># interface serial 0/1/0</td>",
+            "</tr>",
+
+            "<tr>",
+            "<td class='bl-small'>R1</td>",
+            "<td class='small'>(config-if)</td>",
+            "<td class='br-small'># ipv6 address fe80::3:1 link-local</td>",
+            "</tr>",
+
+            "<tr>",
+            "<td class='blb-small'>R1</td>",
+            "<td class='bb-small'>(config-if)</td>",
+            "<td class='brb-small'># no shutdown</td>",
+            "</tr>",
+            
+            "</table>"
         ]
     },
     {

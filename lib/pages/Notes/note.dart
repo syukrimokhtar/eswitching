@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_html/flutter_html.dart';
 import 'package:flutter_html_table/flutter_html_table.dart';
 import 'package:get/get.dart';
+import 'package:photo_view/photo_view.dart';
 
 class NotesNote extends GetView<NotesController> {
 
@@ -23,8 +24,23 @@ class NotesNote extends GetView<NotesController> {
     Widget body = SingleChildScrollView(
       child: Html(
       data: note,
-      extensions: const [
-        TableHtmlExtension(),
+      extensions: [
+        const TableHtmlExtension(),
+        
+        //view image
+        OnImageTapExtension(onImageTap: (url, attributes, element) {
+          String? imageUrl = url;
+
+          if(imageUrl != null) {
+            Get.dialog(
+              Dialog(child: PhotoView(
+                disableGestures: false,
+                tightMode: true,
+                imageProvider: NetworkImage(imageUrl))),
+              );
+          }
+          
+        })
       ],
       style: {
         ".text-center": Style(
@@ -38,7 +54,7 @@ class NotesNote extends GetView<NotesController> {
           color: Colors.white
         ),
         "td": Style(
-          padding: HtmlPaddings.all(10)
+          padding: HtmlPaddings.only(left: 5, right: 5, top: 10, bottom: 10)
         ),
         ".bt": Style(
           border: Border(
@@ -88,6 +104,19 @@ class NotesNote extends GetView<NotesController> {
               width: 1),
           ),
         ),
+        ".brtb": Style(
+          border: Border(
+          right: BorderSide(
+              color: Colors.grey.shade400,
+              width: 1),
+          top: BorderSide(
+              color: Colors.grey.shade400,
+              width: 1),
+          bottom: BorderSide(
+              color: Colors.grey.shade400,
+              width: 1),
+          ),
+        ),
         ".blb": Style(
           border: Border(
           left: BorderSide(
@@ -114,6 +143,35 @@ class NotesNote extends GetView<NotesController> {
               color: Colors.grey.shade400,
               width: 1),
           left: BorderSide(
+              color: Colors.grey.shade400,
+              width: 1),
+          bottom: BorderSide(
+              color: Colors.grey.shade400,
+              width: 1),
+          ),
+        ),
+        ".brlt": Style(
+          border: Border(
+          right: BorderSide(
+              color: Colors.grey.shade400,
+              width: 1),
+          left: BorderSide(
+              color: Colors.grey.shade400,
+              width: 1),
+          top: BorderSide(
+              color: Colors.grey.shade400,
+              width: 1),
+          ),
+        ),
+        ".brltb": Style(
+          border: Border(
+          right: BorderSide(
+              color: Colors.grey.shade400,
+              width: 1),
+          left: BorderSide(
+              color: Colors.grey.shade400,
+              width: 1),
+          top: BorderSide(
               color: Colors.grey.shade400,
               width: 1),
           bottom: BorderSide(
@@ -194,6 +252,19 @@ class NotesNote extends GetView<NotesController> {
                 color: Colors.grey.shade400,
                 width: 1),
             )),
+        ".blt-blue-small-center": Style(
+          textAlign: TextAlign.center,
+          fontSize: FontSize.smaller,
+          backgroundColor: Colors.blue.shade900,
+          color: Colors.white,
+          border: Border(
+            left: BorderSide(
+                color: Colors.grey.shade400,
+                width: 1),
+            top: BorderSide(
+                color: Colors.grey.shade400,
+                width: 1),
+            )),
         ".blrt-blue-center": Style(
           textAlign: TextAlign.center,
           backgroundColor: Colors.blue.shade900,
@@ -209,6 +280,41 @@ class NotesNote extends GetView<NotesController> {
                 color: Colors.grey.shade400,
                 width: 1),
             )),
+        ".blrt-blue-small-center": Style(
+          textAlign: TextAlign.center,
+          fontSize: FontSize.smaller,
+          backgroundColor: Colors.blue.shade900,
+          color: Colors.white,
+          border: Border(
+            left: BorderSide(
+                color: Colors.grey.shade400,
+                width: 1),
+            right: BorderSide(
+                color: Colors.grey.shade400,
+                width: 1),
+            top: BorderSide(
+                color: Colors.grey.shade400,
+                width: 1),
+            )),
+        ".blrtb-blue-small-center": Style(
+          textAlign: TextAlign.center,
+          fontSize: FontSize.smaller,
+          backgroundColor: Colors.blue.shade900,
+          color: Colors.white,
+          border: Border(
+            left: BorderSide(
+                color: Colors.grey.shade400,
+                width: 1),
+            right: BorderSide(
+                color: Colors.grey.shade400,
+                width: 1),
+            top: BorderSide(
+                color: Colors.grey.shade400,
+                width: 1),
+            bottom: BorderSide(
+                color: Colors.grey.shade400,
+                width: 1),
+            )),
         ".brt-blue-center": Style(
           textAlign: TextAlign.center,
           backgroundColor: Colors.blue.shade900,
@@ -221,6 +327,190 @@ class NotesNote extends GetView<NotesController> {
                 color: Colors.grey.shade400,
                 width: 1),
             )),
+        ".brt-small-center": Style(
+          textAlign: TextAlign.center,
+          fontSize: FontSize.smaller,
+          border: Border(
+            right: BorderSide(
+                color: Colors.grey.shade400,
+                width: 1),
+            top: BorderSide(
+                color: Colors.grey.shade400,
+                width: 1),
+            )),
+        ".brtb-small-center": Style(
+          textAlign: TextAlign.center,
+          fontSize: FontSize.smaller,
+          border: Border(
+            right: BorderSide(
+                color: Colors.grey.shade400,
+                width: 1),
+            top: BorderSide(
+                color: Colors.grey.shade400,
+                width: 1),
+            bottom: BorderSide(
+                color: Colors.grey.shade400,
+                width: 1),
+            )),
+        ".blrt-small-center": Style(
+          textAlign: TextAlign.center,
+          fontSize: FontSize.smaller,
+          border: Border(
+            left: BorderSide(
+                color: Colors.grey.shade400,
+                width: 1),
+            right: BorderSide(
+                color: Colors.grey.shade400,
+                width: 1),
+            top: BorderSide(
+                color: Colors.grey.shade400,
+                width: 1),
+            )),
+          ".blrb-small-center": Style(
+          textAlign: TextAlign.center,
+          fontSize: FontSize.smaller,
+          border: Border(
+            left: BorderSide(
+                color: Colors.grey.shade400,
+                width: 1),
+            right: BorderSide(
+                color: Colors.grey.shade400,
+                width: 1),
+            top: BorderSide(
+                color: Colors.grey.shade400,
+                width: 1),
+            bottom: BorderSide(
+                color: Colors.grey.shade400,
+                width: 1),
+            )),
+        ".brt-blue-small-center": Style(
+          textAlign: TextAlign.center,
+          fontSize: FontSize.smaller,
+          backgroundColor: Colors.blue.shade900,
+          color: Colors.white,
+          border: Border(
+            right: BorderSide(
+                color: Colors.grey.shade400,
+                width: 1),
+            top: BorderSide(
+                color: Colors.grey.shade400,
+                width: 1),
+            )),
+        ".code": Style(
+          fontSize: FontSize.smaller
+        ),
+        ".code-large": Style(
+          fontSize: FontSize.medium
+        ),
+        "ul": Style(
+          margin: Margins.all(0),
+          padding: HtmlPaddings.only(left: 10, top: 0,
+            right: 0, bottom: 0)
+        ),
+        ".pl-10": Style(
+          margin: Margins.only(left: 10),
+          padding: HtmlPaddings.only(left: 10, top: 0,
+            right: 0, bottom: 0)
+        ),
+
+        ".blue-dark-center": Style(
+          backgroundColor: Colors.blue.shade900,
+          color: Colors.white,
+          textAlign: TextAlign.center,
+          padding: HtmlPaddings.all(10)
+        ),
+        ".blue-light-border": Style(
+          backgroundColor: Colors.blueGrey.shade100,
+          color: Colors.black,
+          textAlign: TextAlign.center,
+          padding: HtmlPaddings.all(10),
+          border: Border(
+            right: BorderSide(
+                color: Colors.grey.shade700,
+                width: 1),
+            left: BorderSide(
+                color: Colors.grey.shade700,
+                width: 1),
+            top: BorderSide(
+                color: Colors.grey.shade700,
+                width: 1),
+            bottom: BorderSide(
+                color: Colors.grey.shade700,
+                width: 1),
+            ),
+        ),
+
+        ".green-dark-center": Style(
+          backgroundColor: Colors.green.shade900,
+          color: Colors.white,
+          textAlign: TextAlign.center,
+          padding: HtmlPaddings.all(10)
+        ),
+        ".green-light-border": Style(
+          backgroundColor: Colors.greenAccent.shade100,
+          color: Colors.black,
+          textAlign: TextAlign.center,
+          padding: HtmlPaddings.all(10),
+          border: Border(
+            right: BorderSide(
+                color: Colors.grey.shade700,
+                width: 1),
+            left: BorderSide(
+                color: Colors.grey.shade700,
+                width: 1),
+            top: BorderSide(
+                color: Colors.grey.shade700,
+                width: 1),
+            bottom: BorderSide(
+                color: Colors.grey.shade700,
+                width: 1),
+            ),
+        ),
+
+        ".orange-dark-center": Style(
+          backgroundColor: Colors.deepOrange.shade900,
+          color: Colors.white,
+          textAlign: TextAlign.center,
+          padding: HtmlPaddings.all(10)
+        ),
+        ".orange-light-border": Style(
+          backgroundColor: Colors.orangeAccent.shade100,
+          color: Colors.black,
+          textAlign: TextAlign.center,
+          padding: HtmlPaddings.all(10),
+          border: Border(
+            right: BorderSide(
+                color: Colors.grey.shade700,
+                width: 1),
+            left: BorderSide(
+                color: Colors.grey.shade700,
+                width: 1),
+            top: BorderSide(
+                color: Colors.grey.shade700,
+                width: 1),
+            bottom: BorderSide(
+                color: Colors.grey.shade700,
+                width: 1),
+            ),
+        ),
+
+        ".blue-dark-small-center": Style(
+          backgroundColor: Colors.blueGrey.shade800,
+          color: Colors.white,
+          fontSize: FontSize.small,
+          textAlign: TextAlign.center,
+          padding: HtmlPaddings.only(left: 5, right: 5, top: 10, bottom: 10),
+          margin: Margins.only(left: 5, right: 5)
+        ),
+
+        ".grey-dark-small-center": Style(
+          backgroundColor: Colors.grey.shade800,
+          color: Colors.white,
+          fontSize: FontSize.small,
+          textAlign: TextAlign.center,
+          padding: HtmlPaddings.only(left: 5, right: 5, top: 10, bottom: 10),
+          margin: Margins.only(left: 5, right: 5)
+        ),
         
       }
       
@@ -238,15 +528,7 @@ class NotesNote extends GetView<NotesController> {
       body: body,
       back: () {
         Get.back();
-      },
-      actions: [
-        IconButton(onPressed: () {
-
-          _notesController.fetchNotes();
-          Get.toNamed("/notes");
-
-        }, icon: const Icon((Icons.refresh)))
-      ]);
+      });
 
   }
 
