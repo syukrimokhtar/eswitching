@@ -22,6 +22,7 @@ class CommandController extends GetxController {
   var isShowAnswer = false.obs;
   var answerErrors = [].obs;
   final List<TextEditingController> answerControllers = [];
+  final List<String> answers = [];
   
   
   
@@ -79,7 +80,7 @@ class CommandController extends GetxController {
 
   }
 
-  void checkAnswers(List<String> answers) {
+  void checkAnswers() {
 
     int i = -1;
     bool error = false;

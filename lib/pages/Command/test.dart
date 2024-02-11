@@ -14,7 +14,6 @@ class CommandTest extends GetView<CommandController> {
   //logging
   final _talker = Sm.instance.talker;
   final CommandController _commandController = Get.find();
-  final List<String> _answers = [];
   final _formKey = GlobalKey<FormState>();
   final ScrollController _scrollController = ScrollController();
   
@@ -122,7 +121,6 @@ class CommandTest extends GetView<CommandController> {
       onTap: () {
         _commandController.clearAnswerError();
         _commandController.isShowAnswer(false);
-        _scrollController.jumpTo(500);
       },
       hintText: "Answer",
       helper: _commandController.helper(index, answer),
@@ -148,7 +146,7 @@ class CommandTest extends GetView<CommandController> {
       for (var a in aList) {
         i++;
         _commandController.answerControllers.add(TextEditingController());
-        _answers.add("${a['a']}");
+        _commandController.answers.add("${a['a']}");
         _commandController.answerErrors.add("");
         
       }
@@ -177,53 +175,6 @@ class CommandTest extends GetView<CommandController> {
     question = question.replaceAll("{{ SERVE_URL }}", serveUrl);
 
     var answer = test['answer'];
-
-      //floating action
-      Widget floatingActionButton = Stack(
-        children: <Widget>[
-
-        //
-        // Show Answer
-        //
-        Align(
-          alignment: Alignment.bottomLeft,
-          child: FloatingActionButton.extended(
-            backgroundColor: Sm.instance.config.secondColor,
-            foregroundColor: Colors.black,
-            label: const Text("Show Answer"),
-            icon: const Icon(Icons.question_mark),
-            heroTag: null,
-            onPressed: () {
-
-              if(_commandController.isShowAnswer.isTrue) {
-                _commandController.isShowAnswer(false);
-              }else {
-                _commandController.isShowAnswer(true);
-              }
-
-              _commandController.clearAnswerError();
-              
-            }),
-        ).paddingOnly(left: 31),
-
-        //
-        // Check Answer
-        //
-        Align(
-          alignment: Alignment.bottomRight,
-          child: FloatingActionButton.extended(
-            backgroundColor: Sm.instance.config.primaryColor,
-            label: const Text("Check Answer"),
-            icon: const Icon(Icons.check),
-            heroTag: null,
-            onPressed: () {
-              _commandController.isShowAnswer(false);
-              _commandController.checkAnswers(_answers);
-            
-            }),
-        ),
-      ],
-    );
 
     Widget body = SingleChildScrollView(
       controller: _scrollController,
@@ -259,7 +210,54 @@ class CommandTest extends GetView<CommandController> {
             Form(
               key: _formKey,
               child: _buildAnswer(answer)
-            .paddingOnly(left: 10, right: 10)),
+            .paddingOnly(left: 10, right: 10, bottom: 20)),
+
+
+            // button
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              children: [
+
+              ElevatedButton.icon(onPressed: () {
+
+                if(_commandController.isShowAnswer.isTrue) {
+                  _commandController.isShowAnswer(false);
+                }else {
+                  _commandController.isShowAnswer(true);
+                }
+                _commandController.clearAnswerError();
+
+              },
+              style: ElevatedButton.styleFrom(
+                foregroundColor: Colors.black,
+                backgroundColor: Sm.instance.config.secondColor,
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(10),
+                ),
+              ),
+              icon: const Icon(Icons.question_mark),
+              label: const Text("Show Answer")),
+
+              // button
+              ElevatedButton.icon(onPressed: () {
+
+                _commandController.isShowAnswer(false);
+                _commandController.checkAnswers();
+
+              },
+              style: ElevatedButton.styleFrom(
+                foregroundColor: Colors.white,
+                backgroundColor: Sm.instance.config.primaryColor,
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(10),
+                ),
+              ),
+              icon: const Icon(Icons.check),
+              label: const Text("Check Answer"))
+
+            ])
+            
+
             
           ])
           .paddingOnly(top: 30, left: 15, right: 15, bottom: 100),
@@ -269,7 +267,7 @@ class CommandTest extends GetView<CommandController> {
     return SmLayout(
       title: title,
       body: body,
-      floatingActionButton: floatingActionButton,
+      //floatingActionButton: floatingActionButton,
       back: () {
         Get.back();
       },
