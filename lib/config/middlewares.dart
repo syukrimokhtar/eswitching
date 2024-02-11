@@ -50,4 +50,14 @@ void smMiddlewares(Routing? routing) {
     CommandController commandController = Get.find<CommandController>();
     commandController.fetchCommand();
   }
+
+  //
+  // Command > Test
+  //
+  if(routing!.current == '/command/test') {
+    Get.lazyPut<CommandController>(() => CommandController());
+    CommandController commandController = Get.find<CommandController>();
+    commandController.isShowAnswer(false);
+    commandController.clearAnswerError();
+  }
 }

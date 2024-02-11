@@ -2,6 +2,7 @@ import 'package:eswitching/controllers/command_controller.dart';
 import 'package:eswitching/library/sm_init.dart';
 import 'package:eswitching/library/sm_layout.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:flutter_html/flutter_html.dart';
 import 'package:flutter_html_table/flutter_html_table.dart';
 import 'package:get/get.dart';
@@ -20,28 +21,13 @@ class CommandNote extends GetView<CommandController> {
     var title = args['title'];
     var note = args['note'].join("\n");
 
-    Widget body = SingleChildScrollView(
-      child: Html(
-        data: note,
-        extensions: [
-        const TableHtmlExtension(),
-        
-        //view image
-        OnImageTapExtension(onImageTap: (url, attributes, element) {
-          String? imageUrl = url;
+    // replace {{ SERVE_URL }}
+    if(note != null) {
+      String serveUrl = dotenv.env['SERVE_URL'] ?? '';
+      note = "$note".replaceAll("{{ SERVE_URL }}", serveUrl);
+    }
 
-          if(imageUrl != null) {
-            Get.dialog(
-              Dialog(child: PhotoView(
-                disableGestures: false,
-                tightMode: true,
-                imageProvider: NetworkImage(imageUrl))),
-              );
-          }
-          
-        })
-      ],
-      style: {
+    var style = {
         ".text-center": Style(
           textAlign: TextAlign.center
         ),
@@ -120,8 +106,30 @@ class CommandNote extends GetView<CommandController> {
               width: 1),
           ),
         )
+    };
+
+    Widget body = SingleChildScrollView(
+      child: Html(
+        data: note,
+        extensions: [
+        const TableHtmlExtension(),
         
+        //view image
+        OnImageTapExtension(onImageTap: (url, attributes, element) {
+          String? imageUrl = url;
+
+          if(imageUrl != null) {
+            Get.dialog(
+              Dialog(child: PhotoView(
+                disableGestures: false,
+                tightMode: true,
+                imageProvider: NetworkImage(imageUrl))),
+              );
+          }
+          
         })
+      ],
+      style: style)
     .paddingOnly(top: 30, left: 15, right: 15, bottom: 100));
     
 

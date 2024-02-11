@@ -10,7 +10,10 @@ final appConfig = SmConfig(
   initialRoute: "/home",
 
   //color
-  primaryColor: Colors.blue.shade900
+  primaryColor: Colors.blue.shade900,
+  secondColor: Colors.blue.shade100,
+  errorColor: Colors.red.shade800,
+  successColor: Colors.green.shade900
 
 
 );

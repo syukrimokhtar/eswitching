@@ -3,7 +3,7 @@
         "title": "GUA Configuration",
         "type": "note",
         "note": [
-            "<img src='http://192.168.1.75:8080/command/topic1note1.png'>",
+            "<img src='{{ SERVE_URL }}/command/topic1note1.png'>",
             "<br>",
             "<table class='compact'>",
             "<colgroup>",
@@ -90,7 +90,7 @@
         "title": "LLA Configuration",
         "type": "note",
         "note": [
-            "<img src='http://192.168.1.75:8080/command/topic1note3.png'>",
+            "<img src='{{ SERVE_URL }}/command/topic1note3.png'>",
             "<br>",
             "<table class='compact'>",
             "<colgroup>",
@@ -176,8 +176,21 @@
     {
         "title": "Test Your Knowledge",
         "type": "test",
-        "test": [
-            ""
-        ]
+        "test": {
+            "question": [
+                "<img src='{{ SERVE_URL }}/command/test1.png'>",
+                "<br>",
+                "<br>",
+                "<div class='text-center'><b>Configure GUA and LLA on R1 Interface Gigabit Ethernet 0/0/1</b></div>"
+                
+            ],
+            "answer": [
+                {"q": "R1(config)      #", "a": "interface gigabitethernet 0/0/1"},
+                {"q": "R1(config-if)   #", "a": "ipv6 address fe80::2:1 link-local"},
+                {"q": "R1(config-if)   #", "a": "ipv6 address 2001:db09:acef:2::1/64"},
+                {"q": "R1(config-if)   #", "a": "no shutdown"},
+                {"q": "R1(config-if)   #", "a": "exit"}
+            ]
+        }
     }
 ]

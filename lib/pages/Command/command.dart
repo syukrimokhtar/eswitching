@@ -69,12 +69,20 @@ class Command extends GetView<CommandController> {
               onTap: () {
 
                 var type = cmd['type'];
+                
                 if(type == "note") {
 
-                Get.toNamed("/command/note", arguments: {
-                  "title": cmd['title'],
-                  "note": cmd['note']
-                });
+                  Get.toNamed("/command/note", arguments: {
+                    "title": cmd['title'],
+                    "note": cmd['note']
+                  });
+
+                } else if(type == "test") {
+
+                  Get.toNamed("/command/test", arguments: {
+                    "title": cmd['title'],
+                    "test": cmd['test']
+                  });
 
                 }
               },

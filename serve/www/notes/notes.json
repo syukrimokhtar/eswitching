@@ -20,7 +20,7 @@
                     "7 subnets are required and the largest number of hosts is in Block 4 with 28 hosts. A /27 mask would provide 8 subnets of 30 host IP addresses and therefore support this topology.",
                     "<br>",
                     "<br>",
-                    "<img title='VLSM Example' src='https://raw.githubusercontent.com/syukrimokhtar/eswitching/main/serve/notes/block.png'>",
+                    "<img title='VLSM Example' src='{{ SERVE_URL }}/notes/block.png'>",
                     "<br>",
                     "<br>",
                     "The point-to-point WAN links only require two addresses and therefore waste 28 addresses each for a total of 84 unused addresses",
@@ -57,7 +57,7 @@
             {
                 "title": "The need of IPV6",
                 "note": [
-                    "<img title='The need of IPV6' src='https://raw.githubusercontent.com/syukrimokhtar/eswitching/main/serve/notes/ipv6Need.png'>"
+                    "<img title='The need of IPV6' src='{{ SERVE_URL }}/notes/ipv6Need.png'>"
                 ]
             },
             {
@@ -164,7 +164,7 @@
             {
                 "title": "IPv6 Address Types",
                 "note": [
-                    "<img title='IPv6 Address Types' src='https://raw.githubusercontent.com/syukrimokhtar/eswitching/main/serve/notes/ipv6AT.png'>"
+                    "<img title='IPv6 Address Types' src='{{ SERVE_URL }}/notes/ipv6AT.png'>"
                 ]
             },
             {
@@ -176,7 +176,7 @@
                     "<b>Link-local Address (LLA)</b> - Required for every IPv6-enabled device and used to communicate with other devices on the same local link. LLAs are not routable and are confined to a single link. IPv6 LLAs are in the fe80: :/10 range.",
 					"<br>",
                     "<br>",
-					"<img title='IPv6 Unicast Address' src='https://raw.githubusercontent.com/syukrimokhtar/eswitching/main/serve/notes/ipv6UA1.png'>"
+					"<img title='IPv6 Unicast Address' src='{{ SERVE_URL }}/notes/ipv6UA1.png'>"
                 ]
             },
 			{
@@ -210,7 +210,7 @@
                     "</tr>",
                     "<tr>",
                     "<td class='blue-light-border'>",
-                    " * Configure a GUA without the services of DHCPv6 server.<br><br>",
+                    " * Configure a GUA without the services of DHCPv6 {{ SERVE_URL }}r.<br><br>",
                     " * The prefix is provided by the RA messages and the device uses either the EUI-64 or random generation method to create an interface ID",
                     "</td>",
                     "</tr>",
@@ -233,7 +233,7 @@
                     "<tr>",
                     "<td class='green-light-border'>",
                     " * SLAAC to create IPv6 GUA.<br>",
-                    " * To obtain other information (such as a DNS server address and a domain name) from DHCPv6 server.<br>",
+                    " * To obtain other information (such as a DNS {{ SERVE_URL }}r address and a domain name) from DHCPv6 {{ SERVE_URL }}r.<br>",
                     "</td>",
                     "</tr>",
 
@@ -254,8 +254,8 @@
                     "</tr>",
                     "<tr>",
                     "<td class='orange-light-border'>",
-                    " * An RA can instruct a device to use DHCPv6 server only.<br>",
-                    " * A device can automatically receive a GUA, prefix length, and the DNS server address from a stateful DHCPv6 server.<br>",
+                    " * An RA can instruct a device to use DHCPv6 {{ SERVE_URL }}r only.<br>",
+                    " * A device can automatically receive a GUA, prefix length, and the DNS {{ SERVE_URL }}r address from a stateful DHCPv6 {{ SERVE_URL }}r.<br>",
                     "</td>",
                     "</tr>",
 
@@ -315,7 +315,7 @@
                     "<br>",
 
 
-                    "<img title='IPv6 Multicast Address' src='https://raw.githubusercontent.com/syukrimokhtar/eswitching/main/serve/notes/T1-Solicited.png'>"
+                    "<img title='IPv6 Multicast Address' src='{{ SERVE_URL }}/notes/T1-Solicited.png'>"
                 ]
             }
         ]
@@ -333,13 +333,13 @@
                     "<br>",
                     "<br>",
                     "<b>Benefits of a VLAN Design</b>",
-                    "<img src='https://raw.githubusercontent.com/syukrimokhtar/eswitching/main/serve/notes/vLAN.png'>"
+                    "<img src='{{ SERVE_URL }}/notes/vLAN.png'>"
                 ]
             },
             {
                 "title": "Types of VLANs",
                 "note": [
-                    "<img src='https://raw.githubusercontent.com/syukrimokhtar/eswitching/main/serve/notes/vLANType.png'>"
+                    "<img src='{{ SERVE_URL }}/notes/vLANType.png'>"
                 ]
             },
             {
@@ -351,7 +351,7 @@
                     "</ol>",
                     "<br>",
                     "<br>",
-                    "<img src='https://raw.githubusercontent.com/syukrimokhtar/eswitching/main/serve/notes/T2-VLAN-Trunk.png'>",
+                    "<img src='{{ SERVE_URL }}/notes/T2-VLAN-Trunk.png'>",
                     "<br>",
                     "<br>",
                     "The links between switches SW1 - SW2 and SW2 - SW3 are configured to transmit traffic coming from VLANs 10 and 20 across the network."
@@ -452,20 +452,20 @@
                     "<br>",
                     "Legacy inter-VLAN routing solution using a router with multiple Ethernet interfaces. Each router interface was connected to a switch port in different VLANs.",
                     "<br>",
-                    "<img src='https://raw.githubusercontent.com/syukrimokhtar/eswitching/main/serve/notes/T2-Legacy-InterVLAN.png'>",
+                    "<img src='{{ SERVE_URL }}/notes/T2-Legacy-InterVLAN.png'>",
                     "<br>",
                     "<br>",
                     "<b>Router-on-a-Stick</b>",
                     "<br>",
                     "The router-on-a-stick requires only one physical Ethernet interface to route traffic between multiple VLANs on a network.",
-                    "<img src='https://raw.githubusercontent.com/syukrimokhtar/eswitching/main/serve/notes/T2-outer-on-Stick.png'>",
+                    "<img src='{{ SERVE_URL }}/notes/T2-outer-on-Stick.png'>",
                     "<br>",
                     "<br>",
                     "<b>Layer 3 switch using switched virtual interfaces (SVIs)</b>",
                     "<br>",
                     "The modern method of performing inter-VLAN routing is to use Layer 3 switches and switched virtual interfaces (SVI).  An SVI is a virtual interface that is configured on a Layer 3 switch.",
                     "",
-                    "<img src='https://raw.githubusercontent.com/syukrimokhtar/eswitching/main/serve/notes/layer3a.png'>"
+                    "<img src='{{ SERVE_URL }}/notes/layer3a.png'>"
                 ]
             },
             {
@@ -535,7 +535,7 @@
                 "note": [
                     "<b>Spanning Tree Protocol (STP)</b> is a loop-prevention network protocol that allows for redundancy while creating a loop-free Layer 2 topology using blocked ports.",
                     "<br>",
-                    "<img src='https://raw.githubusercontent.com/syukrimokhtar/eswitching/main/serve/notes/T4-STP.png'>",
+                    "<img src='{{ SERVE_URL }}/notes/T4-STP.png'>",
                     "<br>",
                     "<b>Steps to a Loop-Free Topology</b>",
                     "<ol>",
@@ -552,7 +552,7 @@
                     "</ul>",
                     "<br>",
                     "<br>",
-                    "<img src='https://raw.githubusercontent.com/syukrimokhtar/eswitching/main/serve/notes/T4-Bridge.png'>"
+                    "<img src='{{ SERVE_URL }}/notes/T4-Bridge.png'>"
                     
                 ]
             },
@@ -571,7 +571,7 @@
                     "EtherChannel is a link aggregation technology that groups multiple physical Ethernet links together into one single logical link. When an EtherChannel is configured, the resulting virtual interface is called a port channel.",
                     "<br>",
                     "<br>",
-                    "<img src='https://raw.githubusercontent.com/syukrimokhtar/eswitching/main/serve/notes/EtherChannel1.png'>"
+                    "<img src='{{ SERVE_URL }}/notes/EtherChannel1.png'>"
                 ]
             },
             {
@@ -579,7 +579,7 @@
                 "note": [
                     "<b>Port Aggregation Protocol (PAgP)</b>",
                     "",
-                    "<img src='https://raw.githubusercontent.com/syukrimokhtar/eswitching/main/serve/notes/T4-PAGP.png'>",
+                    "<img src='{{ SERVE_URL }}/notes/T4-PAGP.png'>",
                     "<br>",
                     "<br>",
                     
@@ -660,7 +660,7 @@
                     "<b>Link Aggregation Control Protocol</b>",
                     "<br>",
                     "<br>",
-                    "<img src='https://raw.githubusercontent.com/syukrimokhtar/eswitching/main/serve/notes/stpLACP1.png'>",
+                    "<img src='{{ SERVE_URL }}/notes/stpLACP1.png'>",
                     "<br>",
                     "<br>",
                     "<table>",

@@ -1,5 +1,6 @@
 import 'dart:convert';
 
+import 'package:dio/dio.dart';
 import 'package:eswitching/config/dio.dart';
 import 'package:eswitching/library/sm_init.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
@@ -21,7 +22,8 @@ class NotesController extends GetxController {
     error('');
     try {
 
-      String notesUrl = dotenv.env['NOTES'] ?? '';
+      String notesUrl = "${dotenv.env['SERVE_URL']}/notes/notes.json";
+      _talker.debug("notesUrl: $notesUrl");
 
       if(notesUrl.startsWith("http")) {
 
@@ -29,16 +31,27 @@ class NotesController extends GetxController {
         notes.clear();
         var body = response.data;
         if(body is String) {
+          
           notes.addAll(jsonDecode(body));
+
         }else {
+          
           notes.addAll(body);
+
         }
       }
 
       
-    }catch(e) {
+    } on DioException catch (e) {
+     if(e.type == DioExceptionType.connectionTimeout) {
+      error('Fail to load JSON');
+     }
+     else if(e.type == DioExceptionType.receiveTimeout) {
+      error('Fail to load JSON');
+     }else {
       _talker.error(e);
-      error('Fail to load / parse JSON');
+      error('Fail to parse JSON');
+     }
     }
     isLoading(false);
   }

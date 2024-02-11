@@ -9,6 +9,8 @@ class SmLayout extends GetView<HomeController> {
   late String? subTitle;
   late Function? back;
   late List<Widget>? actions;
+  late Widget? floatingActionButton;
+  late ScrollController? scrollController;
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
   SmLayout({
@@ -17,7 +19,9 @@ class SmLayout extends GetView<HomeController> {
     this.title,
     this.subTitle,
     this.back,
-    this.actions});
+    this.actions,
+    this.floatingActionButton,
+    this.scrollController});
 
   Widget? _title(String? title, String? subTitle) {
     if(title == null && subTitle == null) {
@@ -140,6 +144,7 @@ class SmLayout extends GetView<HomeController> {
     return Scaffold(
       key: scaffoldKey,
       body: body,
+      floatingActionButton: floatingActionButton,
       appBar: _appBar(
         title: title,
         subTitle: subTitle,
