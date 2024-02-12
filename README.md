@@ -1,8 +1,5 @@
 # eswitching
 
-## Reference Markdown
-https://commonmark.org/help/
-
 ## serve content
 Terminal > New
 cd serve
