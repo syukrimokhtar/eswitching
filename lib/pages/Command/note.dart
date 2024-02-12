@@ -138,15 +138,7 @@ class CommandNote extends GetView<CommandController> {
       body: body,
       back: () {
         Get.back();
-      },
-      actions: [
-        IconButton(onPressed: () {
-
-          _commandController.fetchCommand();
-          Get.toNamed("/command");
-
-        }, icon: const Icon((Icons.refresh)))
-      ]);
+      });
 
   }
 
