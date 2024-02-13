@@ -14,8 +14,6 @@ class CommandController extends GetxController {
   //logging
   final _talker = Sm.instance.talker;
 
-  var filePath = ''.obs;
-  var pdfFile = ''.obs;
   var commands = [].obs;
   var isLoading = false.obs;
   var error = ''.obs;
@@ -49,9 +47,6 @@ class CommandController extends GetxController {
 
         }
       }
-
-      _talker.debug(commands);
-
       
     } on DioException catch (e) {
       if(e.type == DioExceptionType.connectionTimeout) {

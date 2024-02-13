@@ -267,7 +267,6 @@ class CommandTest extends GetView<CommandController> {
     return SmLayout(
       title: title,
       body: body,
-      //floatingActionButton: floatingActionButton,
       back: () {
         Get.back();
       });

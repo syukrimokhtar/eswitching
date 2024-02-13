@@ -11,8 +11,6 @@ class NotesController extends GetxController {
   //logging
   final _talker = Sm.instance.talker;
 
-  var filePath = ''.obs;
-  var pdfFile = ''.obs;
   var notes = [].obs;
   var isLoading = false.obs;
   var error = ''.obs;

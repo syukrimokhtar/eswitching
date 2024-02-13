@@ -1,5 +1,6 @@
 import 'package:eswitching/controllers/command_controller.dart';
 import 'package:eswitching/controllers/notes_controller.dart';
+import 'package:eswitching/controllers/quiz_controller.dart';
 import 'package:eswitching/library/sm_init.dart';
 import 'package:get/get.dart';
 
@@ -59,5 +60,14 @@ void smMiddlewares(Routing? routing) {
     CommandController commandController = Get.find<CommandController>();
     commandController.isShowAnswer(false);
     commandController.clearAnswerError();
+  }
+
+  //
+  // Quiz
+  //
+  if(routing!.current == '/quiz') {
+    Get.lazyPut<QuizController>(() => QuizController());
+    QuizController quizController = Get.find<QuizController>();
+    quizController.fetchQuiz();
   }
 }

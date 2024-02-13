@@ -1,0 +1,462 @@
+[
+    {
+        "topic": "Topic 1",
+        "title": "IP ADDRESSING",
+        "quiz": [
+            {
+                "question": [
+                    "Choose which of the following is TRUE about VLSM"
+                ],
+                "answers": [
+                    {
+                        "A": [
+                            "VLSM allows route summarization"
+                        ],
+                        "B": [
+                            "VLSM makes less efficient use of IP addresses compared to fixed subnet mask addressing"
+                        ],
+                        "C": [
+                            "VLSM can be implemented on both link state and distance vector routing protocols"
+                        ],
+                        "D": [
+                            "VLSM is a Cisco proprietary technology"
+                        ]
+                    }
+                ],
+                "answer": "C"
+            },
+            {
+                "question": [
+                    "Which one of the following is not a protocol and tools used to migrate the network to IPv6."
+                ],
+                "answers": [
+                    {
+                        "A": [
+                            "Dual Stack"
+                        ],
+                        "B": [
+                            "Tunneling"
+                        ],
+                        "C": [
+                            "Translation"
+                        ],
+                        "D": [
+                            "Discovering"
+                        ]
+                    }
+                ],
+                "answer": "D"
+            },
+            {
+                "question": [
+                    "Choose which of these addresses is the shortest aabbreviation for the IP address",
+                    "<br>",
+                    "<br>",
+                    "<code class='code'>3FFE:00573FFE:1044:0000:0000:00AB:0000:0000:0057</code>"
+                ],
+                "answers": [
+                    {
+                        "A": [
+                            "<code class='code'>3FFE:1044::AB::57</code>"
+                        ],
+                        "B": [
+                            "<code class='code'>3FFE:1044::00AB::0057</code>"
+                        ],
+                        "C": [
+                            "<code class='code'>3FFE:1044:0:0:AB::57</code>"
+                        ],
+                        "D": [
+                            "<code class='code'>3FFE:1044:0:0:00AB::0057</code>"
+                        ]
+                    }
+                ],
+                "answer": "C"
+            },
+            {
+                "question": [
+                    "Choose which is the compressed format of the IPV6 address",
+                    "<br>",
+                    "<br>",
+                    "<code class='code'>2001:0db8:0000:0000:0ab8:0001:0000:1000</code>"
+                ],
+                "answers": [
+                    {
+                        "A": [
+                            "<code class='code'>2001:db8::ab8:1:0:1000</code>"
+                        ],
+                        "B": [
+                            "<code class='code'>2001:db8::a0b:8:1</code>"
+                        ],
+                        "C": [
+                            "<code class='code'>2001:db8:1::ab8:0:1</code>"
+                        ],
+                        "D": [
+                            "<code class='code'>2001:db8:0:1::8:1</code>"
+                        ]
+                    }
+                ],
+                "answer": "A"
+            },
+            {
+                "question": [
+                    "Select the type of IPv6 address for <code>FE80::1</code>"
+                ],
+                "answers": [
+                    {
+                        "A": [
+                            "Loopback"
+                        ],
+                        "B": [
+                            "Link-local"
+                        ],
+                        "C": [
+                            "Multicast"
+                        ],
+                        "D": [
+                            "Global unicast"
+                        ]
+                    }
+                ],
+                "answer": "B"
+            },
+            {
+                "question": [
+                    "Identify which service provides dynamic global IPv6 addressing to end devices without using a server that keeps a record of available IPv6 addresses"
+                ],
+                "answers": [
+                    {
+                        "A": [
+                            "Stateful DHCPv6"
+                        ],
+                        "B": [
+                            "SLAAC"
+                        ],
+                        "C": [
+                            "Static IPv6 addressing"
+                        ],
+                        "D": [
+                            "Stateless DHCPv6"
+                        ]
+                    }
+                ],
+                "answer": "B"
+            },
+            {
+                "question": [
+                    "Which type of IPv6 address refers to any unicast address that is assigned to multiple hosts?"
+                ],
+                "answers": [
+                    {
+                        "A": [
+                            "unique local"
+                        ],
+                        "B": [
+                            "global unicast"
+                        ],
+                        "C": [
+                            "link-local"
+                        ],
+                        "D": [
+                            "anycast"
+                        ]
+                    }
+                ],
+                "answer": "D"
+            },
+            {
+                "question": [
+                    "identify which service provides dynamic global IPv6 addressing to end devices without using a server that keeps a record of available IPv6 addresses."
+                ],
+                "answers": [
+                    {
+                        "A": [
+                            "Stateful DHCPv6"
+                        ],
+                        "B": [
+                            "SLAAC"
+                        ],
+                        "C": [
+                            "Static IPv6 addressing"
+                        ],
+                        "D": [
+                            "Stateless DHCPv6"
+                        ]
+                    }
+                ],
+                "answer": "B"
+            },
+            {
+                "question": [
+                    "Which protocol supports Stateless Address Autoconfiguration (SLAAC) for dynamic assignment of IPv6 addresses to a host?"
+                ],
+                "answers": [
+                    {
+                        "A": [
+                            "ARPv6"
+                        ],
+                        "B": [
+                            "DHCPv6"
+                        ],
+                        "C": [
+                            "ICMPv6"
+                        ],
+                        "D": [
+                            "UDP"
+                        ]
+                    }
+                ],
+                "answer": "C"
+            },
+            {
+                "question": [
+                    "Which of the following is the IPv6 unicast address?"
+                ],
+                "answers": [
+                    {
+                        "A": [
+                            "Multicast"
+                        ],
+                        "B": [
+                            "Loopback"
+                        ],
+                        "C": [
+                            "Anycast"
+                        ],
+                        "D": [
+                            "Broadcast"
+                        ]
+                    }
+                ],
+                "answer": "B"
+            }
+        ]
+    },
+    {
+        "topic": "Topic 2",
+        "title": "VLAN NETWORKS",
+        "quiz": [
+            {
+                "question": [
+                    "Which of the following is true of using VLANs?"
+                ],
+                "answers": [
+                    {
+                        "A": [
+                            "Makes it harder to add, move, and change users"
+                        ],
+                        "B": [
+                            "Degrades network security"
+                        ],
+                        "C": [
+                            "Isolates networking problems"
+                        ],
+                        "D": [
+                            "Allow only a single path in a network from one area to another"
+                        ]
+                    }
+                ],
+                "answer": "C"
+            },
+            {
+                "question": [
+                    "Identify the type of VLAN that supports untagged traffic"
+                ],
+                "answers": [
+                    {
+                        "A": [
+                            "Voice VLAN"
+                        ],
+                        "B": [
+                            "Native VLAN"
+                        ],
+                        "C": [
+                            "Security VLAN"
+                        ],
+                        "D": [
+                            "Management VLAN"
+                        ]
+                    }
+                ],
+                "answer": "B"
+            },
+            {
+                "question": [
+                    "Which one of the following is not a benefits of VLAN Design"
+                ],
+                "answers": [
+                    {
+                        "A": [
+                            "Complexity in Management"
+                        ],
+                        "B": [
+                            "Smaller broadcast domain"
+                        ],
+                        "C": [
+                            "Reduced cost"
+                        ],
+                        "D": [
+                            "Better performance"
+                        ]
+                    }
+                ],
+                "answer": "A"
+            },
+            {
+                "question": [
+                    "Identify the purpose of vlan.dat on a switch"
+                ],
+                "answers": [
+                    {
+                        "A": [
+                            "It holds VLAN database"
+                        ],
+                        "B": [
+                            "It holds the operating system"
+                        ],
+                        "C": [
+                            "It holds the saved configuration"
+                        ],
+                        "D": [
+                            "It holds the running configuration"
+                        ]
+                    }
+                ],
+                "answer": "A"
+            },
+            {
+                "question": [
+                    "Which occasion the DTP should be in the disable mode while managing LAN"
+                ],
+                "answers": [
+                    {
+                        "A": [
+                            "when a neighbor switch uses a DTP mode of dynamic auto"
+                            
+                        ],
+                        "B": [
+                            "when a neighbor switch uses a DTP mode of dynamic desirable"
+                        ],
+                        "C": [
+                            "on links that should not be trunking"
+                        ],
+                        "D": [
+                            "on links that should dynamically attempt trunking"
+                        ]
+                    }
+                ],
+                "answer": "C"
+            },
+            {
+                "question": [
+                    "Select the type of VLAN that is used by an administrator to access and configure switch"
+                ],
+                "answers": [
+                    {
+                        "A": [
+                            "Data VLAN"
+                        ],
+                        "B": [
+                            "Native VLAN"
+                        ],
+                        "C": [
+                            "Default VLAN"
+                        ],
+                        "D": [
+                            "Management VLAN"
+                        ]
+                    }
+                ],
+                "answer": "D"
+            },
+            {
+                "question": [
+                    "Which DTP mode should you use if you're connecting a Cisco switch to a Nortel switch and want to form a trunk?"
+                ],
+                "answers": [
+                    {
+                        "A": [
+                            "Client"
+                        ],
+                        "B": [
+                            "Server"
+                        ],
+                        "C": [
+                            "Transparent"
+                        ],
+                        "D": [
+                            "Client and Server"
+                        ]
+                    }
+                ],
+                "answer": "B"
+            },
+            {
+                "question": [
+                    "Which characteristic describe the native VLAN?"
+                ],
+                "answers": [
+                    {
+                        "A": [
+                            "Designed to carry traffic that is generated by users, this type of VLAN is also known as the default VLAN."
+                        ],
+                        "B": [
+                            "The native VLAN traffic will be untagged across the trunk link."
+                        ],
+                        "C": [
+                            "This VLAN is necessary for remote management of a switch"
+                        ],
+                        "D": [
+                            "High priority traffic, such as voice traffic, uses the native VLAN."
+                        ]
+                    }
+                ],
+                "answer": "B"
+            },
+            {
+                "question": [
+                    "Which switch command specifies the DTP mode for trunking?"
+                ],
+                "answers": [
+                    {
+                        "A": [
+                            "switchport trunk"
+                        ],
+                        "B": [
+                            "switchport mode"
+                        ],
+                        "C": [
+                            "switchport native"
+                        ],
+                        "D": [
+                            "switchport vtp"
+                        ]
+                    }
+                ],
+                "answer": "B"
+            },
+            {
+                "question": [
+                    "What happens to switch ports after the VLAN to which they are assigned is deleted?"
+                ],
+                "answers": [
+                    {
+                        "A": [
+                            "The ports are disabled."
+                        ],
+                        "B": [
+                            "The ports are placed in trunk mode."
+                        ],
+                        "C": [
+                            "The ports are assigned to VLAN1, the default VLAN."
+                        ],
+                        "D": [
+                            "The ports stop communicating with the attached devices."
+                        ]
+                    }
+                ],
+                "answer": "D"
+            }
+        ]
+    }
+    
+]

@@ -9,6 +9,7 @@ import 'package:eswitching/pages/Home/home.dart';
 import 'package:eswitching/pages/Notes/note.dart';
 import 'package:eswitching/pages/Notes/notes.dart';
 import 'package:eswitching/pages/Notes/sub_notes.dart';
+import 'package:eswitching/pages/Quiz/question.dart';
 import 'package:eswitching/pages/quiz/quiz.dart';
 import 'package:get/get.dart';
 
@@ -93,7 +94,7 @@ smRoutes() => [
   ),
 
   //
-  // Command / Test
+  // Command > Test
   //
   GetPage(
     name: '/command/test',
@@ -111,6 +112,19 @@ smRoutes() => [
   GetPage(
     name: '/quiz',
     page: () => Quiz(),
+    binding: BindingsBuilder(() { 
+      Get.lazyPut<QuizController>(() => QuizController());
+      
+    }),
+    transition: Transition.rightToLeft
+  ),
+
+  //
+  // Quiz > Question
+  //
+  GetPage(
+    name: '/quiz/question',
+    page: () => QuizQuestion(),
     binding: BindingsBuilder(() { 
       Get.lazyPut<QuizController>(() => QuizController());
       
