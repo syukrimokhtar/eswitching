@@ -73,7 +73,7 @@ class Quiz extends GetView<QuizController> {
                   return;
                 }
 
-                Get.toNamed("/quiz/question", arguments: {
+                Get.toNamed("/quiz/start", arguments: {
                   "title": quiz['title'],
                   "quiz": quiz['quiz']
                 });

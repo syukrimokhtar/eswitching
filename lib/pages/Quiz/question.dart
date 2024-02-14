@@ -2,7 +2,6 @@ import 'package:eswitching/controllers/quiz_controller.dart';
 import 'package:eswitching/library/sm_init.dart';
 import 'package:eswitching/library/sm_layout.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:flutter_html/flutter_html.dart';
 import 'package:flutter_html_table/flutter_html_table.dart';
 import 'package:get/get.dart';
@@ -13,7 +12,6 @@ class QuizQuestion extends GetView<QuizController> {
   //logging
   final _talker = Sm.instance.talker;
   final QuizController _quizController = Get.find();
-  final _formKey = GlobalKey<FormState>();
   final ScrollController _scrollController = ScrollController();
   
 
@@ -148,29 +146,15 @@ class QuizQuestion extends GetView<QuizController> {
         a = a.join("\n");
         answerList.add(CheckboxListTile(
           controlAffinity: ListTileControlAffinity.leading,
-          contentPadding: EdgeInsets.zero,
-          dense: true,
-          value: false,
+          dense: false,
+          value: _quizController.getMark(key),
           onChanged: (value) {
             
+            _quizController.updateMark(key, value);
+
           },
           title: _html("$a"),
         ));
-        /*
-        answerList.add(ListTile(
-          titleAlignment: ListTileTitleAlignment.top,
-          dense: true,
-          title: Row(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            mainAxisAlignment: MainAxisAlignment.start,
-            children: [
-            Text("$key",
-              style: const TextStyle(fontWeight: FontWeight.bold)),
-            const SizedBox(width: 20),
-            Expanded(child: Text("$a"))
-          ])
-
-      )); */
       }
     }
 
@@ -180,36 +164,63 @@ class QuizQuestion extends GetView<QuizController> {
           children: answerList);
   }
 
-  Widget _buildQuestions(questions) {
+  Widget _buildQuestion(questions) {
 
-    List<Widget> qList = [];
-    int index = -1;
-    for(var el in questions) {
-      index++;
+    int index = _quizController.index.value;
+    var count = questions.length;
+    var question = questions[index - 1];
+    var q = "${question['question'].join()}";
+    var answers = question['answers'];
+    var answer = question['answer'];
+
+    _talker.debug("answer: $answer");
+
+    return Column(children: [
       
-      //question
-      var q = el['question'];
-      var a = el['answers'];
-      qList.add(ListTile(
-        titleAlignment: ListTileTitleAlignment.top,
-        leading: Text("${index + 1}",
-              style: const TextStyle(fontSize: 30)).paddingOnly(top: 5),
-        trailing: Text(""),
-        title: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          mainAxisAlignment: MainAxisAlignment.start,
-          children: [
-            _html(q),
-            _buildAnswers(a)
-          ]))
-      );
-      qList.add(Divider(color: Colors.grey.shade400));
-    }
-    
-    return ListView(
-          shrinkWrap: true,
-          physics: const NeverScrollableScrollPhysics(),
-          children: qList);
+      // step
+      Text("Question $index/$count", style: const TextStyle(
+        fontSize: 20, fontWeight: FontWeight.bold
+      ))
+      .paddingOnly(bottom: 20),
+
+      // question
+      Container(
+        padding: const EdgeInsets.all(10),
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(10),
+          color: Colors.white,
+          boxShadow: [
+            BoxShadow(color: Colors.grey.shade300, spreadRadius: 3),
+          ]),
+        child: _html(q),
+      ),
+      
+      // anwser
+      _buildAnswers(answers)
+      .paddingOnly(top: 20),
+
+      // button
+      ElevatedButton.icon(onPressed: () {
+
+            _quizController.verify(answer);
+
+          },
+          style: ElevatedButton.styleFrom(
+            foregroundColor: Colors.white,
+            backgroundColor: Sm.instance.config.primaryColor,
+            padding: const EdgeInsets.only(left: 20, right: 20, top: 10, bottom: 10),
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(10),
+            ),
+          ),
+          icon: const Icon(Icons.check),
+          label: const Text("Submit",
+            style: TextStyle(fontSize: 20)))
+      .paddingOnly(top: 20),
+
+    ]);
+
+      //
   }
 
   
@@ -221,19 +232,9 @@ class QuizQuestion extends GetView<QuizController> {
     var title = args['title'];
     var quiz = args['quiz'];
 
-    //var question = "${quiz['question']}";
-    
-    // replace {{ SERVE_URL }}
-    String serveUrl = dotenv.env['SERVE_URL'] ?? '';
-    //question = question.replaceAll("{{ SERVE_URL }}", serveUrl);
-    
-    //var answers = quiz['answers'];
-
-    //var answer = quiz['answer'];
-
     Widget body = SingleChildScrollView(
       controller: _scrollController,
-      child: _buildQuestions(quiz)
+      child: Obx(() => _buildQuestion(quiz))
           .paddingOnly(top: 30, left: 15, right: 15, bottom: 100),
 
       );
@@ -242,7 +243,7 @@ class QuizQuestion extends GetView<QuizController> {
       title: title,
       body: body,
       back: () {
-        Get.back();
+        _quizController.back();
       });
 
   }

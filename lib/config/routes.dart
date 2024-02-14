@@ -10,6 +10,7 @@ import 'package:eswitching/pages/Notes/note.dart';
 import 'package:eswitching/pages/Notes/notes.dart';
 import 'package:eswitching/pages/Notes/sub_notes.dart';
 import 'package:eswitching/pages/Quiz/question.dart';
+import 'package:eswitching/pages/Quiz/start.dart';
 import 'package:eswitching/pages/quiz/quiz.dart';
 import 'package:get/get.dart';
 
@@ -112,6 +113,19 @@ smRoutes() => [
   GetPage(
     name: '/quiz',
     page: () => Quiz(),
+    binding: BindingsBuilder(() { 
+      Get.lazyPut<QuizController>(() => QuizController());
+      
+    }),
+    transition: Transition.rightToLeft
+  ),
+
+  //
+  // Quiz > Start
+  //
+  GetPage(
+    name: '/quiz/start',
+    page: () => QuizStart(),
     binding: BindingsBuilder(() { 
       Get.lazyPut<QuizController>(() => QuizController());
       
