@@ -20,7 +20,6 @@ class QuizQuestion extends GetView<QuizController> {
   //
   final _style = {
     ".code": Style(
-      fontSize: FontSize.small,
       color: Colors.black87
     ),
     ".text-center": Style(
@@ -136,7 +135,7 @@ class QuizQuestion extends GetView<QuizController> {
 
   }
 
-  Widget _buildAnswers(answers) {
+  Widget _buildAnswers(marks, answers) {
     
     List<Widget> answerList = [];
     for(var answer in answers) {
@@ -147,10 +146,10 @@ class QuizQuestion extends GetView<QuizController> {
         answerList.add(CheckboxListTile(
           controlAffinity: ListTileControlAffinity.leading,
           dense: false,
-          value: _quizController.getMark(key),
+          value: _quizController.getMark(marks, key),
           onChanged: (value) {
             
-            _quizController.updateMark(key, value);
+            _quizController.updateMark(marks, key, value);
 
           },
           title: _html("$a"),
@@ -164,11 +163,11 @@ class QuizQuestion extends GetView<QuizController> {
           children: answerList);
   }
 
-  Widget _buildQuestion(questions) {
+  Widget _buildQuestion(marks, questions) {
 
     int index = _quizController.index.value;
     var count = questions.length;
-    var question = questions[index - 1];
+    var question = questions[index];
     var q = "${question['question'].join()}";
     var answers = question['answers'];
     var answer = question['answer'];
@@ -178,7 +177,7 @@ class QuizQuestion extends GetView<QuizController> {
     return Column(children: [
       
       // step
-      Text("Question $index/$count", style: const TextStyle(
+      Text("Question ${index + 1}/$count", style: const TextStyle(
         fontSize: 20, fontWeight: FontWeight.bold
       ))
       .paddingOnly(bottom: 20),
@@ -196,13 +195,13 @@ class QuizQuestion extends GetView<QuizController> {
       ),
       
       // anwser
-      _buildAnswers(answers)
+      _buildAnswers(marks, answers)
       .paddingOnly(top: 20),
 
       // button
       ElevatedButton.icon(onPressed: () {
 
-            _quizController.verify(answer);
+            _quizController.verify(marks, answer);
 
           },
           style: ElevatedButton.styleFrom(
@@ -231,10 +230,16 @@ class QuizQuestion extends GetView<QuizController> {
     var args = Get.arguments;
     var title = args['title'];
     var quiz = args['quiz'];
+    var marks = args['marks'];
 
     Widget body = SingleChildScrollView(
       controller: _scrollController,
-      child: Obx(() => _buildQuestion(quiz))
+      child: Obx(() {
+        
+        _talker.debug("just triggered_${_quizController.triggered.value}");
+        return _buildQuestion(marks, quiz);
+
+      })
           .paddingOnly(top: 30, left: 15, right: 15, bottom: 100),
 
       );

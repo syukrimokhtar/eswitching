@@ -93,7 +93,7 @@ class Quiz extends GetView<QuizController> {
       title: "Quiz",
       body: body,
       back: () {
-        Get.back();
+        Get.offAllNamed("/home");
       });
 
   }

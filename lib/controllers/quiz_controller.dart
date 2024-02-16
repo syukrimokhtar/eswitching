@@ -17,8 +17,25 @@ class QuizController extends GetxController {
   var isLoading = false.obs;
   var error = ''.obs;
   var index = 0.obs;
-  var marks = {}.obs;
   var last = false.obs;
+  var triggered = 0.obs;
+  
+  List createMarks(quiz) {
+
+    var marks = [];
+    for(var question in quiz) {
+      var answers = question['answers'];
+      var mark = {};
+      for(var answer in answers) {
+        for(var key in answer.keys) {
+          mark[key] = false;
+        }
+      }
+      marks.add(mark);
+    }
+    return marks;
+
+  }
 
 
   void start() {
@@ -26,13 +43,16 @@ class QuizController extends GetxController {
     var args = Get.arguments;
     var title = args['title'];
     var quiz = args['quiz'];
-    index(1);
-    var q = quiz[0];
-    createMark(q["answers"]);
+    var marks = createMarks(quiz);
+    _talker.debug(marks);
+
+    index(0);
+    triggered(0);
 
     Get.toNamed("/quiz/question", arguments: {
       "title": title,
-      "quiz": quiz
+      "quiz": quiz,
+      "marks": marks
     });
   }
 
@@ -42,17 +62,45 @@ class QuizController extends GetxController {
     var args = Get.arguments;
     var title = args['title'];
     var quiz = args['quiz'];
-    
+    var marks = args['marks'];
 
     var i = index.value;
+
+    if(i == marks.length - 1) {
+        //correct
+        AwesomeDialog(
+          context: Get.context!,
+          padding: const EdgeInsets.all(10),
+          animType: AnimType.topSlide,
+          headerAnimationLoop: false,
+          dismissOnTouchOutside: false,
+          dialogType: DialogType.success,
+          showCloseIcon: false,
+          title: 'Congratulations,',
+          desc: "Quiz completed!",
+          btnCancelText: "Back",
+          btnCancelOnPress: () {
+
+            back();
+
+          },
+          btnOkText: "Home",
+          btnOkOnPress: () {
+            
+            Get.offAllNamed("/quiz");
+
+          },
+          btnOkIcon: Icons.check_circle,
+        ).show();
+      return;
+    }
     
     index(i + 1);
-    var q = quiz[i - 1];
-    createMark(q["answers"]);
-
+    
     Get.toNamed("/quiz/question", arguments: {
       "title": title,
-      "quiz": quiz
+      "quiz": quiz,
+      "marks": marks
     });
 
   }
@@ -60,7 +108,8 @@ class QuizController extends GetxController {
   void back() {
 
     var i = index.value;
-    if(i <= 1) {
+    _talker.debug("i: $i");
+    if(i == 0) {
       Get.back();
       return;
     }
@@ -68,12 +117,13 @@ class QuizController extends GetxController {
     var args = Get.arguments;
     var title = args['title'];
     var quiz = args['quiz'];
-    var q = quiz[i + 1];
-    createMark(q["answers"]);
+    var marks = args['marks'];
+    
 
     Get.toNamed("/quiz/question", arguments: {
       "title": title,
-      "quiz": quiz
+      "quiz": quiz,
+      "marks": marks
     });
 
   }
@@ -117,19 +167,7 @@ class QuizController extends GetxController {
     isLoading(false);
   }
 
-  void createMark(answers) {
-
-    var mark = {};
-    for(var answer in answers) {
-      for(var a in answer.keys) {
-          mark[a] = false;
-      }
-    }
-    marks[index.value] = mark;
-
-  }
-  
-  void updateMark(String key, bool? value) {
+  void updateMark(marks, String key, bool? value) {
     var mark =  marks[index.value];
     for(var m in mark.keys) {
       mark[m] = false;
@@ -137,9 +175,11 @@ class QuizController extends GetxController {
     mark[key] = value;
     marks[index.value] = mark;
 
+    triggered(triggered.value + 1);
+
   }
 
-  bool getMark(key) {
+  bool getMark(marks, key) {
     var mark =  marks[index.value];
     var value = mark[key];
     if(value == null) {
@@ -148,14 +188,46 @@ class QuizController extends GetxController {
     return value;
   }
 
-  void verify(answer) {
+  void verify(marks, answer) {
+
+    //verify input
     var mark =  marks[index.value];
+    var empty = true;
+    for(var m in mark.keys) {
+      if(mark[m] == true) {
+        empty = false;
+      }
+    }
+    
+    if(empty) {
+      AwesomeDialog(
+        context: Get.context!,
+        padding: const EdgeInsets.all(10),
+        animType: AnimType.topSlide,
+        headerAnimationLoop: false,
+        dismissOnTouchOutside: false,
+        dialogBackgroundColor: Colors.red.shade100,
+        dialogType: DialogType.error,
+        showCloseIcon: false,
+        title: 'Sorry,',
+        desc: "Answer cannot empty",
+        btnCancelText: "Close",
+        btnCancelIcon: Icons.close,
+        btnCancelOnPress: () {
+          
+          
+        },
+      ).show();
+      return;
+    }
+
     var value = mark[answer];
     if(value) {
 
       //correct
       AwesomeDialog(
         context: Get.context!,
+        padding: const EdgeInsets.all(10),
         animType: AnimType.topSlide,
         headerAnimationLoop: false,
         dismissOnTouchOutside: false,
@@ -183,16 +255,17 @@ class QuizController extends GetxController {
       //incorrect
       AwesomeDialog(
         context: Get.context!,
+        padding: const EdgeInsets.all(10),
         animType: AnimType.topSlide,
         headerAnimationLoop: false,
         dismissOnTouchOutside: false,
         dialogBackgroundColor: Colors.red.shade100,
         dialogType: DialogType.error,
         showCloseIcon: false,
-        title: 'Srrory,',
+        title: 'Sorry,',
         desc: "Your answer is incorrect",
-        btnCancelText: "Back",
-        btnCancelIcon: Icons.arrow_back,
+        btnCancelText: "Close",
+        btnCancelIcon: Icons.close,
         btnCancelOnPress: () {
           
           
@@ -204,7 +277,5 @@ class QuizController extends GetxController {
     }
 
   }
-
-  
 
 }
