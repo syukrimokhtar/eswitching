@@ -44,7 +44,7 @@ class QuizStart extends GetView<QuizController> {
             ),
           ),
           icon: const Icon(Icons.timer),
-          label: const Text("Start Quiz", 
+          label: const Text("Start",
             style: TextStyle(fontSize: 20)))
 
 

@@ -143,10 +143,11 @@ class QuizQuestion extends GetView<QuizController> {
       for(var key in answer.keys) {
         var a = answer[key];
         a = a.join("\n");
-        answerList.add(CheckboxListTile(
+        answerList.add(RadioListTile(
+          groupValue:  _quizController.getMark(marks, key),
+          value: true,
           controlAffinity: ListTileControlAffinity.leading,
           dense: false,
-          value: _quizController.getMark(marks, key),
           onChanged: (value) {
             
             _quizController.updateMark(marks, key, value);
@@ -236,7 +237,7 @@ class QuizQuestion extends GetView<QuizController> {
       controller: _scrollController,
       child: Obx(() {
         
-        _talker.debug("just triggered_${_quizController.triggered.value}");
+        //_talker.debug("just triggered_${_quizController.triggered.value}");
         return _buildQuestion(marks, quiz);
 
       })
