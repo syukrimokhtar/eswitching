@@ -1,196 +1,1060 @@
 [
     {
-        "title": "GUA Configuration",
-        "type": "note",
-        "note": [
-            "<img src='{{ SERVE_URL }}/command/topic1note1.png'>",
-            "<br>",
-            "<table class='compact'>",
-            "<colgroup>",
-            "<col width='10%' />",
-            "<col width='21%' />",
-            "<col width='69%' />",
-            "</colgroup>",
-            
-            "<tr>",
-            "<th class='blue-blrtb-center' colspan='3'>IPV6 GUA Configuration on Router R1</th>",
-            "</tr>",
+        "topic": "Topic 1",
+        "title": "IP ADDRESSING",
+        "command": [
+            {
+                "title": "GUA Configuration",
+                "type": "note",
+                "note": [
+                    "<img src='{{ SERVE_URL }}/command/T1-notes-GUA Configuration.png'>",
+                    "<br>",
+                    "<table class='compact'>",
+                    "<colgroup>",
+                    "<col width='10%' />",
+                    "<col width='21%' />",
+                    "<col width='69%' />",
+                    "</colgroup>",
+                    
+                    "<tr>",
+                    "<th class='blue-blrtb-center' colspan='3'>IPV6 GUA Configuration on Router R1</th>",
+                    "</tr>",
 
-            "<tr>",
-            "<td class='bl-small'>R1</td>",
-            "<td class='small'>(config)</td>",
-            "<td class='br-small'># interface gigabitethernet 0/0/0</td>",
-            "</tr>",
+                    "<tr>",
+                    "<td class='bl-small'>R1</td>",
+                    "<td class='small'>(config)</td>",
+                    "<td class='br-small'># interface gigabitethernet 0/0/0</td>",
+                    "</tr>",
 
-            
-            "<tr>",
-            "<td class='bl-small'>R1</td>",
-            "<td class='small'>(config-if)</td>",
-            "<td class='br-small'># ipv6 address 2001:db8:acad:1::1/64</td>",
-            "</tr>",
+                    
+                    "<tr>",
+                    "<td class='bl-small'>R1</td>",
+                    "<td class='small'>(config-if)</td>",
+                    "<td class='br-small'># ipv6 address 2001:db8:acad:1::1/64</td>",
+                    "</tr>",
 
-            "<tr>",
-            "<td class='bl-small'>R1</td>",
-            "<td class='small'>(config-if)</td>",
-            "<td class='br-small'># no shutdown</td>",
-            "</tr>",
+                    "<tr>",
+                    "<td class='bl-small'>R1</td>",
+                    "<td class='small'>(config-if)</td>",
+                    "<td class='br-small'># no shutdown</td>",
+                    "</tr>",
 
-            "<tr>",
-            "<td class='bl-small'>R1</td>",
-            "<td class='small'>(config-if)</td>",
-            "<td class='br-small'># exit</td>",
-            "</tr>",
+                    "<tr>",
+                    "<td class='bl-small'>R1</td>",
+                    "<td class='small'>(config-if)</td>",
+                    "<td class='br-small'># exit</td>",
+                    "</tr>",
 
-            "<tr>",
-            "<td class='bl-small'>R1</td>",
-            "<td class='small'>(config)</td>",
-            "<td class='br-small'># interface gigabitethernet 0/0/1</td>",
-            "</tr>",
+                    "<tr>",
+                    "<td class='bl-small'>R1</td>",
+                    "<td class='small'>(config)</td>",
+                    "<td class='br-small'># interface gigabitethernet 0/0/1</td>",
+                    "</tr>",
 
-            "<tr>",
-            "<td class='bl-small'>R1</td>",
-            "<td class='small'>(config-if)</td>",
-            "<td class='br-small'># ipv6 address 2001:db8:acad:2::1/64</td>",
-            "</tr>",
+                    "<tr>",
+                    "<td class='bl-small'>R1</td>",
+                    "<td class='small'>(config-if)</td>",
+                    "<td class='br-small'># ipv6 address 2001:db8:acad:2::1/64</td>",
+                    "</tr>",
 
-            "<tr>",
-            "<td class='bl-small'>R1</td>",
-            "<td class='small'>(config-if)</td>",
-            "<td class='br-small'># no shutdown</td>",
-            "</tr>",
+                    "<tr>",
+                    "<td class='bl-small'>R1</td>",
+                    "<td class='small'>(config-if)</td>",
+                    "<td class='br-small'># no shutdown</td>",
+                    "</tr>",
 
-            "<tr>",
-            "<td class='bl-small'>R1</td>",
-            "<td class='small'>(config-if)</td>",
-            "<td class='br-small'># exit</td>",
-            "</tr>",
+                    "<tr>",
+                    "<td class='bl-small'>R1</td>",
+                    "<td class='small'>(config-if)</td>",
+                    "<td class='br-small'># exit</td>",
+                    "</tr>",
 
-            "<tr>",
-            "<td class='bl-small'>R1</td>",
-            "<td class='small'>(config)</td>",
-            "<td class='br-small'># interface serial 0/1/0</td>",
-            "</tr>",
+                    "<tr>",
+                    "<td class='bl-small'>R1</td>",
+                    "<td class='small'>(config)</td>",
+                    "<td class='br-small'># interface serial 0/1/0</td>",
+                    "</tr>",
 
-            "<tr>",
-            "<td class='bl-small'>R1</td>",
-            "<td class='small'>(config-if)</td>",
-            "<td class='br-small'># ipv6 address 2001:db8:acad:3::1/64</td>",
-            "</tr>",
+                    "<tr>",
+                    "<td class='bl-small'>R1</td>",
+                    "<td class='small'>(config-if)</td>",
+                    "<td class='br-small'># ipv6 address 2001:db8:acad:3::1/64</td>",
+                    "</tr>",
 
-            "<tr>",
-            "<td class='blb-small'>R1</td>",
-            "<td class='bb-small'>(config-if)</td>",
-            "<td class='brb-small'># no shutdown</td>",
-            "</tr>",
-            
-            "</table>"
+                    "<tr>",
+                    "<td class='blb-small'>R1</td>",
+                    "<td class='bb-small'>(config-if)</td>",
+                    "<td class='brb-small'># no shutdown</td>",
+                    "</tr>",
+                    
+                    "</table>"
+                ]
+            },
+            {
+                "title": "LLA Configuration",
+                "type": "note",
+                "note": [
+                    "<img src='{{ SERVE_URL }}/command/T1-notes-LLA-Configuration.png'>",
+                    "<br>",
+                    "<table class='compact'>",
+                    "<colgroup>",
+                    "<col width='10%' />",
+                    "<col width='21%' />",
+                    "<col width='69%' />",
+                    "</colgroup>",
+                    
+                    "<tr>",
+                    "<th class='blue-blrtb-center' colspan='3'>IPV6 LLA Configuration on Router R1</th>",
+                    "</tr>",
+
+                    "<tr>",
+                    "<td class='bl-small'>R1</td>",
+                    "<td class='small'>(config)</td>",
+                    "<td class='br-small'># interface gigabitethernet 0/0/0</td>",
+                    "</tr>",
+
+                    
+                    "<tr>",
+                    "<td class='bl-small'>R1</td>",
+                    "<td class='small'>(config-if)</td>",
+                    "<td class='br-small'># ipv6 address fe80::1:1 link-local</td>",
+                    "</tr>",
+
+                    "<tr>",
+                    "<td class='bl-small'>R1</td>",
+                    "<td class='small'>(config-if)</td>",
+                    "<td class='br-small'># no shutdown</td>",
+                    "</tr>",
+
+                    "<tr>",
+                    "<td class='bl-small'>R1</td>",
+                    "<td class='small'>(config-if)</td>",
+                    "<td class='br-small'># exit</td>",
+                    "</tr>",
+
+                    "<tr>",
+                    "<td class='bl-small'>R1</td>",
+                    "<td class='small'>(config)</td>",
+                    "<td class='br-small'># interface gigabitethernet 0/0/1</td>",
+                    "</tr>",
+
+                    "<tr>",
+                    "<td class='bl-small'>R1</td>",
+                    "<td class='small'>(config-if)</td>",
+                    "<td class='br-small'># ipv6 address fe80::2:1 link-local</td>",
+                    "</tr>",
+
+                    "<tr>",
+                    "<td class='bl-small'>R1</td>",
+                    "<td class='small'>(config-if)</td>",
+                    "<td class='br-small'># no shutdown</td>",
+                    "</tr>",
+
+                    "<tr>",
+                    "<td class='bl-small'>R1</td>",
+                    "<td class='small'>(config-if)</td>",
+                    "<td class='br-small'># exit</td>",
+                    "</tr>",
+
+                    "<tr>",
+                    "<td class='bl-small'>R1</td>",
+                    "<td class='small'>(config)</td>",
+                    "<td class='br-small'># interface serial 0/1/0</td>",
+                    "</tr>",
+
+                    "<tr>",
+                    "<td class='bl-small'>R1</td>",
+                    "<td class='small'>(config-if)</td>",
+                    "<td class='br-small'># ipv6 address fe80::3:1 link-local</td>",
+                    "</tr>",
+
+                    "<tr>",
+                    "<td class='blb-small'>R1</td>",
+                    "<td class='bb-small'>(config-if)</td>",
+                    "<td class='brb-small'># no shutdown</td>",
+                    "</tr>",
+                    
+                    "</table>"
+                ]
+            },
+            {
+                "title": "Test Your Knowledge",
+                "type": "test",
+                "test": {
+                    "question": [
+                        "<img src='{{ SERVE_URL }}/command/T1-test-Test Your Knowledge.png'>",
+                        "<br>",
+                        "<br>",
+                        "<div><b>Configure GUA and LLA on R1 Interface Gigabit Ethernet 0/0/1</b></div>"
+                        
+                    ],
+                    "answer": [
+                        {"q": "R1(config)      #", "a": "interface gigabitethernet 0/0/1"},
+                        {"q": "R1(config-if)   #", "a": "ipv6 address fe80::2:1 link-local"},
+                        {"q": "R1(config-if)   #", "a": "ipv6 address 2001:db09:acef:2::1/64"},
+                        {"q": "R1(config-if)   #", "a": "no shutdown"},
+                        {"q": "R1(config-if)   #", "a": "exit"}
+                    ]
+                }
+            }
         ]
     },
     {
-        "title": "LLA Configuration",
-        "type": "note",
-        "note": [
-            "<img src='{{ SERVE_URL }}/command/topic1note3.png'>",
-            "<br>",
-            "<table class='compact'>",
-            "<colgroup>",
-            "<col width='10%' />",
-            "<col width='21%' />",
-            "<col width='69%' />",
-            "</colgroup>",
-            
-            "<tr>",
-            "<th class='blue-blrtb-center' colspan='3'>IPV6 LLA Configuration on Router R1</th>",
-            "</tr>",
+        "topic": "Topic 2",
+        "title": "VLANs",
+        "command": [
+            {
+                "title": "Create VLAN",
+                "type": "note",
+                "note": [
+                    "<img src='{{ SERVE_URL }}/command/T2-notes-Create VLAN.png'>",
+                    "<br>",
+                    "<table class='compact'>",
+                    "<colgroup>",
+                    "<col width='10%' />",
+                    "<col width='25%' />",
+                    "<col width='65%' />",
+                    "</colgroup>",
+                    
+                    "<tr>",
+                    "<th class='blue-blrtb-center' colspan='3'>Create VLAN on SW1</th>",
+                    "</tr>",
 
-            "<tr>",
-            "<td class='bl-small'>R1</td>",
-            "<td class='small'>(config)</td>",
-            "<td class='br-small'># interface gigabitethernet 0/0/0</td>",
-            "</tr>",
+                    "<tr>",
+                    "<td class='bl-small'>SW1</td>",
+                    "<td class='small'>(config)</td>",
+                    "<td class='br-small'># vlan 10</td>",
+                    "</tr>",
 
-            
-            "<tr>",
-            "<td class='bl-small'>R1</td>",
-            "<td class='small'>(config-if)</td>",
-            "<td class='br-small'># ipv6 address fe80::1:1 link-local</td>",
-            "</tr>",
+                    "<tr>",
+                    "<td class='bl-small'>SW1</td>",
+                    "<td class='small'>(config-vlan)</td>",
+                    "<td class='br-small'># name Accounting</td>",
+                    "</tr>",
 
-            "<tr>",
-            "<td class='bl-small'>R1</td>",
-            "<td class='small'>(config-if)</td>",
-            "<td class='br-small'># no shutdown</td>",
-            "</tr>",
+                    "<tr>",
+                    "<td class='bl-small'>SW1</td>",
+                    "<td class='small'>(config-vlan)</td>",
+                    "<td class='br-small'># vlan 20</td>",
+                    "</tr>",
 
-            "<tr>",
-            "<td class='bl-small'>R1</td>",
-            "<td class='small'>(config-if)</td>",
-            "<td class='br-small'># exit</td>",
-            "</tr>",
+                    "<tr>",
+                    "<td class='bl-small'>SW1</td>",
+                    "<td class='small'>(config-vlan)</td>",
+                    "<td class='br-small'># name Marketing</td>",
+                    "</tr>",
 
-            "<tr>",
-            "<td class='bl-small'>R1</td>",
-            "<td class='small'>(config)</td>",
-            "<td class='br-small'># interface gigabitethernet 0/0/1</td>",
-            "</tr>",
+                    "<tr>",
+                    "<td class='blb-small'>SW1</td>",
+                    "<td class='bb-small'>(config-vlan)</td>",
+                    "<td class='brb-small'># end</td>",
+                    "</tr>",
+                    
+                    "</table>"
+                ]
+            },
+            {
+                "title": "Assign Ports",
+                "type": "note",
+                "note": [
+                    "<img src='{{ SERVE_URL }}/command/T2-notes-Assign Ports.png'>",
+                    "<br>",
+                    "<table class='compact'>",
+                    "<colgroup>",
+                    "<col width='10%' />",
+                    "<col width='25%' />",
+                    "<col width='65%' />",
+                    "</colgroup>",
+                    
+                    "<tr>",
+                    "<th class='blue-blrtb-center' colspan='3'>Assign Ports to VLAN 30 and 40</th>",
+                    "</tr>",
 
-            "<tr>",
-            "<td class='bl-small'>R1</td>",
-            "<td class='small'>(config-if)</td>",
-            "<td class='br-small'># ipv6 address fe80::2:1 link-local</td>",
-            "</tr>",
+                    "<tr>",
+                    "<td class='bl-small'>SW1</td>",
+                    "<td class='small'>(config)</td>",
+                    "<td class='br-small'># interface f0/11</td>",
+                    "</tr>",
 
-            "<tr>",
-            "<td class='bl-small'>R1</td>",
-            "<td class='small'>(config-if)</td>",
-            "<td class='br-small'># no shutdown</td>",
-            "</tr>",
+                    "<tr>",
+                    "<td class='bl-small'>SW1</td>",
+                    "<td class='small'>(config-if)</td>",
+                    "<td class='br-small'># switchport mode access</td>",
+                    "</tr>",
 
-            "<tr>",
-            "<td class='bl-small'>R1</td>",
-            "<td class='small'>(config-if)</td>",
-            "<td class='br-small'># exit</td>",
-            "</tr>",
+                    "<tr>",
+                    "<td class='bl-small'>SW1</td>",
+                    "<td class='small'>(config-if)</td>",
+                    "<td class='br-small'># switchport access vlan 30</td>",
+                    "</tr>",
 
-            "<tr>",
-            "<td class='bl-small'>R1</td>",
-            "<td class='small'>(config)</td>",
-            "<td class='br-small'># interface serial 0/1/0</td>",
-            "</tr>",
+                    "<tr>",
+                    "<td class='bl-small'>SW1</td>",
+                    "<td class='small'>(config-if)</td>",
+                    "<td class='br-small'># interface f0/12</td>",
+                    "</tr>",
 
-            "<tr>",
-            "<td class='bl-small'>R1</td>",
-            "<td class='small'>(config-if)</td>",
-            "<td class='br-small'># ipv6 address fe80::3:1 link-local</td>",
-            "</tr>",
+                    "<tr>",
+                    "<td class='bl-small'>SW1</td>",
+                    "<td class='small'>(config-if)</td>",
+                    "<td class='br-small'># switchport mode access</td>",
+                    "</tr>",
 
-            "<tr>",
-            "<td class='blb-small'>R1</td>",
-            "<td class='bb-small'>(config-if)</td>",
-            "<td class='brb-small'># no shutdown</td>",
-            "</tr>",
-            
-            "</table>"
+                    "<tr>",
+                    "<td class='bl-small'>SW1</td>",
+                    "<td class='small'>(config-if)</td>",
+                    "<td class='br-small'># switchport access vlan 40</td>",
+                    "</tr>",
+
+                    "<tr>",
+                    "<td class='blb-small'>SW1</td>",
+                    "<td class='bb-small'>(config-if)</td>",
+                    "<td class='brb-small'># end</td>",
+                    "</tr>",
+                    
+                    "</table>"
+                ]
+            },
+            {
+                "title": "VLAN Trunks",
+                "type": "note",
+                "note": [
+                    "<img src='{{ SERVE_URL }}/command/T2-notes-VLAN Trunks.png'>",
+                    "<br>",
+                    "<table class='compact'>",
+                    "<colgroup>",
+                    "<col width='10%' />",
+                    "<col width='25%' />",
+                    "<col width='65%' />",
+                    "</colgroup>",
+                    
+                    "<tr>",
+                    "<th class='blue-blrtb-center' colspan='3'>Configure Trunk on SW1</th>",
+                    "</tr>",
+
+                    "<tr>",
+                    "<td class='bl-small'>SW1</td>",
+                    "<td class='small'>(config)</td>",
+                    "<td class='br-small'># interface f0/1</td>",
+                    "</tr>",
+
+                    "<tr>",
+                    "<td class='bl-small'>SW1</td>",
+                    "<td class='small'>(config-if)</td>",
+                    "<td class='br-small'># switchport mode trunk</td>",
+                    "</tr>",
+
+                    "<tr>",
+                    "<td class='bl-small'>SW1</td>",
+                    "<td class='small'>(config-if)</td>",
+                    "<td class='br-small'># switchport trunk native vlan 88</td>",
+                    "</tr>",
+
+                    "<tr>",
+                    "<td class='bl-small'>SW1</td>",
+                    "<td class='small'>(config-if)</td>",
+                    "<td class='br-small'># switchport trunk allowed vlan 10,20,30,88</td>",
+                    "</tr>",
+
+                    "<tr>",
+                    "<td class='blb-small'>SW1</td>",
+                    "<td class='bb-small'>(config-if)</td>",
+                    "<td class='brb-small'># end</td>",
+                    "</tr>",
+                    
+                    "</table>"
+                ]
+            },
+            {
+                "title": "Test Your Knowledge",
+                "type": "test",
+                "test": {
+                    "question": [
+                        "<img src='{{ SERVE_URL }}/command/T2-test-Test Your Knowledge.png'>",
+                        "<br>",
+                        "<br>",
+                        "<div><b>Create VLANs and assign ports on SW2</b></div>"
+                        
+                    ],
+                    "answer": [
+                        {"q": "SW2 (config)      #", "a": "vlan 10"},
+                        {"q": "SW2 (config-vlan)   #", "a": "name Accounting"},
+                        {"q": "SW2 (config-vlan)   #", "a": "vlan 20"},
+                        {"q": "SW2 (config-vlan)   #", "a": "name Marketing"},
+                        {"q": "SW2 (config-vlan)   #", "a": "exit"},
+                        {"q": "SW2 (config)      #", "a": "interface fa0/8"},
+                        {"q": "SW2 (config-if)   #", "a": "switchport mode access"},
+                        {"q": "SW2 (config-if)   #", "a": "switchport access vlan 20"},
+                        {"q": "SW2 (config-if)   #", "a": "end"}
+                    ]
+                }
+            }
         ]
     },
     {
-        "title": "Test Your Knowledge",
-        "type": "test",
-        "test": {
-            "question": [
-                "<img src='{{ SERVE_URL }}/command/test1.png'>",
-                "<br>",
-                "<br>",
-                "<div class='text-center'><b>Configure GUA and LLA on R1 Interface Gigabit Ethernet 0/0/1</b></div>"
-                
-            ],
-            "answer": [
-                {"q": "R1(config)      #", "a": "interface gigabitethernet 0/0/1"},
-                {"q": "R1(config-if)   #", "a": "ipv6 address fe80::2:1 link-local"},
-                {"q": "R1(config-if)   #", "a": "ipv6 address 2001:db09:acef:2::1/64"},
-                {"q": "R1(config-if)   #", "a": "no shutdown"},
-                {"q": "R1(config-if)   #", "a": "exit"}
-            ]
-        }
+        "topic": "Topic 3",
+        "title": "INTER VLAN",
+        "command": [
+            {
+                "title": "Router on a Stick",
+                "type": "note",
+                "note": [
+                    "<img src='{{ SERVE_URL }}/command/T3-notes-Router On A Stick.png'>",
+                    "<br>",
+                    "<table class='compact'>",
+                    "<colgroup>",
+                    "<col width='10%' />",
+                    "<col width='25%' />",
+                    "<col width='65%' />",
+                    "</colgroup>",
+                    
+                    "<tr>",
+                    "<th class='blue-blrtb-center' colspan='3'>Configure R1 Subinterface</th>",
+                    "</tr>",
+
+                    "<tr>",
+                    "<td class='bl-small'>R1</td>",
+                    "<td class='small'>(config)</td>",
+                    "<td class='br-small'># interface G0/0/0.10</td>",
+                    "</tr>",
+
+                    "<tr>",
+                    "<td class='bl-small'>R1</td>",
+                    "<td class='small'>(config-subif)</td>",
+                    "<td class='br-small'># encapsulation dot1q 10</td>",
+                    "</tr>",
+
+                    "<tr>",
+                    "<td class='bl-small'>R1</td>",
+                    "<td class='small'>(config-subif)</td>",
+                    "<td class='br-small'># ip address 172.17.10.1 255.255.255.0</td>",
+                    "</tr>",
+
+                    "<tr>",
+                    "<td class='bl-small'>R1</td>",
+                    "<td class='small'>(config-subif)</td>",
+                    "<td class='br-small'># exit</td>",
+                    "</tr>",
+
+                    "<tr>",
+                    "<td class='bl-small'>R1</td>",
+                    "<td class='small'>(config)</td>",
+                    "<td class='br-small'># interface G0/0/0.20</td>",
+                    "</tr>",
+
+                    "<tr>",
+                    "<td class='bl-small'>R1</td>",
+                    "<td class='small'>(config-subif)</td>",
+                    "<td class='br-small'># encapsulation dot1q 20</td>",
+                    "</tr>",
+
+                    "<tr>",
+                    "<td class='bl-small'>R1</td>",
+                    "<td class='small'>(config-subif)</td>",
+                    "<td class='br-small'># ip address 172.17.20.1 255.255.255.0</td>",
+                    "</tr>",
+
+                    "<tr>",
+                    "<td class='bl-small'>R1</td>",
+                    "<td class='small'>(config-subif)</td>",
+                    "<td class='br-small'># exit</td>",
+                    "</tr>",
+
+                    "<tr>",
+                    "<td class='bl-small'>R1</td>",
+                    "<td class='small'>(config)</td>",
+                    "<td class='br-small'># interface G0/0/0.99</td>",
+                    "</tr>",
+
+                    "<tr>",
+                    "<td class='bl-small'>R1</td>",
+                    "<td class='small'>(config-subif)</td>",
+                    "<td class='br-small'># encapsulation dot1q 99</td>",
+                    "</tr>",
+
+                    "<tr>",
+                    "<td class='bl-small'>R1</td>",
+                    "<td class='small'>(config-subif)</td>",
+                    "<td class='br-small'># ip address 172.17.99.1 255.255.255.0</td>",
+                    "</tr>",
+
+                    "<tr>",
+                    "<td class='bl-small'>R1</td>",
+                    "<td class='small'>(config-subif)</td>",
+                    "<td class='br-small'># exit</td>",
+                    "</tr>",
+
+                    "<tr>",
+                    "<td class='bl-small'>R1</td>",
+                    "<td class='small'>(config)</td>",
+                    "<td class='br-small'># interface G0/0/0 </td>",
+                    "</tr>",
+
+                    "<tr>",
+                    "<td class='bl-small'>R1</td>",
+                    "<td class='small'>(config-if)</td>",
+                    "<td class='br-small'># no shutdown</td>",
+                    "</tr>",
+
+                    "<tr>",
+                    "<td class='blb-small'>R1</td>",
+                    "<td class='bb-small'>(config-if)</td>",
+                    "<td class='brb-small'># end</td>",
+                    "</tr>",
+                    
+                    "</table>"
+                ]
+            },
+            {
+                "title": "Layer 3 Switch",
+                "type": "note",
+                "note": [
+                    "<img src='{{ SERVE_URL }}/command/T3-notes-Layer 3 Switch.png'>",
+                    "<br>",
+                    "<table class='compact'>",
+                    "<colgroup>",
+                    "<col width='10%' />",
+                    "<col width='25%' />",
+                    "<col width='65%' />",
+                    "</colgroup>",
+                    
+                    "<tr>",
+                    "<th class='blue-blrtb-center' colspan='3'>Configure Layer 3 Switch</th>",
+                    "</tr>",
+
+                    "<tr>",
+                    "<td class='bl-small'>D1</td>",
+                    "<td class='small'>(config)</td>",
+                    "<td class='br-small'># vlan 10</td>",
+                    "</tr>",
+
+                    "<tr>",
+                    "<td class='bl-small'>D1</td>",
+                    "<td class='small'>(config-vlan)</td>",
+                    "<td class='br-small'># name HR</td>",
+                    "</tr>",
+
+                    "<tr>",
+                    "<td class='bl-small'>D1</td>",
+                    "<td class='small'>(config-vlan)</td>",
+                    "<td class='br-small'># vlan 20</td>",
+                    "</tr>",
+
+                    "<tr>",
+                    "<td class='bl-small'>D1</td>",
+                    "<td class='small'>(config-vlan)</td>",
+                    "<td class='br-small'># name IT</td>",
+                    "</tr>",
+
+                    "<tr>",
+                    "<td class='bl-small'>D1</td>",
+                    "<td class='small'>(config-if)</td>",
+                    "<td class='br-small'># interface vlan 10</td>",
+                    "</tr>",
+
+                    "<tr>",
+                    "<td class='bl-small'>D1</td>",
+                    "<td class='small'>(config-if)</td>",
+                    "<td class='br-small'># ip add 172.17.10.1 255.255.255.0</td>",
+                    "</tr>",
+
+                    "<tr>",
+                    "<td class='bl-small'>D1</td>",
+                    "<td class='small'>(config-if)</td>",
+                    "<td class='br-small'># no shutdown</td>",
+                    "</tr>",
+
+                    "<tr>",
+                    "<td class='bl-small'>D1</td>",
+                    "<td class='small'>(config-if)</td>",
+                    "<td class='br-small'># exit</td>",
+                    "</tr>",
+
+                    "<tr>",
+                    "<td class='bl-small'>D1</td>",
+                    "<td class='small'>(config)</td>",
+                    "<td class='br-small'># interface vlan 20</td>",
+                    "</tr>",
+                    
+                    "<tr>",
+                    "<td class='bl-small'>D1</td>",
+                    "<td class='small'>(config-if)</td>",
+                    "<td class='br-small'># ip add 172.17.20.1 255.255.255.0</td>",
+                    "</tr>",
+
+                    "<tr>",
+                    "<td class='bl-small'>D1</td>",
+                    "<td class='small'>(config-if)</td>",
+                    "<td class='br-small'># no shutdown</td>",
+                    "</tr>",
+
+                    "<tr>",
+                    "<td class='bl-small'>D1</td>",
+                    "<td class='small'>(config-if)</td>",
+                    "<td class='br-small'># exit</td>",
+                    "</tr>",
+
+                    "<tr>",
+                    "<td class='bl-small'>D1</td>",
+                    "<td class='small'>(config)</td>",
+                    "<td class='br-small'># interface GigabitEthernet1/0/6</td>",
+                    "</tr>",
+
+                    "<tr>",
+                    "<td class='bl-small'>D1</td>",
+                    "<td class='small'>(config-if)</td>",
+                    "<td class='br-small'># switchport mode access</td>",
+                    "</tr>",
+                    
+                    "<tr>",
+                    "<td class='bl-small'>D1</td>",
+                    "<td class='small'>(config-if)</td>",
+                    "<td class='br-small'># switchport access vlan 10</td>",
+                    "</tr>",
+
+                    "<tr>",
+                    "<td class='bl-small'>D1</td>",
+                    "<td class='small'>(config-if)</td>",
+                    "<td class='br-small'># exit</td>",
+                    "</tr>",
+
+                    "<tr>",
+                    "<td class='bl-small'>D1</td>",
+                    "<td class='small'>(config)</td>",
+                    "<td class='br-small'># interface GigabitEthernet1/0/7</td>",
+                    "</tr>",
+                    
+                    "<tr>",
+                    "<td class='bl-small'>D1</td>",
+                    "<td class='small'>(config-if)</td>",
+                    "<td class='br-small'># switchport mode access</td>",
+                    "</tr>",
+                    
+                    "<tr>",
+                    "<td class='bl-small'>D1</td>",
+                    "<td class='small'>(config-if)</td>",
+                    "<td class='br-small'># switchport access vlan 20</td>",
+                    "</tr>",
+
+                    "<tr>",
+                    "<td class='bl-small'>D1</td>",
+                    "<td class='small'>(config-if)</td>",
+                    "<td class='br-small'># exit</td>",
+                    "</tr>",
+
+                    "<tr>",
+                    "<td class='blb-small'>D1</td>",
+                    "<td class='bb-small'>(config)</td>",
+                    "<td class='brb-small'># ip routing</td>",
+                    "</tr>",
+                    
+                    "</table>"
+                ]
+            },
+            {
+                "title": "Test Your Knowledge",
+                "type": "test",
+                "test": {
+                    "question": [
+                        "<img src='{{ SERVE_URL }}/command/T3-test-Test Your Knowledge.png'>",
+                        "<br>",
+                        "<br>",
+                        "<div><b>Create Router on a Stick Subinterface on R1</b></div>"
+                        
+                    ],
+                    "answer": [
+                        {"q": "R1 (config)      #", "a": "interface G0/0/0.10"},
+                        {"q": "R1 (config-subif)   #", "a": "encapsulation dot1q 10"},
+                        {"q": "R1 (config-subif)   #", "a": "ip address 192.168.10.1 255.255.255.0"},
+                        {"q": "R1 (config-subif)   #", "a": "exit"},
+                        {"q": "R1 (config)   #", "a": "interface G0/0/0.20"},
+                        {"q": "R1 (config-subif)   #", "a": "encapsulation dot1q 20"},
+                        {"q": "R1 (config-subif)   #", "a": "ip address 192.168.20.1 255.255.255.0"},
+                        {"q": "R1 (config-subif)   #", "a": "exit"},
+                        {"q": "R1 (config)   #", "a": "interface G0/0/0"},
+                        {"q": "R1 (config-subif)   #", "a": "no shutdown"},
+                        {"q": "R1 (config-subif)   #", "a": "end"}
+                    ]
+                }
+            }
+        ]
+    },
+    {
+        "topic": "Topic 4",
+        "title": "STP AND ETHERCHANNEL",
+        "command": [
+            {
+                "title": "PagP Configuration",
+                "type": "note",
+                "note": [
+                    "<img src='{{ SERVE_URL }}/command/T4-notes-PagP Configuration.png'>",
+                    "<br>",
+                    "<table class='compact'>",
+                    "<colgroup>",
+                    "<col width='10%' />",
+                    "<col width='30%' />",
+                    "<col width='60%' />",
+                    "</colgroup>",
+                    
+                    "<tr>",
+                    "<th class='blue-blrtb-center' colspan='3'>PagP Configuration on SW1</th>",
+                    "</tr>",
+
+                    "<tr>",
+                    "<td class='bl-small'>SW1</td>",
+                    "<td class='small'>(config)</td>",
+                    "<td class='br-small'># interface range fastethernet 0/1-2</td>",
+                    "</tr>",
+
+                    "<tr>",
+                    "<td class='bl-small'>SW1</td>",
+                    "<td class='small'>(config-if-range)</td>",
+                    "<td class='br-small'># channel-group 1 mode desirable</td>",
+                    "</tr>",
+
+                    "<tr>",
+                    "<td class='bl-small'>SW1</td>",
+                    "<td class='small'>(config-if-range)</td>",
+                    "<td class='br-small'># exit</td>",
+                    "</tr>",
+
+                    "<tr>",
+                    "<td class='bl-small'>SW1</td>",
+                    "<td class='small'>(config-if)</td>",
+                    "<td class='br-small'># interface port-channel 1</td>",
+                    "</tr>",
+
+                    "<tr>",
+                    "<td class='bl-small'>SW1</td>",
+                    "<td class='small'>(config-if)</td>",
+                    "<td class='br-small'># switchport mode trunk</td>",
+                    "</tr>",
+
+                    "<tr>",
+                    "<td class='bl-small'>SW1</td>",
+                    "<td class='small'>(config-if)</td>",
+                    "<td class='br-small'># switchport trunk allowed vlan 1,2,30</td>",
+                    "</tr>",
+
+                    "<tr>",
+                    "<td class='blb-small'>SW1</td>",
+                    "<td class='bb-small'>(config-if)</td>",
+                    "<td class='brb-small'># end</td>",
+                    "</tr>",
+                    
+                    "</table>"
+                ]
+            },
+            {
+                "title": "LACP Configuration",
+                "type": "note",
+                "note": [
+                    "<img src='{{ SERVE_URL }}/command/T4-notes-LACP Configuration.png'>",
+                    "<br>",
+                    "<table class='compact'>",
+                    "<colgroup>",
+                    "<col width='10%' />",
+                    "<col width='30%' />",
+                    "<col width='60%' />",
+                    "</colgroup>",
+                    
+                    "<tr>",
+                    "<th class='blue-blrtb-center' colspan='3'>LACP Configuration on SW1</th>",
+                    "</tr>",
+
+                    "<tr>",
+                    "<td class='bl-small'>SW1</td>",
+                    "<td class='small'>(config)</td>",
+                    "<td class='br-small'># interface range fastethernet 0/1-2</td>",
+                    "</tr>",
+
+                    "<tr>",
+                    "<td class='bl-small'>SW1</td>",
+                    "<td class='small'>(config-if-range)</td>",
+                    "<td class='br-small'># channel-group 1 mode active</td>",
+                    "</tr>",
+
+                    "<tr>",
+                    "<td class='bl-small'>SW1</td>",
+                    "<td class='small'>(config-if-range)</td>",
+                    "<td class='br-small'># exit</td>",
+                    "</tr>",
+
+                    "<tr>",
+                    "<td class='bl-small'>SW1</td>",
+                    "<td class='small'>(config-if)</td>",
+                    "<td class='br-small'># interface port-channel 1</td>",
+                    "</tr>",
+
+                    "<tr>",
+                    "<td class='bl-small'>SW1</td>",
+                    "<td class='small'>(config-if)</td>",
+                    "<td class='br-small'># switchport mode trunk</td>",
+                    "</tr>",
+
+                    "<tr>",
+                    "<td class='bl-small'>SW1</td>",
+                    "<td class='small'>(config-if)</td>",
+                    "<td class='br-small'># switchport trunk allowed vlan 1,2,30</td>",
+                    "</tr>",
+
+                    "<tr>",
+                    "<td class='blb-small'>SW1</td>",
+                    "<td class='bb-small'>(config-if)</td>",
+                    "<td class='brb-small'># end</td>",
+                    "</tr>",
+                    
+                    "</table>"
+                ]
+            },
+            {
+                "title": "Test Your Knowledge",
+                "type": "test",
+                "test": {
+                    "question": [
+                        "<img src='{{ SERVE_URL }}/command/T4-test-Test Your Knowledge.png'>",
+                        "<br>",
+                        "<br>",
+                        "<div class='text-center'><b>Configure EtherChannel using LACP on SW1</b></div>"
+                    ],
+                    "answer": [
+                        {"q": "SW1 (config)      #", "a": "interface range fastethernet 0/3-4"},
+                        {"q": "SW1 (config-if-range)   #", "a": "channel-group 1 mode active"},
+                        {"q": "SW1 (config-if-range)   #", "a": "exit"},
+                        {"q": "SW1 (config-if)   #", "a": "interface port-channel 1"},
+                        {"q": "SW1 (config-if)   #", "a": "switchport mode trunk"},
+                        {"q": "SW1 (config-if)   #", "a": "switchport trunk allowed vlan 10,20"},
+                        {"q": "SW1 (config-if)   #", "a": "end"}
+                    ]
+                }
+            }
+        ]
+    },
+    {
+        "topic": "Topic 5",
+        "title": "SWITCH SECURITY",
+        "command": [
+            {
+                "title": "Port Security",
+                "type": "note",
+                "note": [
+                    "<img src='{{ SERVE_URL }}/command/T5-notes-Port Security.png'>",
+                    "<br>",
+                    "<table class='compact'>",
+                    "<colgroup>",
+                    "<col width='10%' />",
+                    "<col width='25%' />",
+                    "<col width='65%' />",
+                    "</colgroup>",
+                    
+                    "<tr>",
+                    "<th class='blue-blrtb-center' colspan='3'>Enable Port Security on  SW1</th>",
+                    "</tr>",
+
+                    "<tr>",
+                    "<td class='bl-small'>SW1</td>",
+                    "<td class='small'>(config)</td>",
+                    "<td class='br-small'># interface fastethernet 0/6</td>",
+                    "</tr>",
+
+                    "<tr>",
+                    "<td class='bl-small'>SW1</td>",
+                    "<td class='small'>(config-if)</td>",
+                    "<td class='br-small'># switchport mode access</td>",
+                    "</tr>",
+
+                    "<tr>",
+                    "<td class='bl-small'>SW1</td>",
+                    "<td class='small'>(config-if)</td>",
+                    "<td class='br-small'># switchport port-security</td>",
+                    "</tr>",
+
+                    "<tr>",
+                    "<td class='bl-small'>SW1</td>",
+                    "<td class='small'>(config-if)</td>",
+                    "<td class='br-small'># switchport port-security maximum 4</td>",
+                    "</tr>",
+
+                    "<tr>",
+                    "<td class='bl-small'>SW1</td>",
+                    "<td class='small'>(config-if)</td>",
+                    "<td class='br-small'># switchport port-security mac-address sticky</td>",
+                    "</tr>",
+
+                    "<tr>",
+                    "<td class='blb-small'>SW1</td>",
+                    "<td class='bb-small'>(config-if)</td>",
+                    "<td class='brb-small'># end</td>",
+                    "</tr>",
+                    
+                    "</table>"
+                ]
+            },
+            {
+                "title": "SSH",
+                "type": "note",
+                "note": [
+                    "<img src='{{ SERVE_URL }}/command/T5-notes-SSH.png'>",
+                    "<br>",
+                    "<table class='compact'>",
+                    "<colgroup>",
+                    "<col width='10%' />",
+                    "<col width='25%' />",
+                    "<col width='65%' />",
+                    "</colgroup>",
+                    
+                    "<tr>",
+                    "<th class='blue-blrtb-center' colspan='3'>Configure SSH on SW1</th>",
+                    "</tr>",
+
+                    "<tr>",
+                    "<td class='bl-small'>SW1</td>",
+                    "<td class='small'>(config)</td>",
+                    "<td class='br-small'># ip domain-name networking.com</td>",
+                    "</tr>",
+
+                    "<tr>",
+                    "<td class='bl-small'>SW1</td>",
+                    "<td class='small'>(config)</td>",
+                    "<td class='br-small'># crypto key generate rsa</td>",
+                    "</tr>",
+
+                    "<tr>",
+                    "<td class='bl-small'>SW1</td>",
+                    "<td class='small'>(config)</td>",
+                    "<td class='br-small'># username admin password Str0ngPa55w0rd</td>",
+                    "</tr>",
+
+                    "<tr>",
+                    "<td class='bl-small'>SW1</td>",
+                    "<td class='small'>(config)</td>",
+                    "<td class='br-small'># line vty 0 15</td>",
+                    "</tr>",
+
+                    "<tr>",
+                    "<td class='bl-small'>SW1</td>",
+                    "<td class='small'>(config-line)</td>",
+                    "<td class='br-small'># transport input ssh</td>",
+                    "</tr>",
+
+                    "<tr>",
+                    "<td class='bl-small'>SW1</td>",
+                    "<td class='small'>(config-line)</td>",
+                    "<td class='br-small'># login local</td>",
+                    "</tr>",
+
+                    "<tr>",
+                    "<td class='blb-small'>SW1</td>",
+                    "<td class='bb-small'>(config)</td>",
+                    "<td class='brb-small'># end</td>",
+                    "</tr>",
+                    
+                    "</table>"
+                ]
+            },
+            {
+                "title": "PortFast",
+                "type": "note",
+                "note": [
+                    "<img src='{{ SERVE_URL }}/command/T5-notes-PortFast.png'>",
+                    "<br>",
+                    "<table class='compact'>",
+                    "<colgroup>",
+                    "<col width='10%' />",
+                    "<col width='25%' />",
+                    "<col width='65%' />",
+                    "</colgroup>",
+                    
+                    "<tr>",
+                    "<th class='blue-blrtb-center' colspan='3'>Enable PortFast on SW1</th>",
+                    "</tr>",
+
+                    "<tr>",
+                    "<td class='bl-small'>SW1</td>",
+                    "<td class='small'>(config)</td>",
+                    "<td class='br-small'># interface range fastethernet 0/6-7</td>",
+                    "</tr>",
+
+                    "<tr>",
+                    "<td class='bl-small'>SW1</td>",
+                    "<td class='small'>(config-if)</td>",
+                    "<td class='br-small'># spanning-tree portfast</td>",
+                    "</tr>",
+
+                    "<tr>",
+                    "<td class='blb-small'>SW1</td>",
+                    "<td class='bb-small'>(config-if)</td>",
+                    "<td class='brb-small'># end</td>",
+                    "</tr>",
+                    
+                    "</table>"
+                ]
+            },
+            {
+                "title": "BPDU Guard",
+                "type": "note",
+                "note": [
+                    "<img src='{{ SERVE_URL }}/command/T5-notes-BPDU Guard.png'>",
+                    "<br>",
+                    "<table class='compact'>",
+                    "<colgroup>",
+                    "<col width='10%' />",
+                    "<col width='25%' />",
+                    "<col width='65%' />",
+                    "</colgroup>",
+                    
+                    "<tr>",
+                    "<th class='blue-blrtb-center' colspan='3'>Enable BPDU Guard on SW1</th>",
+                    "</tr>",
+
+                    "<tr>",
+                    "<td class='bl-small'>SW1</td>",
+                    "<td class='small'>(config)</td>",
+                    "<td class='br-small'># interface range fastethernet 0/6-7</td>",
+                    "</tr>",
+
+                    "<tr>",
+                    "<td class='bl-small'>SW1</td>",
+                    "<td class='small'>(config-if)</td>",
+                    "<td class='br-small'># spanning-tree bpduguard enable</td>",
+                    "</tr>",
+
+                    "<tr>",
+                    "<td class='blb-small'>SW1</td>",
+                    "<td class='bb-small'>(config-if)</td>",
+                    "<td class='brb-small'># end</td>",
+                    "</tr>",
+                    
+                    "</table>"
+                ]
+            },
+            {
+                "title": "Test Your Knowledge",
+                "type": "test",
+                "test": {
+                    "question": [
+                        "<img src='{{ SERVE_URL }}/command/T5-test-Test Your Knowledge.png'>",
+                        "<br>",
+                        "<br>",
+                        "<div><b>Configure Port Security on SW1</b></div>",
+                        "<br>",
+                        "<ol>",
+                        "<li>Enable port security on F0/10.</li>",
+                        "<li>Set the maximum so that only five devices can access F0/10.</li>",
+                        "<li>Set the MAC Address to dynamically learned.</li>",
+                        "</ol>"
+                        
+                    ],
+                    "answer": [
+                        {"q": "SW1 (config)      #", "a": "interface fastethernet 0/10"},
+                        {"q": "SW1 (config-if)   #", "a": "switchport mode access"},
+                        {"q": "SW1 (config-if)   #", "a": "switchport port-security"},
+                        {"q": "SW1 (config-if)   #", "a": "switchport port-security maximum 5"},
+                        {"q": "SW1 (config-if)   #", "a": "switchport port-security mac-address sticky"},
+                        {"q": "SW1 (config-if)   #", "a": "end"}
+                    ]
+                }
+            }
+        ]
     }
 ]

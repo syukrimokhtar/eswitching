@@ -5,6 +5,7 @@ import 'package:eswitching/controllers/quiz_controller.dart';
 import 'package:eswitching/pages/Command/command.dart';
 import 'package:eswitching/pages/Command/note.dart';
 import 'package:eswitching/pages/Command/test.dart';
+import 'package:eswitching/pages/Command/topic.dart';
 import 'package:eswitching/pages/Home/home.dart';
 import 'package:eswitching/pages/Notes/note.dart';
 import 'package:eswitching/pages/Notes/notes.dart';
@@ -74,6 +75,19 @@ smRoutes() => [
   GetPage(
     name: '/command',
     page: () => Command(),
+    binding: BindingsBuilder(() { 
+      Get.lazyPut<CommandController>(() => CommandController());
+      
+    }),
+    transition: Transition.rightToLeft
+  ),
+
+  //
+  // Command / Topic
+  //
+  GetPage(
+    name: '/command/topic',
+    page: () => CommandTopic(),
     binding: BindingsBuilder(() { 
       Get.lazyPut<CommandController>(() => CommandController());
       

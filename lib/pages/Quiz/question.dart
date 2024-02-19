@@ -237,7 +237,7 @@ class QuizQuestion extends GetView<QuizController> {
       controller: _scrollController,
       child: Obx(() {
         
-        //_talker.debug("just triggered_${_quizController.triggered.value}");
+        _talker.debug("just triggered_${_quizController.triggered.value}");
         return _buildQuestion(marks, quiz);
 
       })

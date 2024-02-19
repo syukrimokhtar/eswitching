@@ -457,6 +457,684 @@
                 "answer": "D"
             }
         ]
+    },
+    {
+        "topic": "Topic 3",
+        "title": "INTER VLAN",
+        "quiz": [
+            {
+                "question": [
+                    "Identify the type of inter-VLAN communication design that requires the configuration of multiple subinterfaces"
+                ],
+                "answers": [
+                    {
+                        "A": [
+                            "Router on a stick"
+                        ],
+                        "B": [
+                            "Legacy inter-VLAN routing"
+                        ],
+                        "C": [
+                            "Routing via a multilayer switch"
+                        ],
+                        "D": [
+                            "Routing for the Management VLAN"
+                        ]
+                    }
+                ],
+                "answer": "A"
+            },
+            {
+                "question": [
+                    "Identify the meaning of the number 20 in the encapsulation dot1q 20 router subinterface command"
+                ],
+                "answers": [
+                    {
+                        "A": [
+                            "The VLAN ID"
+                        ],
+                        "B": [
+                            "The subnet number"
+                        ],
+                        "C": [
+                            "The interface number"
+                        ],
+                        "D": [
+                            "The subinterface number"
+                        ]
+                    }
+                ],
+                "answer": "A"
+            },
+            {
+                "question": [
+                    "Select the disadvantage of using router-on-a-stick inter-VLAN routing"
+                ],
+                "answers": [
+                    {
+                        "A": [
+                            "Does not scale well beyond 50 VLAN"
+                        ],
+                        "B": [
+                            "Does not support VLAN-tagged packet"
+                        ],
+                        "C": [
+                            "Requires the use of more physical interface than legacy inter-VLAN routing"
+                        ],
+                        "D": [
+                            "Require the use of multiple router interfaces configured to operate as access links"
+                        ]
+                    }
+                ],
+                "answer": "A"
+            },
+            {
+                "question": [
+                    "Which statement is correct with respect to SVI inter-VLAN routing?"
+                ],
+                "answers": [
+                    {
+                        "A": [
+                            "Switching packets is faster with SVI."
+                        ],
+                        "B": [
+                            "Virtual interfaces support subinterfaces."
+                        ],
+                        "C": [
+                            "SVI can be bundled into EtherChannels."
+                        ],
+                        "D": [
+                            "SVI eliminate the need for a default gateway in the hosts."
+                        ]
+                    }
+                ],
+                "answer": "A"
+            },
+            {
+                "question": [
+                    "Identify the operational mode that should be used on a switch port to connect it to a router for a router-on-a- stick inter-VLAN routing"
+                ],
+                "answers": [
+                    {
+                        "A": [
+                            "Access"
+                        ],
+                        "B": [
+                            "Trunk"
+                        ],
+                        "C": [
+                            "Dynamic auto"
+                        ],
+                        "D": [
+                            "Dynamic desirable"
+                        ]
+                    }
+                ],
+                "answer": "B"
+            },
+            {
+                "question": [
+                    "A high school uses VLAN15 for the laboratory network and VLAN30 for the faculty network. What is required to enable communication between these two VLANs while using the router-on-a-stick approach?"
+                ],
+                "answers": [
+                    {
+                        "A": [
+                            "A multilayer switch is needed"
+                        ],
+                        "B": [
+                            "A switch with a port that is configured as a trunk is needed when connecting to the router."
+                        ],
+                        "C": [
+                            "Two groups of switches are needed, each with ports that are configured for one VLAN."
+                        ],
+                        "D": [
+                            "A router with at least two LAN interfaces is needed."
+                        ]
+                    }
+                ],
+                "answer": "B"
+            },
+            {
+                "question": [
+                    "Which DTP mode should you use if you're connecting a Cisco switch to a Nortel switch and want to form a trunk?"
+                ],
+                "answers": [
+                    {
+                        "A": [
+                            "Client"
+                        ],
+                        "B": [
+                            "Server"
+                        ],
+                        "C": [
+                            "Transparent"
+                        ],
+                        "D": [
+                            "Client and Server"
+                        ]
+                    }
+                ],
+                "answer": "B"
+            },
+            {
+                "question": [
+                    "When routing a large number of VLANs, what is the disadvantages of using router-on-a-stick compare to multilayer switch inter-VLAN routing method."
+                ],
+                "answers": [
+                    {
+                        "A": [
+                            "Router-on-a-stick requires subinterfaces to be configured on the same subnet"
+                        ],
+                        "B": [
+                            "Multiple SVIs are needed"
+                        ],
+                        "C": [
+                            "Multiple subinterfaces may impact the traffic flow speed "
+                        ],
+                        "D": [
+                            "Router-on-a-stick requires multiple physical interfaces on a router."
+                        ]
+                    }
+                ],
+                "answer": "C"
+            },
+            {
+                "question": [
+                    "Select the characteristic of a routed port on a Layer 3 switch?"
+                ],
+                "answers": [
+                    {
+                        "A": [
+                            "It supports trunking."
+                        ],
+                        "B": [
+                            "It is not assigned to a VLAN."
+                        ],
+                        "C": [
+                            "It is commonly used as a WAN link. switchport native"
+                        ],
+                        "D": [
+                            "It cannot have an IP address assigned to it."
+                        ]
+                    }
+                ],
+                "answer": "B"
+            },
+            {
+                "question": [
+                    "A network contains multiple VLANs spanning multiple switches. What happens when a device in VLAN 20 sends a broadcast Ethernet frame?"
+                ],
+                "answers": [
+                    {
+                        "A": [
+                            "All devices in all VLANs see the frame."
+                        ],
+                        "B": [
+                            "Devices in VLAN 20 and the management VLAN see the frame."
+                        ],
+                        "C": [
+                            "Only devices in VLAN 20 see the frame"
+                        ],
+                        "D": [
+                            "Only devices that are connected to the local switch see the frame."
+                        ]
+                    }
+                ],
+                "answer": "C"
+            }
+        ]
+    },
+    {
+        "topic": "Topic 4",
+        "title": "STP AND ETHERCHANNEL",
+        "quiz": [
+            {
+                "question": [
+                    "Identify the STP port role that adopted by a switch port if there is no other port with a lower cost to the root bridge?"
+                ],
+                "answers": [
+                    {
+                        "A": [
+                            "Designated port"
+                        ],
+                        "B": [
+                            "Root port"
+                        ],
+                        "C": [
+                            "Alternate"
+                        ],
+                        "D": [
+                            "Disable port"
+                        ]
+                    }
+                ],
+                "answer": "B"
+            },
+            {
+                "question": [
+                    "Identify which port state will switch ports immediately transition to when configured for Port Fast"
+                ],
+                "answers": [
+                    {
+                        "A": [
+                            "Blocking"
+                        ],
+                        "B": [
+                            "Forwarding"
+                        ],
+                        "C": [
+                            "Listening"
+                        ],
+                        "D": [
+                            "Learning"
+                        ]
+                    }
+                ],
+                "answer": "B"
+            },
+            {
+                "question": [
+                    "Identify one port state that a switch learn MAC address and process BPDUs in a PVST network"
+                ],
+                "answers": [
+                    {
+                        "A": [
+                            "forwarding"
+                        ],
+                        "B": [
+                            "disabled"
+                        ],
+                        "C": [
+                            "listening"
+                        ],
+                        "D": [
+                            "blocking"
+                        ]
+                    }
+                ],
+                "answer": "A"
+            },
+            {
+                "question": [
+                    "If no bridge priority is configured in PVST, which criteria is considered when electing the root bridge? "
+                ],
+                "answers": [
+                    {
+                        "A": [
+                            "Lowest MAC address"
+                        ],
+                        "B": [
+                            "Lowest IP address"
+                        ],
+                        "C": [
+                            "Highest IP address"
+                        ],
+                        "D": [
+                            "Highest MAC address"
+                        ]
+                    }
+                ],
+                "answer": "A"
+            },
+            {
+                "question": [
+                    "Identify the function of STP in a scalable network"
+                ],
+                "answers": [
+                    {
+                        "A": [
+                            "It decreases the size of the failure domain to contain the impact of failures."
+                        ],
+                        "B": [
+                            "It protects the edge of the enterprise network from malicious activity."
+                        ],
+                        "C": [
+                            "It combines multiple switch trunk links to act as one logical link for increased bandwidth"
+                        ],
+                        "D": [
+                            "It disables redundant paths to eliminate Layer 2 loops."
+                        ]
+                    }
+                ],
+                "answer": "D"
+            },
+            {
+                "question": [
+                    "Choose a true statement regarding the use of PAgP to create EtherChannel"
+                ],
+                "answers": [
+                    {
+                        "A": [
+                            "It requires full duplex"
+                        ],
+                        "B": [
+                            "It is Cisco proprietary"
+                        ],
+                        "C": [
+                            "It increases the number of ports that are participating in spanning tree."
+                        ],
+                        "D": [
+                            "Default VLAN It requires more physical links than LACP does."
+                        ]
+                    }
+                ],
+                "answer": "B"
+            },
+            {
+                "question": [
+                    "A network administrator configured an EtherChannel link with three interfaces between two switches. What is the result if one of the three interfaces is down?"
+                ],
+                "answers": [
+                    {
+                        "A": [
+                            "The remaining two interfaces continue to load balance traffic."
+                        ],
+                        "B": [
+                            "The remaining two interfaces become separate links between the two switches."
+                        ],
+                        "C": [
+                            "One interface becomes an active link for data traffic and the other becomes a backup link."
+                        ],
+                        "D": [
+                            "The EtherChannel fails."
+                        ]
+                    }
+                ],
+                "answer": "A"
+            },
+            {
+                "question": [
+                    "Identify the technology that is an open protocol standard which allows switches to automatically bundle physical ports into a single logical link"
+                ],
+                "answers": [
+                    {
+                        "A": [
+                            "PAgp."
+                        ],
+                        "B": [
+                            "LACP"
+                        ],
+                        "C": [
+                            "Multilink PPP"
+                        ],
+                        "D": [
+                            "DTP"
+                        ]
+                    }
+                ],
+                "answer": "B"
+            },
+            {
+                "question": [
+                    "Identify which statement describe an EtherChannel implementation"
+                ],
+                "answers": [
+                    {
+                        "A": [
+                            "EtherChannel operates only at Layer 2"
+                        ],
+                        "B": [
+                            "PAgP cannot be used in conjuction with EtherChannel"
+                        ],
+                        "C": [
+                            "A trunked port can be part of an EtherChannel bundle"
+                        ],
+                        "D": [
+                            "EtherChannel can support up to a maximum of ten separate links."
+                        ]
+                    }
+                ],
+                "answer": "C"
+            },
+            {
+                "question": [
+                    "When EtherChannel is configures, which mode will force an interface into a port channel without exchanging aggregation protocol packets?"
+                ],
+                "answers": [
+                    {
+                        "A": [
+                            "Active"
+                        ],
+                        "B": [
+                            "On"
+                        ],
+                        "C": [
+                            "Auto"
+                        ],
+                        "D": [
+                            "Desirable"
+                        ]
+                    }
+                ],
+                "answer": "B"
+            }
+        ]
+    },
+    {
+        "topic": "Topic 5",
+        "title": "SWITCH SECURITY",
+        "quiz": [
+            {
+                "question": [
+                    "Identify which Layer 2 attack will result in legitimate users not getting valid IP addresses?"
+                ],
+                "answers": [
+                    {
+                        "A": [
+                            "ARP Spoofing"
+                        ],
+                        "B": [
+                            "DHCP starvation"
+                        ],
+                        "C": [
+                            "IP address spoofing"
+                        ],
+                        "D": [
+                            "MAC address flooding"
+                        ]
+                    }
+                ],
+                "answer": "B"
+            },
+            {
+                "question": [
+                    "Choose the BEST mitigation plan to stop a DOS attack that is creating a MAC address table overflow"
+                ],
+                "answers": [
+                    {
+                        "A": [
+                            "Disable DTP"
+                        ],
+                        "B": [
+                            "Disable STP"
+                        ],
+                        "C": [
+                            "Enable port security"
+                        ],
+                        "D": [
+                            "Place unused ports in an unused VLAN"
+                        ]
+                    }
+                ],
+                "answer": "C"
+            },
+            {
+                "question": [
+                    "Identify Which protocol should be used to mitigate the vulnerability of using Telnet to remotely manage network devices?"
+                ],
+                "answers": [
+                    {
+                        "A": [
+                            "SNMP"
+                        ],
+                        "B": [
+                            "TFTP"
+                        ],
+                        "C": [
+                            "SSH"
+                        ],
+                        "D": [
+                            "SCP"
+                        ]
+                    }
+                ],
+                "answer": "B"
+            },
+            {
+                "question": [
+                    "Which type of VLAN-hopping attack may be prevented by designating an unused VLAN as the native VLAN?"
+                ],
+                "answers": [
+                    {
+                        "A": [
+                            "DHCP Spoofing"
+                        ],
+                        "B": [
+                            "DHCP starvation"
+                        ],
+                        "C": [
+                            "VLAN double-tagging"
+                        ],
+                        "D": [
+                            "DTP spoofing"
+                        ]
+                    }
+                ],
+                "answer": "C"
+            },
+            {
+                "question": [
+                    "Choose the technique for mitigating VLAN attack"
+                ],
+                "answers": [
+                    {
+                        "A": [
+                            "Enable Source Guard."
+                        ],
+                        "B": [
+                            "Use private VLANs."
+                        ],
+                        "C": [
+                            "Set the native VLAN to an unused VLAN."
+                        ],
+                        "D": [
+                            "Enable BPDU guard."
+                        ]
+                    }
+                ],
+                "answer": "C"
+            },
+            {
+                "question": [
+                    "Identify the result of a DHCP starvation attack"
+                ],
+                "answers": [
+                    {
+                        "A": [
+                            "The attacker provides incorrect DNS and default gateway information to clients"
+                        ],
+                        "B": [
+                            "The IP addresses assigned to legitimate clients are hijacked."
+                        ],
+                        "C": [
+                            "Clients receive IP address assignments from a rogue DHCP server."
+                        ],
+                        "D": [
+                            "Legitimate clients are unable to lease IP addresses"
+                        ]
+                    }
+                ],
+                "answer": "C"
+            },
+            {
+                "question": [
+                    "Choose which is the feature on a switch makes it vulnerable to VLAN hopping attacks?"
+                ],
+                "answers": [
+                    {
+                        "A": [
+                            "the mixed duplex mode enabled for all ports by default"
+                        ],
+                        "B": [
+                            "the automatic trunking port feature enabled for all ports by default"
+                        ],
+                        "C": [
+                            "the limited size of content-addressable memory space"
+                        ],
+                        "D": [
+                            "mixed port bandwidth support enabled for all ports by default"
+                        ]
+                    }
+                ],
+                "answer": "B"
+            },
+            {
+                "question": [
+                    "The security benefit that is gained from enabling BPDU guard on PortFast enabled interface is:"
+                ],
+                "answers": [
+                    {
+                        "A": [
+                            "Preventing buffer overflow attacks"
+                        ],
+                        "B": [
+                            "Preventing rogue switches from being added to the network"
+                        ],
+                        "C": [
+                            "Protecting against Layer 2 loops"
+                        ],
+                        "D": [
+                            "Enforcing the placement of root bridges"
+                        ]
+                    }
+                ],
+                "answer": "B"
+            },
+            {
+                "question": [
+                    "A network administrator is configuring DAI on a switch with the command ip arp inspection validate src-mac . What is the purpose of this configuration command?"
+                ],
+                "answers": [
+                    {
+                        "A": [
+                            "It checks the source MAC address in the Ethernet header against the user-configured ARP ACLs."
+                        ],
+                        "B": [
+                            "It checks the source MAC address in the Ethernet header against the MAC address table."
+                        ],
+                        "C": [
+                            "It checks the source MAC address in the Ethernet header against the sender MAC address in the ARP body."
+                        ],
+                        "D": [
+                            "It checks the source MAC address in the Ethernet header against the target MAC address in the ARP body"
+                        ]
+                    }
+                ],
+                "answer": "C"
+            },
+            {
+                "question": [
+                    "Identify which statement describes the behavior of a switch when the MAC address table is full"
+                ],
+                "answers": [
+                    {
+                        "A": [
+                            "It treats frames as unknown unicast and floods all incoming frames to all ports on the switch"
+                        ],
+                        "B": [
+                            "It treats frames as unknown unicast and floods all incoming frames to all ports across multiple switches."
+                        ],
+                        "C": [
+                            "It treats frames as unknown unicast and floods all incoming frames to all ports within the local VLAN"
+                        ],
+                        "D": [
+                            "It treats frames as unknown unicast and floods all incoming frames to all ports within the collision domain"
+                        ]
+                    }
+                ],
+                "answer": "C"
+            }
+        ]
     }
     
 ]

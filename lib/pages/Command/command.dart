@@ -65,26 +65,14 @@ class Command extends GetView<CommandController> {
                 color: Sm.instance.config.primaryColor),
               trailing: Icon(Icons.arrow_forward,
                 color: Sm.instance.config.primaryColor),
-              title: Text(cmd['title']),
+              title: Text(cmd['topic'], style: const TextStyle(fontWeight: FontWeight.bold)),
+              subtitle: Text(cmd['title']),
               onTap: () {
 
-                var type = cmd['type'];
-                
-                if(type == "note") {
-
-                  Get.toNamed("/command/note", arguments: {
+                Get.toNamed("/command/topic", arguments: {
                     "title": cmd['title'],
-                    "note": cmd['note']
+                    "command": cmd['command']
                   });
-
-                } else if(type == "test") {
-
-                  Get.toNamed("/command/test", arguments: {
-                    "title": cmd['title'],
-                    "test": cmd['test']
-                  });
-
-                }
               },
             );
             

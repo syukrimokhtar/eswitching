@@ -168,4 +168,12 @@ class CommandController extends GetxController {
     }
   }
 
+  void resetAllControllers() {
+
+    for(TextEditingController controller in answerControllers) {
+      controller.dispose();
+    }
+    answerControllers.clear();
+  }
+
 }
