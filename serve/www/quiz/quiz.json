@@ -52,21 +52,21 @@
                     "Choose which of these addresses is the shortest aabbreviation for the IP address",
                     "<br>",
                     "<br>",
-                    "<code class='code'>3FFE:00573FFE:1044:0000:0000:00AB:0000:0000:0057</code>"
+                    "<code class='code-large'>3FFE:00573FFE:1044:0000:0000:00AB:0000:0000:0057</code>"
                 ],
                 "answers": [
                     {
                         "A": [
-                            "<code class='code'>3FFE:1044::AB::57</code>"
+                            "<code class='code-large'>3FFE:1044::AB::57</code>"
                         ],
                         "B": [
-                            "<code class='code'>3FFE:1044::00AB::0057</code>"
+                            "<code class='code-large'>3FFE:1044::00AB::0057</code>"
                         ],
                         "C": [
-                            "<code class='code'>3FFE:1044:0:0:AB::57</code>"
+                            "<code class='code-large'>3FFE:1044:0:0:AB::57</code>"
                         ],
                         "D": [
-                            "<code class='code'>3FFE:1044:0:0:00AB::0057</code>"
+                            "<code class='code-large'>3FFE:1044:0:0:00AB::0057</code>"
                         ]
                     }
                 ],
@@ -77,21 +77,21 @@
                     "Choose which is the compressed format of the IPV6 address",
                     "<br>",
                     "<br>",
-                    "<code class='code'>2001:0db8:0000:0000:0ab8:0001:0000:1000</code>"
+                    "<code class='code-large'>2001:0db8:0000:0000:0ab8:0001:0000:1000</code>"
                 ],
                 "answers": [
                     {
                         "A": [
-                            "<code class='code'>2001:db8::ab8:1:0:1000</code>"
+                            "<code class='code-large'>2001:db8::ab8:1:0:1000</code>"
                         ],
                         "B": [
-                            "<code class='code'>2001:db8::a0b:8:1</code>"
+                            "<code class='code-large'>2001:db8::a0b:8:1</code>"
                         ],
                         "C": [
-                            "<code class='code'>2001:db8:1::ab8:0:1</code>"
+                            "<code class='code-large'>2001:db8:1::ab8:0:1</code>"
                         ],
                         "D": [
-                            "<code class='code'>2001:db8:0:1::8:1</code>"
+                            "<code class='code-large'>2001:db8:0:1::8:1</code>"
                         ]
                     }
                 ],
@@ -233,7 +233,7 @@
     },
     {
         "topic": "Topic 2",
-        "title": "VLAN Networks",
+        "title": "VLANs",
         "quiz": [
             {
                 "question": [
@@ -286,7 +286,7 @@
                 "answers": [
                     {
                         "A": [
-                            "Complexity in Management"
+                            "Complexity in management"
                         ],
                         "B": [
                             "Smaller broadcast domain"
@@ -739,16 +739,16 @@
                 "answers": [
                     {
                         "A": [
-                            "forwarding"
+                            "Forwarding"
                         ],
                         "B": [
-                            "disabled"
+                            "Disabled"
                         ],
                         "C": [
-                            "listening"
+                            "Listening"
                         ],
                         "D": [
-                            "blocking"
+                            "Blocking"
                         ]
                     }
                 ],
@@ -960,7 +960,7 @@
             },
             {
                 "question": [
-                    "Identify Which protocol should be used to mitigate the vulnerability of using Telnet to remotely manage network devices?"
+                    "Identify which protocol should be used to mitigate the vulnerability of using Telnet to remotely manage network devices?"
                 ],
                 "answers": [
                     {
@@ -1044,7 +1044,7 @@
                         ]
                     }
                 ],
-                "answer": "C"
+                "answer": "D"
             },
             {
                 "question": [

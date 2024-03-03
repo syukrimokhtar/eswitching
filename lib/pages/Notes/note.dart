@@ -301,6 +301,25 @@ class NotesNote extends GetView<NotesController> {
                 color: Colors.grey.shade400,
                 width: 1),
             )),
+        ".blrtb-blue-center": Style(
+          textAlign: TextAlign.center,
+          fontSize: FontSize.medium,
+          backgroundColor: Colors.blue.shade900,
+          color: Colors.white,
+          border: Border(
+            left: BorderSide(
+                color: Colors.grey.shade400,
+                width: 1),
+            right: BorderSide(
+                color: Colors.grey.shade400,
+                width: 1),
+            top: BorderSide(
+                color: Colors.grey.shade400,
+                width: 1),
+            bottom: BorderSide(
+                color: Colors.grey.shade400,
+                width: 1),
+            )),
         ".brt-blue-center": Style(
           textAlign: TextAlign.center,
           backgroundColor: Colors.blue.shade900,
@@ -324,9 +343,58 @@ class NotesNote extends GetView<NotesController> {
                 color: Colors.grey.shade400,
                 width: 1),
             )),
+        ".brt-center": Style(
+          textAlign: TextAlign.center,
+          fontSize: FontSize.medium,
+          border: Border(
+            right: BorderSide(
+                color: Colors.grey.shade400,
+                width: 1),
+            top: BorderSide(
+                color: Colors.grey.shade400,
+                width: 1),
+            )),
+        ".br-center": Style(
+          textAlign: TextAlign.center,
+          fontSize: FontSize.medium,
+          border: Border(
+            right: BorderSide(
+                color: Colors.grey.shade400,
+                width: 1)),),
+        ".b-center": Style(
+          textAlign: TextAlign.center,
+          fontSize: FontSize.medium,
+          border: Border(
+            bottom: BorderSide(
+                color: Colors.grey.shade400,
+                width: 1)),),
+        ".tr-center": Style(
+          textAlign: TextAlign.center,
+          fontSize: FontSize.medium,
+          border: Border(
+            top: BorderSide(
+                color: Colors.grey.shade400,
+                width: 1),
+            right: BorderSide(
+                color: Colors.grey.shade400,
+                width: 1))),
         ".brtb-small-center": Style(
           textAlign: TextAlign.center,
           fontSize: FontSize.smaller,
+          border: Border(
+            right: BorderSide(
+                color: Colors.grey.shade400,
+                width: 1),
+            top: BorderSide(
+                color: Colors.grey.shade400,
+                width: 1),
+            bottom: BorderSide(
+                color: Colors.grey.shade400,
+                width: 1),
+            )),
+        ".brtb-center": Style(
+          textAlign: TextAlign.center,
+          fontSize: FontSize.medium,
           border: Border(
             right: BorderSide(
                 color: Colors.grey.shade400,
@@ -352,9 +420,48 @@ class NotesNote extends GetView<NotesController> {
                 color: Colors.grey.shade400,
                 width: 1),
             )),
+          ".blrt-center": Style(
+          textAlign: TextAlign.center,
+          fontSize: FontSize.medium,
+          border: Border(
+            left: BorderSide(
+                color: Colors.grey.shade400,
+                width: 1),
+            right: BorderSide(
+                color: Colors.grey.shade400,
+                width: 1),
+            top: BorderSide(
+                color: Colors.grey.shade400,
+                width: 1),
+            )),
+          ".r-center": Style(
+          textAlign: TextAlign.center,
+          fontSize: FontSize.medium,
+          border: Border(
+            right: BorderSide(
+                color: Colors.grey.shade400,
+                width: 1),
+            )),
           ".blrb-small-center": Style(
           textAlign: TextAlign.center,
           fontSize: FontSize.smaller,
+          border: Border(
+            left: BorderSide(
+                color: Colors.grey.shade400,
+                width: 1),
+            right: BorderSide(
+                color: Colors.grey.shade400,
+                width: 1),
+            top: BorderSide(
+                color: Colors.grey.shade400,
+                width: 1),
+            bottom: BorderSide(
+                color: Colors.grey.shade400,
+                width: 1),
+            )),
+          ".blrb-center": Style(
+          textAlign: TextAlign.center,
+          fontSize: FontSize.medium,
           border: Border(
             left: BorderSide(
                 color: Colors.grey.shade400,
@@ -382,9 +489,6 @@ class NotesNote extends GetView<NotesController> {
                 color: Colors.grey.shade400,
                 width: 1),
             )),
-        ".code": Style(
-          fontSize: FontSize.smaller
-        ),
         ".code-large": Style(
           fontSize: FontSize.medium
         ),
@@ -396,6 +500,11 @@ class NotesNote extends GetView<NotesController> {
         ".pl-10": Style(
           margin: Margins.only(left: 10),
           padding: HtmlPaddings.only(left: 10, top: 0,
+            right: 0, bottom: 0)
+        ),
+        ".pt-10": Style(
+          margin: Margins.only(left: 10),
+          padding: HtmlPaddings.only(left: 0, top: 10,
             right: 0, bottom: 0)
         ),
 

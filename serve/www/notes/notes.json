@@ -114,12 +114,12 @@
 
                     "<tr>",
                     "<td class='brlt'>Preferred</td>",
-                    "<td class='brt'><code class='code'>2001:0ff8:0000:1334:0000:0000:0000:0900</code></td>",
+                    "<td class='brt'><code class='code-large'>2001:0ff8:0000:1334:0000:0000:0000:0900</code></td>",
                     "</tr>",
 
                     "<tr>",
                     "<td class='brltb'>No leading zeroes</td>",
-                    "<td class='brtb'><code class='code'>2001: ff8:  <b>0</b> :1334:  0 :  0 : 0  : 900</code></td>",
+                    "<td class='brtb'><code class='code-large'>2001: ff8:  <b>0</b> :1334:  0 :  0 : 0  : 900</code></td>",
                     "</tr>",
 
                     "</table>",
@@ -143,17 +143,17 @@
 
                     "<tr>",
                     "<td class='brlt'>Preferred</td>",
-                    "<td class='brt'><code class='code'>2001:<b>0</b>ff8:<b>000</b>0:1334:<b>000</b>0:<b>000</b>0:<b>000</b>0:<b>0</b>900</code></td>",
+                    "<td class='brt'><code class='code-large'>2001:<b>0</b>ff8:<b>000</b>0:1334:<b>000</b>0:<b>000</b>0:<b>000</b>0:<b>0</b>900</code></td>",
                     "</tr>",
 
                     "<tr>",
                     "<td class='brltb'>No leading zeroes</td>",
-                    "<td class='brtb'><code class='code'>2001: ff8:  <b>0</b> :1334:  0 :  0 : 0  : 900</code></td>",
+                    "<td class='brtb'><code class='code-large'>2001: ff8:  <b>0</b> :1334:  0 :  0 : 0  : 900</code></td>",
                     "</tr>",
 
                     "<tr>",
                     "<td class='brltb'>Compressed</td>",
-                    "<td class='brtb'><code class='code'>2001:ff8:0:1334::900</code></td>",
+                    "<td class='brtb'><code class='code-large'>2001:ff8:0:1334::900</code></td>",
                     "</tr>",
 
                     "</table>"
@@ -186,12 +186,14 @@
 					"<ul>",
                     "<li><b>Router Solicitation (RS) messages</b> - sent by host devices to discover IPv6 routers.<br></li>",
                     "<li><b>Router Advertisement (RA) messages</b> - sent by routers to inform hosts on how to obtain an IPv6 GUA and provide useful network information such as:</li>",
-                    "<ol>",
+                    "<div class='pl-10'>",
+                    "<ul>",
                     "<li>Network prefix and prefix length</li>",
                     "<li>Default gateway address</li>",
                     "<li>DNS addresses and domain name</li>",
-                    "</ol>",
                     "</ul>",
+                    "</ul>",
+                    "</div>",
                     
                     "",
                     "<b>Method for configuring an IPv6 GUA</b>",
@@ -322,7 +324,7 @@
     },
     {
         "topic": "Topic 2",
-        "title": "VLAN",
+        "title": "VLANs",
         "subTitle": "VIRTUAL LOCAL AREA NETWORKS",
         "subNotes": [
             {
@@ -345,10 +347,10 @@
             {
                 "title": "VLAN Trunks",
                 "note": [
-                    "<ol>",
+                    "<ul>",
                     "<li>A trunk is a point-to-point link between two network devices that carries more than one VLAN.<br></li>",
                     "<li>VLAN trunks allow all VLAN traffic to propagate between switches, so that devices which are in the same VLAN, but connected to different switches, can communicate without the intervention of a router.</li>",
-                    "</ol>",
+                    "</ul>",
                     "<br>",
                     "<br>",
                     "<img src='{{ SERVE_URL }}/notes/T2-VLAN-Trunk.png'>",
@@ -360,11 +362,11 @@
             {
                 "title": "VLAN Tagging",
                 "note": [
-                    "<ol>",
+                    "<ul>",
                     "<li><b>Frame tagging</b> is the process of adding a VLAN identification header to the frame.<br></li>",
                     "<li>It is used to properly transmit multiple VLAN frames through a trunk link.<br></li>",
                     "<li>Switches add VLAN tags to the frames before placing them into trunk links and remove the tags before forwarding frames through non-trunk ports.<br></li>",
-                    "</ol>"
+                    "</ul>"
                 ]
             },
             {
@@ -385,43 +387,43 @@
                     "</colgroup>",
 
                     "<tr>",
-                    "<td class='blrt-blue-small-center'>&nbsp;</td>",
-                    "<td class='brt-blue-small-center'>Dynamic</td>",
-                    "<td class='brt-blue-small-center'>Dynamic Desirable</td>",
-                    "<td class='brt-blue-small-center'>Trunk</td>",
-                    "<td class='brt-blue-small-center'>Access</td>",
+                    "<td class='blrt-blue-center'>&nbsp;</td>",
+                    "<td class='brt-blue-center'>Dynamic</td>",
+                    "<td class='brt-blue-center'>Dynamic Desirable</td>",
+                    "<td class='brt-blue-center'>Trunk</td>",
+                    "<td class='brt-blue-center'>Access</td>",
                     "</tr>",
 
                     "<tr>",
-                    "<td class='blrt-blue-small-center'>Dynamic Auto</td>",
-                    "<td class='brt-small-center'>Access</td>",
-                    "<td class='brt-small-center'>Trunk</td>",
-                    "<td class='brt-small-center'>Trunk</td>",
-                    "<td class='brt-small-center'>Access</td>",
+                    "<td class='blrt-blue-center'>Dynamic Auto</td>",
+                    "<td class='brt-center'>Access</td>",
+                    "<td class='brt-center'>Trunk</td>",
+                    "<td class='brt-center'>Trunk</td>",
+                    "<td class='brt-center'>Access</td>",
                     "</tr>",
 
                     "<tr>",
-                    "<td class='blrt-blue-small-center'>Dynamic Desirable</td>",
-                    "<td class='brt-small-center'>Trunk</td>",
-                    "<td class='brt-small-center'>Trunk</td>",
-                    "<td class='brt-small-center'>Trunk</td>",
-                    "<td class='brt-small-center'>Access</td>",
+                    "<td class='blrt-blue-center'>Dynamic Desirable</td>",
+                    "<td class='brt-center'>Trunk</td>",
+                    "<td class='brt-center'>Trunk</td>",
+                    "<td class='brt-center'>Trunk</td>",
+                    "<td class='brt-center'>Access</td>",
                     "</tr>",
 
                     "<tr>",
-                    "<td class='blrt-blue-small-center'>Trunk</td>",
-                    "<td class='brt-small-center'>Trunk</td>",
-                    "<td class='brt-small-center'>Trunk</td>",
-                    "<td class='brt-small-center'>Trunk</td>",
-                    "<td class='brt-small-center'>Limited <br/>connectivity</td>",
+                    "<td class='blrt-blue-center'>Trunk</td>",
+                    "<td class='brt-center'>Trunk</td>",
+                    "<td class='brt-center'>Trunk</td>",
+                    "<td class='brt-center'>Trunk</td>",
+                    "<td class='brt-center'>Limited <br/>connectivity</td>",
                     "</tr>",
 
                     "<tr>",
-                    "<td class='blrtb-blue-small-center'>Access</td>",
-                    "<td class='brtb-small-center'>Access</td>",
-                    "<td class='brtb-small-center'>Access</td>",
-                    "<td class='brtb-small-center'>Limited <br/>connectivity</td>",
-                    "<td class='brtb-small-center'>Access</td>",
+                    "<td class='blrtb-blue-center'>Access</td>",
+                    "<td class='brtb-center'>Access</td>",
+                    "<td class='brtb-center'>Access</td>",
+                    "<td class='brtb-center'>Limited <br/>connectivity</td>",
+                    "<td class='brtb-center'>Access</td>",
                     "</tr>",
 
                     "</table>"
@@ -442,11 +444,13 @@
                     "Types of inter-VLAN routing",
                     "<br>",
                     "<br>",
-                    "<ol>",
+                    "<div class='pl-10'>",
+                    "<ul>",
                     "<li>Legacy inter-VLAN routing<br></li>",
                     "<li>Router-on-a-Stick<br></li>",
                     "<li>Layer 3 switch using switched virtual interfaces (SVIs)<br></li>",
-                    "</ol>",
+                    "</ul>",
+                    "<div>",
                     "<br>",
                     "<b>Legacy inter-VLAN routing</b>",
                     "<br>",
@@ -474,12 +478,14 @@
                     "The advantages of using Layer 3 switches for inter-VLAN routing:",
                     "<br>",
                     "<br>",
-                    "<ol>",
+                    "<div class='pl-10'>",
+                    "<ul>",
                     "<li>They are much faster than router-on-a-stick because everything is hardware switched and routed<br></li>",
                     "<li>There is no need for external links from the switch to the router for routing.<br></li>",
                     "<li>They are not limited to one link because Layer 2 EtherChannels can be used as trunk links between the switches to increase bandwidth.<br></li>",
                     "<li>Latency is much lower because data does not need to leave the switch in order to be routed to a different network.<br></li>",
-                    "</ol>"
+                    "</ul>",
+                    "</div>"
                 ]
             },
             {
@@ -491,34 +497,52 @@
                     "<table>",
                     "<colgroup>",
                     "<col width='20%' />",
-                    "<col width='50%' />",
+                    "<col />",
+                    "<col width='48%' />",
                     "<col width='30%' />",
                     "</colgroup>",
 
                     "<tr>",
-                    "<td class='blrt-blue-small-center'>Issue Type</td>",
-                    "<td class='brt-blue-small-center'>How to Fix</td>",
-                    "<td class='brt-blue-small-center'>How to Verify</td>",
+                    "<td class='blrt-blue-center'>Issue Type</td>",
+                    "<td colspan='2' class='brt-blue-center'>How to Fix</td>",
+                    "<td class='brt-blue-center'>How to Verify</td>",
                     "</tr>",
 
                     "<tr>",
-                    "<td class='blrt-small-center'>Missing VLANs</td>",
-                    "<td class='brt-small-center'> * Create (or re-create) the VLAN if it does not exist.<br> * Ensure host port is assigned to the correct VLAN.</td>",
-                    "<td class='brt-small-center'><b>show vlan [brief] show interfaces switchport ping</b></td>",
+                    "<td rowspan='2' class='blrt-center'>Missing VLANs</td>",
+                    "<td class='center'> &#x2022; </td>",
+                    "<td class='r-center'>Create (or re-create) the VLAN if it does not exist.</td>",
+                    "<td rowspan='2' class='br-center'><b>show vlan [brief] show interfaces switchport ping</b></td>",
                     "</tr>",
 
                     "<tr>",
-                    "<td class='blrt-small-center'>Switch Trunk Port Issues</td>",
-                    "<td class='brt-small-center'> * Ensure trunks are configured correctly.<br> * Ensure port is a trunk port and enabled.</td>",
-                    "<td class='brt-small-center'><b>show interface trunk show running-config</b></td>",
+                    "<td class='b-center'> &#x2022; </td>",
+                    "<td class='br-center'>Ensure host port is assigned to the correct VLAN.</td>",
                     "</tr>",
 
                     "<tr>",
-                    "<td class='blrb-small-center'>Switch Access Port Issues</td>",
-                    "<td class='brtb-small-center'> * Assign correct VLAN to access port.<br> * Ensure port is an access port and enabled.<br></td>",
-                    "<td class='brtb-small-center'><b>show interfaces switchport show running-config interface ipconfig</b></td>",
+                    "<td rowspan='2' class='blrt-center'>Switch Trunk Port Issues</td>",
+                    "<td> &#x2022; </td>",
+                    "<td class='tr-center'>Ensure trunks are configured correctly.</td>",
+                    "<td rowspan='2' class='brt-center'><b>show interface trunk show running-config</b></td>",
                     "</tr>",
 
+                    "<tr>",
+                    "<td class='b-center'> &#x2022; </td>",
+                    "<td class='br-center'>Ensure port is a trunk port and enabled.</td>",
+                    "</tr>",
+
+                    "<tr>",
+                    "<td rowspan='2' class='blrb-center'>Switch Access Port Issues</td>",
+                    "<td class='center'> &#x2022; </td>",
+                    "<td class='tr-center'>Assign correct VLAN to access port.</td>",
+                    "<td rowspan='2' class='brtb-center'><b>show interfaces switchport show running-config interface ipconfig</b></td>",
+                    "</tr>",
+
+                    "<tr>",
+                    "<td class='b-center'> &#x2022; </td>",
+                    "<td class='brb-center'>Ensure port is an access port and enabled.<br></td>",
+                    "</tr>",
 
                     "</table>"
                     
@@ -528,7 +552,7 @@
     },
     {
         "topic": "Topic 4",
-        "title": "STP and ETHERCHANNEL",
+        "title": "STP AND ETHERCHANNEL",
         "subNotes": [
             {
                 "title": "Spanning Tree Protocol",
@@ -538,12 +562,12 @@
                     "<img src='{{ SERVE_URL }}/notes/T4-STP.png'>",
                     "<br>",
                     "<b>Steps to a Loop-Free Topology</b>",
-                    "<ol>",
+                    "<ul>",
                     "<li>Elect the root bridge.</li>",
                     "<li>Elect the root ports.</li>",
                     "<li>Elect designated ports.</li>",
                     "<li>Elect alternate (blocked) ports.</li>",
-                    "</ol>",
+                    "</ul>",
                     "<br>",
                     "<b>Elect the root bridge</b>",
                     "<ul>",

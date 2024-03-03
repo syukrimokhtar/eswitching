@@ -58,7 +58,7 @@ class CommandNote extends GetView<CommandController> {
           ),
         ),
         ".bl-small" : Style(
-          fontSize: FontSize.small,
+          fontSize: FontSize.medium,
           border: Border(
           left: BorderSide(
               color: Colors.grey.shade400,
@@ -66,7 +66,7 @@ class CommandNote extends GetView<CommandController> {
           ),
         ),
         ".br-small" : Style(
-          fontSize: FontSize.small,
+          fontSize: FontSize.medium,
           border: Border(
           right: BorderSide(
               color: Colors.grey.shade400,
@@ -74,11 +74,11 @@ class CommandNote extends GetView<CommandController> {
           ),
         ),
         ".small" : Style(
-          fontSize: FontSize.small
+          fontSize: FontSize.medium
         ),
         
         ".blb-small": Style(
-          fontSize: FontSize.small,
+          fontSize: FontSize.medium,
           border: Border(
           left: BorderSide(
               color: Colors.grey.shade400,
@@ -89,14 +89,14 @@ class CommandNote extends GetView<CommandController> {
           )),
 
         ".bb-small": Style(
-          fontSize: FontSize.small,
+          fontSize: FontSize.medium,
           border: Border(
           bottom: BorderSide(
               color: Colors.grey.shade400,
               width: 1),
         )),
         ".brb-small": Style(
-          fontSize: FontSize.small,
+          fontSize: FontSize.medium,
           border: Border(
             bottom: BorderSide(
               color: Colors.grey.shade400,

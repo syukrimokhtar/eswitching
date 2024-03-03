@@ -20,6 +20,7 @@ class QuizQuestion extends GetView<QuizController> {
   //
   final _style = {
     ".code": Style(
+      fontSize: FontSize.medium,
       color: Colors.black87
     ),
     ".text-center": Style(
@@ -52,7 +53,7 @@ class QuizQuestion extends GetView<QuizController> {
       ),
     ),
     ".bl-small" : Style(
-      fontSize: FontSize.small,
+      fontSize: FontSize.medium,
       border: Border(
       left: BorderSide(
           color: Colors.grey.shade400,
@@ -60,7 +61,7 @@ class QuizQuestion extends GetView<QuizController> {
       ),
     ),
     ".br-small" : Style(
-      fontSize: FontSize.small,
+      fontSize: FontSize.medium,
       border: Border(
       right: BorderSide(
           color: Colors.grey.shade400,
@@ -68,11 +69,11 @@ class QuizQuestion extends GetView<QuizController> {
       ),
     ),
     ".small" : Style(
-      fontSize: FontSize.small
+      fontSize: FontSize.medium
     ),
     
     ".blb-small": Style(
-      fontSize: FontSize.small,
+      fontSize: FontSize.medium,
       border: Border(
       left: BorderSide(
           color: Colors.grey.shade400,
@@ -83,14 +84,14 @@ class QuizQuestion extends GetView<QuizController> {
       )),
 
     ".bb-small": Style(
-      fontSize: FontSize.small,
+      fontSize: FontSize.medium,
       border: Border(
       bottom: BorderSide(
           color: Colors.grey.shade400,
           width: 1),
     )),
     ".brb-small": Style(
-      fontSize: FontSize.small,
+      fontSize: FontSize.medium,
       border: Border(
         bottom: BorderSide(
           color: Colors.grey.shade400,
@@ -99,7 +100,10 @@ class QuizQuestion extends GetView<QuizController> {
           color: Colors.grey.shade400,
           width: 1),
       ),
-    ) 
+    ),
+    ".left": Style(
+      textAlign: TextAlign.left
+    ),
   };
 
   Widget _html(question) {
