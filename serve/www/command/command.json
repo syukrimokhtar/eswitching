@@ -236,9 +236,9 @@
                     "<table class='compact'>",
                     "<colgroup>",
                     "<col width='10%' />",
-                    "<col />",
-                    "<col />",
-                    "<col width='65%' />",
+                    "<col width='20%' />",
+                    "<col width='5%' />",
+                    "<col width='55%' />",
                     "</colgroup>",
                     
                     "<tr>",

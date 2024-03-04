@@ -43,7 +43,7 @@ class CommandNote extends GetView<CommandController> {
           textAlign: TextAlign.center
         ),
         "td": Style(
-          padding: HtmlPaddings.only(left: 5, right: 5, top: 5, bottom: 5)
+          padding: HtmlPaddings.only(left: 5, right: 5, top: 5, bottom: 5),
         ),
         ".compact td": Style(
           padding: HtmlPaddings.only(left: 5, right: 5, top: 1, bottom: 1)
@@ -58,7 +58,7 @@ class CommandNote extends GetView<CommandController> {
           ),
         ),
         ".bl-small" : Style(
-          fontSize: FontSize.medium,
+          fontSize: GetPlatform.isWindows ? FontSize.medium : FontSize.smaller,
           border: Border(
           left: BorderSide(
               color: Colors.grey.shade400,
@@ -66,7 +66,7 @@ class CommandNote extends GetView<CommandController> {
           ),
         ),
         ".br-small" : Style(
-          fontSize: FontSize.medium,
+          fontSize: GetPlatform.isWindows ? FontSize.medium : FontSize.smaller,
           border: Border(
           right: BorderSide(
               color: Colors.grey.shade400,
@@ -74,11 +74,11 @@ class CommandNote extends GetView<CommandController> {
           ),
         ),
         ".small" : Style(
-          fontSize: FontSize.medium
+          fontSize: GetPlatform.isWindows ? FontSize.medium : FontSize.smaller,
         ),
         
         ".blb-small": Style(
-          fontSize: FontSize.medium,
+          fontSize: GetPlatform.isWindows ? FontSize.medium : FontSize.smaller,
           border: Border(
           left: BorderSide(
               color: Colors.grey.shade400,
@@ -89,14 +89,14 @@ class CommandNote extends GetView<CommandController> {
           )),
 
         ".bb-small": Style(
-          fontSize: FontSize.medium,
+          fontSize: GetPlatform.isWindows ? FontSize.medium : FontSize.smaller,
           border: Border(
           bottom: BorderSide(
               color: Colors.grey.shade400,
               width: 1),
         )),
         ".brb-small": Style(
-          fontSize: FontSize.medium,
+          fontSize: GetPlatform.isWindows ? FontSize.medium : FontSize.smaller,
           border: Border(
             bottom: BorderSide(
               color: Colors.grey.shade400,
@@ -105,7 +105,8 @@ class CommandNote extends GetView<CommandController> {
               color: Colors.grey.shade400,
               width: 1),
           ),
-        )
+        ),
+        
     };
 
     Widget body = SingleChildScrollView(

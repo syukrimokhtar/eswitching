@@ -229,6 +229,7 @@ class NotesNote extends GetView<NotesController> {
         ".blt-blue-center": Style(
           textAlign: TextAlign.center,
           backgroundColor: Colors.blue.shade900,
+          fontSize: GetPlatform.isWindows ? FontSize.medium : FontSize.small,
           color: Colors.white,
           border: Border(
             left: BorderSide(
@@ -253,6 +254,7 @@ class NotesNote extends GetView<NotesController> {
             )),
         ".blrt-blue-center": Style(
           textAlign: TextAlign.center,
+          fontSize: GetPlatform.isWindows ? FontSize.medium : FontSize.small,
           backgroundColor: Colors.blue.shade900,
           color: Colors.white,
           border: Border(
@@ -303,7 +305,7 @@ class NotesNote extends GetView<NotesController> {
             )),
         ".blrtb-blue-center": Style(
           textAlign: TextAlign.center,
-          fontSize: FontSize.medium,
+          fontSize: GetPlatform.isWindows ? FontSize.medium : FontSize.small,
           backgroundColor: Colors.blue.shade900,
           color: Colors.white,
           border: Border(
@@ -322,6 +324,7 @@ class NotesNote extends GetView<NotesController> {
             )),
         ".brt-blue-center": Style(
           textAlign: TextAlign.center,
+          fontSize: GetPlatform.isWindows ? FontSize.medium : FontSize.small,
           backgroundColor: Colors.blue.shade900,
           color: Colors.white,
           border: Border(
@@ -345,7 +348,7 @@ class NotesNote extends GetView<NotesController> {
             )),
         ".brt-center": Style(
           textAlign: TextAlign.center,
-          fontSize: FontSize.medium,
+          fontSize: GetPlatform.isWindows ? FontSize.medium : FontSize.small,
           border: Border(
             right: BorderSide(
                 color: Colors.grey.shade400,
@@ -356,21 +359,21 @@ class NotesNote extends GetView<NotesController> {
             )),
         ".br-center": Style(
           textAlign: TextAlign.center,
-          fontSize: FontSize.medium,
+          fontSize: GetPlatform.isWindows ? FontSize.medium : FontSize.small,
           border: Border(
             right: BorderSide(
                 color: Colors.grey.shade400,
                 width: 1)),),
         ".b-center": Style(
           textAlign: TextAlign.center,
-          fontSize: FontSize.medium,
+          fontSize: GetPlatform.isWindows ? FontSize.medium : FontSize.small,
           border: Border(
             bottom: BorderSide(
                 color: Colors.grey.shade400,
                 width: 1)),),
         ".tr-center": Style(
           textAlign: TextAlign.center,
-          fontSize: FontSize.medium,
+          fontSize: GetPlatform.isWindows ? FontSize.medium : FontSize.small,
           border: Border(
             top: BorderSide(
                 color: Colors.grey.shade400,
@@ -394,7 +397,7 @@ class NotesNote extends GetView<NotesController> {
             )),
         ".brtb-center": Style(
           textAlign: TextAlign.center,
-          fontSize: FontSize.medium,
+          fontSize: GetPlatform.isWindows ? FontSize.medium : FontSize.small,
           border: Border(
             right: BorderSide(
                 color: Colors.grey.shade400,
@@ -422,7 +425,7 @@ class NotesNote extends GetView<NotesController> {
             )),
           ".blrt-center": Style(
           textAlign: TextAlign.center,
-          fontSize: FontSize.medium,
+          fontSize: GetPlatform.isWindows ? FontSize.medium : FontSize.small,
           border: Border(
             left: BorderSide(
                 color: Colors.grey.shade400,
@@ -436,7 +439,7 @@ class NotesNote extends GetView<NotesController> {
             )),
           ".r-center": Style(
           textAlign: TextAlign.center,
-          fontSize: FontSize.medium,
+          fontSize: GetPlatform.isWindows ? FontSize.medium : FontSize.small,
           border: Border(
             right: BorderSide(
                 color: Colors.grey.shade400,
@@ -461,7 +464,7 @@ class NotesNote extends GetView<NotesController> {
             )),
           ".blrb-center": Style(
           textAlign: TextAlign.center,
-          fontSize: FontSize.medium,
+          fontSize: GetPlatform.isWindows ? FontSize.medium : FontSize.small,
           border: Border(
             left: BorderSide(
                 color: Colors.grey.shade400,
@@ -535,14 +538,26 @@ class NotesNote extends GetView<NotesController> {
             ),
         ),
 
-        ".green-dark-center": Style(
-          backgroundColor: Colors.green.shade900,
-          color: Colors.white,
+        ".blue-light-border-left": Style(
+          backgroundColor: Colors.blueGrey.shade100,
+          color: Colors.black,
           textAlign: TextAlign.center,
-          padding: HtmlPaddings.all(10)
+          padding: HtmlPaddings.all(10),
+          border: Border(
+            left: BorderSide(
+                color: Colors.grey.shade700,
+                width: 1),
+            top: BorderSide(
+                color: Colors.blueGrey.shade100,
+                width: 0),
+            bottom: BorderSide(
+                color: Colors.blueGrey.shade100,
+                width: 0),
+            ),
         ),
-        ".green-light-border": Style(
-          backgroundColor: Colors.greenAccent.shade100,
+
+        ".blue-light-border-right": Style(
+          backgroundColor: Colors.blueGrey.shade100,
           color: Colors.black,
           textAlign: TextAlign.center,
           padding: HtmlPaddings.all(10),
@@ -550,10 +565,109 @@ class NotesNote extends GetView<NotesController> {
             right: BorderSide(
                 color: Colors.grey.shade700,
                 width: 1),
+            top: BorderSide(
+                color: Colors.blueGrey.shade100,
+                width: 0),
+            bottom: BorderSide(
+                color: Colors.blueGrey.shade100,
+                width: 0),
+            ),
+        ),
+
+        ".blue-light-border-left-bottom": Style(
+          backgroundColor: Colors.blueGrey.shade100,
+          color: Colors.black,
+          textAlign: TextAlign.center,
+          padding: HtmlPaddings.all(10),
+          border: Border(
+            left: BorderSide(
+                color: Colors.grey.shade700,
+                width: 1),
+            bottom: BorderSide(
+                color: Colors.grey.shade700,
+                width: 1),
+            ),
+        ),
+
+        ".blue-light-border-right-bottom": Style(
+          backgroundColor: Colors.blueGrey.shade100,
+          color: Colors.black,
+          textAlign: TextAlign.center,
+          padding: HtmlPaddings.all(10),
+          border: Border(
+            right: BorderSide(
+                color: Colors.grey.shade700,
+                width: 1),
+            bottom: BorderSide(
+                color: Colors.grey.shade700,
+                width: 1),
+            ),
+        ),
+
+        ".green-dark-center": Style(
+          backgroundColor: Colors.green.shade900,
+          color: Colors.white,
+          textAlign: TextAlign.center,
+          padding: HtmlPaddings.all(10)
+        ),
+        ".green-light-border-left": Style(
+          backgroundColor: Colors.greenAccent.shade100,
+          color: Colors.black,
+          textAlign: TextAlign.center,
+          padding: HtmlPaddings.all(10),
+          border: Border(
             left: BorderSide(
                 color: Colors.grey.shade700,
                 width: 1),
             top: BorderSide(
+                color: Colors.greenAccent.shade100,
+                width: 1),
+            bottom: BorderSide(
+                color: Colors.greenAccent.shade100,
+                width: 1),
+            ),
+        ),
+
+        ".green-light-border-right": Style(
+          backgroundColor: Colors.greenAccent.shade100,
+          color: Colors.black,
+          textAlign: TextAlign.left,
+          padding: HtmlPaddings.all(10),
+          border: Border(
+            right: BorderSide(
+                color: Colors.grey.shade700,
+                width: 1),
+            top: BorderSide(
+                color: Colors.greenAccent.shade100,
+                width: 1),
+            bottom: BorderSide(
+                color: Colors.greenAccent.shade100,
+                width: 1),
+            ),
+        ),
+
+        ".green-light-border-left-bottom": Style(
+          backgroundColor: Colors.greenAccent.shade100,
+          color: Colors.black,
+          textAlign: TextAlign.center,
+          padding: HtmlPaddings.all(10),
+          border: Border(
+            left: BorderSide(
+                color: Colors.grey.shade700,
+                width: 1),
+            bottom: BorderSide(
+                color: Colors.grey.shade700,
+                width: 1),
+            ),
+        ),
+
+        ".green-light-border-right-bottom": Style(
+          backgroundColor: Colors.greenAccent.shade100,
+          color: Colors.black,
+          textAlign: TextAlign.left,
+          padding: HtmlPaddings.all(10),
+          border: Border(
+            right: BorderSide(
                 color: Colors.grey.shade700,
                 width: 1),
             bottom: BorderSide(
@@ -568,7 +682,25 @@ class NotesNote extends GetView<NotesController> {
           textAlign: TextAlign.center,
           padding: HtmlPaddings.all(10)
         ),
-        ".orange-light-border": Style(
+        ".orange-light-border-left": Style(
+          backgroundColor: Colors.orangeAccent.shade100,
+          color: Colors.black,
+          textAlign: TextAlign.center,
+          padding: HtmlPaddings.all(10),
+          border: Border(
+            left: BorderSide(
+                color: Colors.grey.shade700,
+                width: 1),
+            top: BorderSide(
+                color: Colors.orangeAccent.shade100,
+                width: 1),
+            bottom: BorderSide(
+                color: Colors.orangeAccent.shade100,
+                width: 1),
+            ),
+        ),
+
+        ".orange-light-border-right": Style(
           backgroundColor: Colors.orangeAccent.shade100,
           color: Colors.black,
           textAlign: TextAlign.center,
@@ -577,10 +709,37 @@ class NotesNote extends GetView<NotesController> {
             right: BorderSide(
                 color: Colors.grey.shade700,
                 width: 1),
+            top: BorderSide(
+                color: Colors.orangeAccent.shade100,
+                width: 1),
+            bottom: BorderSide(
+                color: Colors.orangeAccent.shade100,
+                width: 1),
+            ),
+        ),
+
+        ".orange-light-border-left-bottom": Style(
+          backgroundColor: Colors.orangeAccent.shade100,
+          color: Colors.black,
+          textAlign: TextAlign.center,
+          padding: HtmlPaddings.all(10),
+          border: Border(
             left: BorderSide(
                 color: Colors.grey.shade700,
                 width: 1),
-            top: BorderSide(
+            bottom: BorderSide(
+                color: Colors.grey.shade700,
+                width: 1),
+            ),
+        ),
+
+        ".orange-light-border-right-bottom": Style(
+          backgroundColor: Colors.orangeAccent.shade100,
+          color: Colors.black,
+          textAlign: TextAlign.center,
+          padding: HtmlPaddings.all(10),
+          border: Border(
+            right: BorderSide(
                 color: Colors.grey.shade700,
                 width: 1),
             bottom: BorderSide(
