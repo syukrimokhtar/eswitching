@@ -44,3 +44,4 @@ app.*.map.json
 
 # FVM Version Cache
 .fvm/
+release/windows/eswitching-0.0.6.zip
