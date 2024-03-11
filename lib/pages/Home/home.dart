@@ -5,6 +5,7 @@ import 'package:eswitching/library/sm_layout.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:get/get.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class Home extends GetView<HomeController> {
 
@@ -24,9 +25,27 @@ class Home extends GetView<HomeController> {
     ).paddingOnly(top: deviceSize.height / 6);
   }
   
+  Widget _policy() {
+    return GestureDetector(onTap: () async {
+
+      var serveUrl = dotenv.env['SERVE_URL'] ?? '';
+      Uri url = Uri.parse("$serveUrl/PrivacyPolicy.html");
+      if (!await launchUrl(url)) {
+        Get.snackbar("Error", "Could not launch $url");
+      }
+      
+      
+    },child: Text(
+      "Privacy Policy",
+      style: TextStyle(
+        fontSize: 10,
+        decoration: TextDecoration.underline,
+        color: Sm.instance.config.primaryColor)));
+  }
+  
   Widget _version() {
     return Text(
-              " ${dotenv.env['VERSION']} - release: ${dotenv.env['RELEASE_DATE']}",
+              "Version: ${dotenv.env['VERSION']} (${dotenv.env['RELEASE_DATE']})",
               style: TextStyle(
                 fontSize: 10,
                 color: Sm.instance.config.primaryColor));
@@ -61,19 +80,19 @@ class Home extends GetView<HomeController> {
       children: [
         const SizedBox(height: 90),
 
-        _button("Notes", Icon(Icons.notes), () {
+        _button("Notes", const Icon(Icons.notes), () {
             Get.toNamed("/notes");
           }),
 
         const SizedBox(height: 20),
 
-        _button("Command", Icon(Icons.abc), () {
+        _button("Command", const Icon(Icons.abc), () {
             Get.toNamed("/command");
           }),
 
         const SizedBox(height: 20),
 
-        _button("Quiz", Icon(Icons.question_mark), () {
+        _button("Quiz", const Icon(Icons.question_mark), () {
             Get.toNamed("/quiz");
           }),
       
@@ -107,7 +126,13 @@ class Home extends GetView<HomeController> {
         // version
         Align(
             alignment: Alignment.bottomCenter,
-            child: _version()
+            child: Row(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              children: [
+              _policy(),
+              _version()
+            ]).paddingOnly(bottom: 10)
           ),
       ]);
 
