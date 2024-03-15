@@ -5,6 +5,7 @@ import 'package:eswitching/config/config.dart';
 import 'package:eswitching/library/sm_init.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/semantics.dart';
 
 void main() {
 
@@ -12,6 +13,7 @@ void main() {
 
     BindingBase.debugZoneErrorsAreFatal = true;
     WidgetsFlutterBinding.ensureInitialized();
+    SemanticsService.announce('Loading the App', TextDirection.ltr);
 
     await Sm.init(appConfig, () {
 

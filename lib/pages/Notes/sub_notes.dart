@@ -2,6 +2,7 @@ import 'package:eswitching/controllers/notes_controller.dart';
 import 'package:eswitching/library/sm_init.dart';
 import 'package:eswitching/library/sm_layout.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/semantics.dart';
 import 'package:get/get.dart';
 
 class NotesSubNotes extends GetView<NotesController> {
@@ -52,6 +53,7 @@ class NotesSubNotes extends GetView<NotesController> {
       subTitle: subTitle,
       body: body,
       back: () {
+        SemanticsService.announce('Back', TextDirection.ltr);
         Get.back();
       });
 

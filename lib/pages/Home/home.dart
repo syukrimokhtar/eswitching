@@ -22,7 +22,7 @@ class Home extends GetView<HomeController> {
                 fontWeight: FontWeight.bold,
                 color: Sm.instance.config.primaryColor)) ]
 
-    ).paddingOnly(top: deviceSize.height / 6);
+    ).paddingOnly(top: (deviceSize.height / 6) - 20);
   }
   
   Widget _policy() {
@@ -132,7 +132,7 @@ class Home extends GetView<HomeController> {
               children: [
               _policy(),
               _version()
-            ]).paddingOnly(bottom: 10)
+            ]).paddingOnly(bottom: 50)
           ),
       ]);
 

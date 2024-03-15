@@ -2,6 +2,7 @@ import 'package:eswitching/controllers/command_controller.dart';
 import 'package:eswitching/library/sm_init.dart';
 import 'package:eswitching/library/sm_layout.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/semantics.dart';
 import 'package:get/get.dart';
 
 class CommandTopic extends GetView<CommandController> {
@@ -63,6 +64,7 @@ class CommandTopic extends GetView<CommandController> {
       title: title,
       body: body,
       back: () {
+        SemanticsService.announce('Back', TextDirection.ltr);
         Get.back();
       });
 

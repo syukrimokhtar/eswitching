@@ -2,6 +2,7 @@ import 'package:eswitching/controllers/command_controller.dart';
 import 'package:eswitching/library/sm_init.dart';
 import 'package:eswitching/library/sm_layout.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/semantics.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:flutter_html/flutter_html.dart';
 import 'package:flutter_html_table/flutter_html_table.dart';
@@ -138,6 +139,7 @@ class CommandNote extends GetView<CommandController> {
       title: title,
       body: body,
       back: () {
+        SemanticsService.announce('Back', TextDirection.ltr);
         Get.back();
       });
 

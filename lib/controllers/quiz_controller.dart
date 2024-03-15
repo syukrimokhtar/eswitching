@@ -5,6 +5,7 @@ import 'package:dio/dio.dart';
 import 'package:eswitching/config/dio.dart';
 import 'package:eswitching/library/sm_init.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/semantics.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:get/get.dart';
 
@@ -238,6 +239,7 @@ class QuizController extends GetxController {
         btnCancelText: "Back",
         btnCancelOnPress: () {
 
+          SemanticsService.announce('Back', TextDirection.ltr);
           Get.back();
 
         },

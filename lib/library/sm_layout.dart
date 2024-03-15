@@ -1,5 +1,6 @@
 import 'package:eswitching/controllers/home_controller.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/semantics.dart';
 import 'package:get/get.dart';
 
 class SmLayout extends GetView<HomeController> {
@@ -61,6 +62,7 @@ class SmLayout extends GetView<HomeController> {
         }, icon: const Icon(Icons.menu)) :
         //back
         IconButton(onPressed: () {
+          SemanticsService.announce('Back', TextDirection.ltr);
           back();
         }, icon: const Icon(Icons.arrow_back)),
       actions: actions,
@@ -105,6 +107,7 @@ class SmLayout extends GetView<HomeController> {
               leading: const Icon(Icons.home),
               title: const Text("Home"),
               onTap: () {
+                SemanticsService.announce('Go to Home', TextDirection.ltr);
                 Get.toNamed("/home");
               },
             ),
@@ -113,6 +116,7 @@ class SmLayout extends GetView<HomeController> {
               leading: const Icon(Icons.notes),
               title: const Text("Notes"),
               onTap: () {
+                SemanticsService.announce('Go to Notes', TextDirection.ltr);
                 Get.toNamed("/notes");
               },
             ),
@@ -121,6 +125,7 @@ class SmLayout extends GetView<HomeController> {
               leading: const Icon(Icons.abc),
               title: const Text("Command"),
               onTap: () {
+                SemanticsService.announce('Go to Command', TextDirection.ltr);
                 Get.toNamed("/command");
               },
             ),
@@ -129,6 +134,7 @@ class SmLayout extends GetView<HomeController> {
               leading: const Icon(Icons.question_mark),
               title: const Text("Quiz"),
               onTap: () {
+                SemanticsService.announce('Go to Quiz', TextDirection.ltr);
                 Get.toNamed("/quiz");
               },
             ),

@@ -2,6 +2,7 @@ import 'package:eswitching/controllers/quiz_controller.dart';
 import 'package:eswitching/library/sm_init.dart';
 import 'package:eswitching/library/sm_layout.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/semantics.dart';
 import 'package:flutter_html/flutter_html.dart';
 import 'package:flutter_html_table/flutter_html_table.dart';
 import 'package:get/get.dart';
@@ -253,6 +254,7 @@ class QuizQuestion extends GetView<QuizController> {
       title: title,
       body: body,
       back: () {
+        SemanticsService.announce('Back', TextDirection.ltr);
         _quizController.back();
       });
 
